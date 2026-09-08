@@ -1,0 +1,278 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تغییرات | بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="تاریخچه نسخه‌های بلو ورتکس: ویژگی‌های جدید، بهبودها، رفع باگ‌ها و تغییرات امنیتی با تاریخ شمسی.">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="تغییرات | بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="تاریخچه نسخه‌های بلو ورتکس: ویژگی‌های جدید، بهبودها، رفع باگ‌ها و تغییرات امنیتی با تاریخ شمسی.">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise"><main>
+
+<header class="navbar">
+  <div class="container-wide nav-inner">
+    <a class="brand" href="../index.html" aria-label="بلو ورتکس">
+      <span class="brand-mark"><i data-icon="zap"></i></span>
+      <span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span>
+    </a>
+    <nav class="nav-links" aria-label="ناوبری اصلی"><a class="nav-link" href="../index.html">خانه</a><div class="nav-item dropdown" data-dd><a class="nav-link" href="#" data-dd-toggle>محصولات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../pages/features.html"><span class="icon-tile icon-tile-sm"><i data-icon="sparkles"></i></span><span><b class="mega-title">امکانات</b><p>هر آنچه برای ساخت محصول API نیاز دارید</p></span></a><a class="mega-item" href="../pages/solutions.html"><span class="icon-tile icon-tile-sm"><i data-icon="layers"></i></span><span><b class="mega-title">راهکارها</b><p>راهکار برای استارتاپ و سازمان</p></span></a><a class="mega-item" href="../pages/pricing.html"><span class="icon-tile icon-tile-sm"><i data-icon="credit-card"></i></span><span><b class="mega-title">قیمت‌گذاری</b><p>پلن شفاف و منعطف به تومان</p></span></a><a class="mega-item" href="../pages/customers.html"><span class="icon-tile icon-tile-sm"><i data-icon="users"></i></span><span><b class="mega-title">مشتریان</b><p>داستان شرکت‌هایی که با ما ساختند</p></span></a><a class="mega-item" href="../pages/about.html"><span class="icon-tile icon-tile-sm"><i data-icon="building-2"></i></span><span><b class="mega-title">درباره ما</b><p>تیم و فلسفه بلو استودیو</p></span></a><a class="mega-item" href="../pages/contact.html"><span class="icon-tile icon-tile-sm"><i data-icon="mail"></i></span><span><b class="mega-title">تماس با ما</b><p>گفتگو با تیم فروش</p></span></a></div></div><div class="nav-item dropdown" data-dd><a class="nav-link" href="#" data-dd-toggle>مستندات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../docs/getting-started.html"><span class="icon-tile icon-tile-sm"><i data-icon="rocket"></i></span><span><b class="mega-title">شروع سریع</b><p>اولین درخواست در ۵ دقیقه</p></span></a><a class="mega-item" href="../docs/authentication.html"><span class="icon-tile icon-tile-sm"><i data-icon="shield-check"></i></span><span><b class="mega-title">احراز هویت</b><p>کلید API و مدیریت نشست</p></span></a><a class="mega-item" href="../docs/api-reference.html"><span class="icon-tile icon-tile-sm"><i data-icon="braces"></i></span><span><b class="mega-title">مرجع کامل API</b><p>پایان‌پوینت‌های /v1</p></span></a><a class="mega-item" href="../docs/sdks.html"><span class="icon-tile icon-tile-sm"><i data-icon="package"></i></span><span><b class="mega-title">SDK رسمی</b><p>جاوااسکریپت، پایتون، PHP، گو</p></span></a><a class="mega-item" href="../docs/examples.html"><span class="icon-tile icon-tile-sm"><i data-icon="code-2"></i></span><span><b class="mega-title">نمونه‌ها</b><p>کد آماده برای کپی</p></span></a><a class="mega-item" href="../docs/errors.html"><span class="icon-tile icon-tile-sm"><i data-icon="alert-triangle"></i></span><span><b class="mega-title">خطاها و کدها</b><p>رفع خطای رایج</p></span></a></div></div><a class="nav-link active" href="../changelog/index.html">تغییرات</a><a class="nav-link" href="../pages/blog.html">وبلاگ</a></nav>
+    <div class="nav-cta">
+      <button class="btn-icon theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+      <a class="btn btn-ghost nav-keep" href="../auth/login.html">ورود</a>
+      <a class="btn btn-primary nav-keep" href="../auth/register.html">شروع کنید</a>
+      <button class="nav-burger" data-mobile-open="mobileMenu" aria-label="باز کردن منو"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="منوی موبایل">
+  <div class="mobile-panel">
+    <div class="flex-between">
+      <a class="brand" href="../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span></a>
+      <button class="modal-close" data-mobile-close aria-label="بستن"><i data-icon="x"></i></button>
+    </div>
+    <div class="mobile-theme-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 22px 10px">
+      <span class="t-caption" style="color:var(--text-3)">حالت نمایش</span>
+      <button class="btn btn-outline btn-sm theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش"><i data-icon="sun"></i></button>
+    </div>
+    <nav class="mobile-links" aria-label="منوی موبایل">
+      <a class="mobile-link" href="../index.html">خانه</a>
+      <a class="mobile-link" href="../pages/features.html">امکانات</a>
+      <a class="mobile-link" href="../pages/solutions.html">راهکارها</a>
+      <a class="mobile-link" href="../pages/pricing.html">قیمت‌گذاری</a>
+      <a class="mobile-link" href="../docs/index.html">مستندات</a>
+      <a class="mobile-link" href="../changelog/index.html">تغییرات</a>
+      <a class="mobile-link" href="../pages/blog.html">وبلاگ</a>
+      <a class="mobile-link" href="../status/index.html">وضعیت سرویس</a>
+      <a class="mobile-link" href="../auth/login.html">ورود به حساب</a>
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn btn-primary btn-block" href="../auth/register.html">شروع کنید — رایگان</a>
+      <a class="btn btn-secondary btn-block" href="../auth/login.html">ورود</a>
+    </div>
+  </div>
+</div><section class="page-hero">
+  <div class="hero-bg bg-grid" aria-hidden="true"><div class="glow-1" style="top:-260px"></div></div>
+  <div class="container" style="position:relative">
+    <nav class="breadcrumb" aria-label="مسیر صفحه"><a href="../index.html">خانه</a><span class="sep"><i data-icon="chevron-left"></i></span><span class="current">تغییرات</span></nav>
+    <h1 data-reveal>تغییرات <span class="grad-text">بلو ورتکس</span></h1>
+    <p data-reveal>هر نسخه، یک قدم به سمت زیرساخت توسعه‌دهنده‌ای بهتر. آخرین تغییرات را دنبال کنید — با تاریخ شمسی.</p>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="container" style="max-width:860px">
+    <div class="changelog-head">
+      <div class="chip-group">
+        <button class="chip active" data-cl-filter="all">همه</button>
+        <button class="chip" data-cl-filter="feat">ویژگی جدید</button>
+        <button class="chip" data-cl-filter="imp">بهبود</button>
+        <button class="chip" data-cl-filter="fix">رفع باگ</button>
+        <button class="chip" data-cl-filter="sec">امنیت</button>
+      </div>
+      <span class="t-caption fa-num">۶ نسخه · ۳ ماه اخیر</span>
+    </div>
+    <div class="timeline"><div class="changelog-card" data-rel="fix" data-reveal>
+      <div class="cl-head">
+        <span class="ver-chip">2.4.1</span>
+        <span class="cl-date fa-num">۲۹ مرداد ۱۴۰۵</span>
+        <span class="tl-title" style="margin:0;font-size:var(--fs-body)">نسخه ۲٫۴٫۱</span>
+      </div>
+      <div class="cl-tags">
+        <span class="badge badge-amber">رفع باگ</span>
+      </div>
+      <ul class="cl-list"><li class="fix"><i data-icon="bug"></i><span>رفع باگ نمایش تأخیر در نمودار صدک‌ها هنگام انتخاب بازه ۹۰ روزه</span></li><li class="fix"><i data-icon="bug"></i><span>اصلاح نمایش اعداد فارسی در فاکتورهای دانلودی PDF</span></li><li class="imp"><i data-icon="trending-up"></i><span>بهبود سرعت بارگذاری صفحه وضعیت سرویس</span></li></ul>
+    </div><div class="changelog-card" data-rel="feat" data-reveal>
+      <div class="cl-head">
+        <span class="ver-chip">2.4.0</span>
+        <span class="cl-date fa-num">۲۰ مرداد ۱۴۰۵</span>
+        <span class="tl-title" style="margin:0;font-size:var(--fs-body)">نسخه ۲٫۴٫۰</span>
+      </div>
+      <div class="cl-tags">
+        <span class="badge badge-blue">ویژگی جدید</span>
+      </div>
+      <ul class="cl-list"><li class="feat"><i data-icon="sparkles"></i><span>SDK پایتون با تایپ کامل (PEP 561) و مستندات inline</span></li><li class="feat"><i data-icon="sparkles"></i><span>دسته‌بندی گزارش درخواست‌ها بر اساس پروژه</span></li><li class="imp"><i data-icon="trending-up"></i><span>بازطراحی کامل صفحه تحلیل‌ها با فیلتر تاریخ شمسی</span></li><li class="sec"><i data-icon="shield-check"></i><span>افزودن هدر امنیتی <code class="inline">x-bv-signature</code> به Webhookها</span></li></ul>
+    </div><div class="changelog-card" data-rel="fix" data-reveal>
+      <div class="cl-head">
+        <span class="ver-chip">2.3.1</span>
+        <span class="cl-date fa-num">۸ مرداد ۱۴۰۵</span>
+        <span class="tl-title" style="margin:0;font-size:var(--fs-body)">نسخه ۲٫۳٫۱</span>
+      </div>
+      <div class="cl-tags">
+        <span class="badge badge-amber">رفع باگ</span>
+      </div>
+      <ul class="cl-list"><li class="fix"><i data-icon="bug"></i><span>رفع خطای نادر ۴۰۴ در جستجوی مستندات با عبارات فارسی</span></li><li class="imp"><i data-icon="trending-up"></i><span>کاهش ۱۸٪ حجم جاوااسکریپت بارگذاری‌شده</span></li></ul>
+    </div><div class="changelog-card" data-rel="feat" data-reveal>
+      <div class="cl-head">
+        <span class="ver-chip">2.3.0</span>
+        <span class="cl-date fa-num">۲۸ تیر ۱۴۰۵</span>
+        <span class="tl-title" style="margin:0;font-size:var(--fs-body)">نسخه ۲٫۳٫۰</span>
+      </div>
+      <div class="cl-tags">
+        <span class="badge badge-blue">ویژگی جدید</span>
+      </div>
+      <ul class="cl-list"><li class="feat"><i data-icon="sparkles"></i><span>مرورگر تعاملی API (API Explorer) در داشبورد</span></li><li class="feat"><i data-icon="sparkles"></i><span>فیلتر گزارش درخواست‌ها بر اساس کد وضعیت و محیط</span></li><li class="imp"><i data-icon="trending-up"></i><span>جستجوی مستندات با نمایش جستجوهای اخیر</span></li><li class="imp"><i data-icon="trending-up"></i><span>پشتیبانی کامل از نمایش اعداد فارسی در نمودارها</span></li></ul>
+    </div><div class="changelog-card" data-rel="feat" data-reveal>
+      <div class="cl-head">
+        <span class="ver-chip">2.2.0</span>
+        <span class="cl-date fa-num">۱۰ تیر ۱۴۰۵</span>
+        <span class="tl-title" style="margin:0;font-size:var(--fs-body)">نسخه ۲٫۲٫۰</span>
+      </div>
+      <div class="cl-tags">
+        <span class="badge badge-blue">ویژگی جدید</span>
+      </div>
+      <ul class="cl-list"><li class="feat"><i data-icon="sparkles"></i><span>نقش‌های تیمی سفارشی با دسترسی‌های ریزدانه</span></li><li class="feat"><i data-icon="sparkles"></i><span>گزارش ممیزی (Audit Log) برای همه تغییرات حساس</span></li><li class="sec"><i data-icon="shield-check"></i><span>ورود دومرحله‌ای TOTP برای همه پلن‌ها</span></li><li class="fix"><i data-icon="bug"></i><span>رفع مشکل همپوشانی منوها در صفحه‌های باریک</span></li></ul>
+    </div><div class="changelog-card" data-rel="fix" data-reveal>
+      <div class="cl-head">
+        <span class="ver-chip">2.1.4</span>
+        <span class="cl-date fa-num">۲۶ خرداد ۱۴۰۵</span>
+        <span class="tl-title" style="margin:0;font-size:var(--fs-body)">نسخه ۲٫۱٫۴</span>
+      </div>
+      <div class="cl-tags">
+        <span class="badge badge-amber">رفع باگ</span>
+      </div>
+      <ul class="cl-list"><li class="fix"><i data-icon="bug"></i><span>اصلاح محاسبه اشتراک زمانی صورتحساب در ارتقای میاندوره</span></li><li class="imp"><i data-icon="trending-up"></i><span>افزایش سرعت ساخت کلید API در داشبورد</span></li></ul>
+    </div></div>
+    <div class="empty-state" style="display:none" id="clEmpty">
+      <span class="es-icon"><i data-icon="inbox"></i></span>
+      <h2>تغییری در این دسته نیست</h2>
+      <p>فیلتر دیگری انتخاب کنید یا همه تغییرات را ببینید.</p>
+    </div>
+    <div class="text-center mt-32">
+      <p class="t-caption">نسخه قدیمی‌تر می‌خواهید؟ <a class="link" href="#" style="font-size:inherit">آرشیو کامل تغییرات را ببینید</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../index.html">
+          <span class="brand-mark"><i data-icon="zap"></i></span>
+          <span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span>
+        </a>
+        <p class="footer-desc">پلتفرم توسعه‌دهنده فارسی برای ساخت، مستندسازی و نظارت بر APIهای محصول شما؛ از استارتاپ تا سازمان.</p>
+        <div class="newsletter">
+          <input class="input" type="email" placeholder="ایمیل شما" aria-label="ایمیل برای خبرنامه">
+          <button class="btn btn-primary btn-sm" data-newsletter type="button">عضویت</button>
+        </div>
+        <div class="footer-status mt-16"><span class="status-ind st-green"><span class="pulse"></span> همه سرویس‌ها فعال</span></div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">محصول</h2>
+        <a href="../pages/features.html">امکانات</a>
+        <a href="../pages/solutions.html">راهکارها</a>
+        <a href="../pages/pricing.html">قیمت‌گذاری</a>
+        <a href="../pages/customers.html">مشتریان</a>
+        <a href="../changelog/index.html">تغییرات</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">مستندات</h2>
+        <a href="../docs/index.html">خانه مستندات</a>
+        <a href="../docs/getting-started.html">شروع سریع</a>
+        <a href="../docs/authentication.html">احراز هویت</a>
+        <a href="../docs/api-reference.html">مرجع API</a>
+        <a href="../docs/sdks.html">SDKها</a>
+        <a href="../docs/faq.html">سوالات متداول</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">توسعه‌دهندگان</h2>
+        <a href="../dashboard/index.html">داشبورد</a>
+        <a href="../dashboard/api-keys.html">کلیدهای API</a>
+        <a href="../dashboard/logs.html">گزارش درخواست‌ها</a>
+        <a href="../status/index.html">وضعیت سرویس</a>
+        <a href="../docs/errors.html">خطاها</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">شرکت</h2>
+        <a href="../pages/about.html">درباره ما</a>
+        <a href="../pages/blog.html">وبلاگ</a>
+        <a href="../pages/contact.html">تماس با ما</a>
+        <a href="../auth/register.html">ایجاد حساب</a>
+        <a href="../auth/login.html">ورود</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ۱۴۰۵ بلو استودیو — Blue Studio. تمامی حقوق محفوظ است.</span>
+      <span class="ltr" style="font-size:.72rem;color:var(--text-4)">Blue Vertex v2.4.1</span>
+      <div class="footer-social">
+        <a href="#" aria-label="گیت‌هاب"><i data-icon="github"></i></a>
+        <a href="#" aria-label="لینکدین"><i data-icon="linkedin"></i></a>
+        <a href="#" aria-label="تلگرام"><i data-icon="send"></i></a>
+        <a href="#" aria-label="ایمیل"><i data-icon="mail"></i></a>
+      </div>
+    </div>
+  </div>
+</footer><div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-cl-filter]').forEach(function(chip){
+    chip.addEventListener('click', function(){
+      document.querySelectorAll('[data-cl-filter]').forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      var f = chip.getAttribute('data-cl-filter');
+      var shown = 0;
+      document.querySelectorAll('.changelog-card').forEach(function(card){
+        var ok = f === 'all' || card.getAttribute('data-rel') === f || card.getAttribute('data-rel') === 'feat' && f === 'imp';
+        card.style.display = ok ? '' : 'none';
+        if (ok) shown++;
+      });
+      var empty = document.getElementById('clEmpty');
+      if (empty) empty.style.display = shown ? 'none' : 'flex';
+      if (shown && window.BV) BV.toast('info', 'فیلتر اعمال شد', BV.faNum(shown) + ' نسخه نمایش داده می‌شود.');
+    });
+  });
+})();
+</script>
+</body></html>

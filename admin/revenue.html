@@ -1,0 +1,292 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>درآمد و مالی | پنل مدیریت بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="پنل مدیریت بلو ورتکس — درآمد و مالی">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="درآمد و مالی | پنل مدیریت بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="پنل مدیریت بلو ورتکس — درآمد و مالی">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise admin">
+<div class="dash-shell">
+<aside class="dash-side" id="dashSide">
+  <div class="side-brand">
+    <a class="brand" href="index.html"><span class="brand-mark"><i data-icon="shield"></i></span><span class="brand-name">بلو ورتکس<small>ADMIN CONSOLE</small></span></a>
+    <button class="topbar-btn" style="margin-inline-start:auto" data-side-open-close aria-label="بستن منو"><i data-icon="x"></i></button>
+  </div>
+  <nav class="side-nav" aria-label="منوی مدیریت"><div class="side-section-title">عملیات</div><a class="side-link" href="index.html"><i data-icon="layout-dashboard"></i><span>نمای کلی</span></a><a class="side-link" href="activity.html"><i data-icon="activity"></i><span>فعالیت سیستم</span></a><a class="side-link" href="activity.html#incidents"><i data-icon="siren"></i><span>Incidentها</span></a><div class="side-section-title">مشتریان</div><a class="side-link" href="users.html"><i data-icon="users-round"></i><span>کاربران</span></a><a class="side-link" href="organizations.html"><i data-icon="building-2"></i><span>سازمان‌ها</span></a><a class="side-link" href="subscriptions.html"><i data-icon="credit-card"></i><span>اشتراک‌ها</span></a><div class="side-section-title">مالی</div><a class="side-link active" href="revenue.html" aria-current="page"><i data-icon="wallet"></i><span>درآمد</span></a><div class="side-section-title">پلتفرم</div><a class="side-link" href="api.html"><i data-icon="server"></i><span>مصرف API</span></a><a class="side-link" href="flags.html"><i data-icon="flag"></i><span>Feature Flags</span></a><a class="side-link" href="content.html"><i data-icon="file-text"></i><span>محتوا</span></a><a class="side-link" href="settings.html"><i data-icon="settings"></i><span>تنظیمات سیستم</span></a><div class="side-section-title">پشتیبانی</div><a class="side-link" href="support.html"><i data-icon="life-buoy"></i><span>تیکت‌ها</span><span class="side-badge blue">۱</span></a><a class="side-link" href="notifications.html"><i data-icon="bell"></i><span>اعلان‌ها</span></a><div class="side-section-title">امنیت</div><a class="side-link" href="security.html"><i data-icon="shield-check"></i><span>مرکز امنیت و Audit</span></a></nav>
+  <div class="side-foot" style="margin-top:auto">
+    <div class="side-upgrade">
+      <b><i data-icon="activity"></i> وضعیت سرویس</b>
+      <p>همه سرویس‌ها پایدارند — آپ‌تایم ۳۰ روز: <b class="fa-num">۹۹٫۹۸٪</b></p>
+      <div class="progress green"><i style="width:99.98%"></i></div>
+      <div class="flex gap-8 mt-8">
+        <a class="btn btn-ghost btn-sm btn-block" href="../status/index.html">صفحه وضعیت</a>
+        <button class="btn btn-secondary btn-sm btn-block" data-ad-palette-open>⌘K فرمان</button>
+      </div>
+    </div>
+  </div>
+</aside>
+<div class="side-backdrop" id="sideBackdrop"></div><header class="dash-topbar">
+  <button class="topbar-btn side-toggle" data-side-open aria-label="باز کردن منو"><i data-icon="panel-right"></i></button>
+  <div class="topbar-breadcrumb">
+    <span>پلتفرم بلو ورتکس</span><span class="sep"><i data-icon="chevron-left"></i></span><b>درآمد</b>
+  </div>
+  <div style="flex:1"></div>
+  <button class="topbar-btn theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+  <div class="dropdown" data-dd>
+    <button class="env-chip" data-dd-toggle aria-haspopup="true" aria-label="محیط نمایش — تغییر محیط">
+      <span class="env-dot"></span>محیط: <b data-env-name>Production</b>
+      <i data-icon="chevron-down" style="width:12px;height:12px"></i>
+    </button>
+    <div class="dropdown-menu" style="min-width:210px">
+      <div class="menu-title">محیط نمایش</div>
+      <button class="menu-item" data-env-opt="production"><span class="env-dot" style="background:#FBBF24;box-shadow:0 0 8px #FBBF24"></span>Production<span class="badge badge-amber" style="margin-inline-start:auto">فعال</span></button>
+      <button class="menu-item" data-env-opt="staging"><span class="env-dot" style="background:#A78BFA;box-shadow:0 0 8px #A78BFA"></span>Staging</button>
+      <button class="menu-item" data-env-opt="dev"><span class="env-dot" style="background:#38BDF8;box-shadow:0 0 8px #38BDF8"></span>Development</button>
+    </div>
+  </div>
+  <button class="topbar-search" data-ad-search-open aria-label="جستجوی سراسری">
+    <i data-icon="search"></i><span>جستجوی کاربر، سازمان، تراکنش…</span><span class="kbd">Ctrl /</span>
+  </button>
+  <div class="dropdown" data-dd>
+    <button class="topbar-btn" data-dd-toggle aria-label="اعلان‌ها"><i data-icon="bell"></i><span class="notif-dot"></span></button>
+    <div class="dropdown-menu" style="width:330px">
+      <div class="menu-title">اعلان‌ها <span class="badge badge-blue" data-ad-unread>۳</span></div>
+      <a class="menu-item ma-top" href="notifications.html"><span style="flex:1;min-width:0"><b style="color:var(--text-1);font-size:var(--fs-caption)">۳ اعلان جدید</b><span style="display:block;font-size:.66rem;color:var(--text-4)">مشاهده همه اعلان‌ها</span></span><i data-icon="arrow-left"></i></a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="revenue.html"><i data-icon="credit-card" style="color:var(--red)"></i>پرداخت ناموفق سازمان رایانش</a>
+      <a class="menu-item" href="security.html"><i data-icon="shield-alert" style="color:var(--amber)"></i>۳ تلاش ورود ناموفق مسدود شد</a>
+      <a class="menu-item" href="activity.html"><i data-icon="activity" style="color:var(--amber)"></i>کندی صف گزارش‌گیری</a>
+    </div>
+  </div>
+  <div class="dropdown" data-dd>
+    <button class="topbar-user" data-dd-toggle aria-label="پروفایل ادمین">
+      <span class="avatar avatar-sm" style="background:linear-gradient(135deg,#A78BFA,#6D28D9)">م</span>
+      <span class="u-info"><span class="u-name">مریم کریمی</span><span class="u-mail">admin@bluevertex.ir</span></span>
+      <i data-icon="chevron-down" class="chev"></i>
+    </button>
+    <div class="dropdown-menu">
+      <div class="menu-title">admin@bluevertex.ir</div>
+      <span class="role-chip" data-role="super" style="margin:0 10px 8px">Super Admin</span>
+      <a class="menu-item" href="settings.html#settings-profile"><i data-icon="user-round"></i>پروفایل و نشست‌ها</a>
+      <a class="menu-item" href="settings.html"><i data-icon="settings"></i>تنظیمات سیستم</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="../index.html"><i data-icon="external-link"></i>مشاهده سایت</a>
+      <a class="menu-item" href="../dashboard/index.html"><i data-icon="layout-dashboard"></i>کنسول توسعه‌دهنده</a>
+      <a class="menu-item" href="../auth/login.html"><i data-icon="log-out"></i>خروج</a>
+    </div>
+  </div>
+</header>
+  <main class="dash-main">
+    <div class="dash-content">
+      <div class="dash-head">
+        <div><h1 style="margin:0">درآمد و مالی</h1><p class="greet-sub" style="margin:0;margin-top:4px">MRR، فاکتورها، پرداخت‌ها و پیگیری پرداخت‌های ناموفق — واحد پول: تومان</p></div>
+        <div class="dash-actions"></div>
+      </div>
+      <div class="kpi-grid"><div class="kpi-card accent">
+      <div class="kpi-top"><i data-icon="wallet"></i><span>درآمد ماهانه (MRR)</span></div>
+      <div class="kpi-num">۲۰۷<small>میلیون تومان</small></div>
+      <div class="kpi-sub">شهریور ۱۴۰۵</div><span class="kpi-delta up"><i data-icon="arrow-up-right"></i> ۵٫۶٪</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="trending-up"></i><span>درآمد سالانه (ARR)</span></div>
+      <div class="kpi-num">۲٬۴۸۴<small>میلیون تومان</small></div>
+      <div class="kpi-sub">پیش‌بینی پایان سال</div><span class="kpi-delta up"><i data-icon="arrow-up-right"></i> ۲۳٪</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="gem"></i><span>LTV</span></div>
+      <div class="kpi-num">۴۸<small>میلیون تومان</small></div>
+      <div class="kpi-sub">میانگین هر مشتری</div><span class="kpi-delta up"><i data-icon="arrow-up-right"></i> ۳٪</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="users-round"></i><span>ARPU</span></div>
+      <div class="kpi-num">۳۲۸<small>هزار تومان</small></div>
+      <div class="kpi-sub">هر کاربر فعال</div><span class="kpi-delta up"><i data-icon="arrow-up-right"></i> ۱٫۲٪</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="repeat"></i><span>نرخ چرخش</span></div>
+      <div class="kpi-num">۱٫۸٪</div>
+      <div class="kpi-sub">ماهانه</div><span class="kpi-delta up"><i data-icon="arrow-up-right"></i> ۰٫۳٪ بهبود</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="coins"></i><span>درآمد خالص</span></div>
+      <div class="kpi-num">۲۰۱<small>میلیون تومان</small></div>
+      <div class="kpi-sub">پس از استرداد</div><span class="kpi-delta up"><i data-icon="arrow-up-right"></i> ۵٫۱٪</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="rotate-ccw"></i><span>استردادها</span></div>
+      <div class="kpi-num">۹٬۹۰۰<small>هزار تومان</small></div>
+      <div class="kpi-sub">۱ فاکتور</div><span class="kpi-delta mid"><i data-icon="minus"></i> —</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="alert-circle"></i><span>پرداخت‌های ناموفق</span></div>
+      <div class="kpi-num">۶٬۹۸۰<small>هزار تومان</small></div>
+      <div class="kpi-sub">۲ تراکنش · پیگیری</div><span class="kpi-delta down"><i data-icon="arrow-down-left"></i> خطر</span></div></div><div class="chart-card">
+  <div class="chart-card-head"><div><h2>رشد درآمد تکرارشونده</h2><p>میلیون تومان — با کنترل بازه زمانی</p></div><div class="flex gap-8" style="flex-wrap:wrap"><div class="pill-row" data-ranges="mrr" role="group" aria-label="بازه زمانی"><button data-range="monthly" class="active">ماهانه</button><button data-range="weekly" class="">هفتگی</button><button data-range="daily" class="">روزانه</button></div></div></div>
+  <div class="chart-holder"><canvas data-chart data-chart-type="line" data-labels='["مهر", "آبان", "آذر", "دی", "بهمن", "اسفند", "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور"]' data-values='[112, 118, 124, 131, 139, 146, 158, 165, 172, 184, 196, 207]' data-colors='["rgb(56,189,248)"]' data-unit="میلیون تومان" data-name="MRR" data-fill="1" data-chart-holder="mrr"></canvas></div>
+  <div class="chart-legend"><span><i style="background:#38BDF8"></i> MRR</span></div>
+</div><div class="dash-grid-2e">
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>درآمد به تفکیک پلن</h2><p>سهم هر پلن از درآمد ماهانه</p></div></div>
+        <div class="status-dist">
+          <div class="status-donut">
+            <svg viewBox="0 0 140 140" role="img" aria-label="نمودار توزیع درآمد به تفکیک پلن: ۵۲٪ سازمانی، ۳۱٪ حرفه‌ای، ۱۴٪ رشد، ۳٪ پایه">
+              <circle cx="70" cy="70" r="54" fill="none" style="stroke:var(--track)" stroke-width="16"/>
+              <g transform="rotate(-90 70 70)"><circle cx="70" cy="70" r="54" fill="none" stroke="rgb(56,189,248)" stroke-width="16" pathLength="100" stroke-dasharray="52.0 100" stroke-dashoffset="-0.0"/><circle cx="70" cy="70" r="54" fill="none" stroke="rgb(59,130,246)" stroke-width="16" pathLength="100" stroke-dasharray="31.0 100" stroke-dashoffset="-52.0"/><circle cx="70" cy="70" r="54" fill="none" stroke="rgb(167,139,250)" stroke-width="16" pathLength="100" stroke-dasharray="14.0 100" stroke-dashoffset="-83.0"/><circle cx="70" cy="70" r="54" fill="none" stroke="rgb(113,113,122)" stroke-width="16" pathLength="100" stroke-dasharray="3.0 100" stroke-dashoffset="-97.0"/></g>
+              <text x="70" y="66" text-anchor="middle" class="status-donut-main">۲۰۷</text>
+              <text x="70" y="86" text-anchor="middle" class="status-donut-sub">میلیون تومان</text>
+            </svg>
+          </div>
+          <div class="status-legend"><div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(56,189,248)"></span>
+                <span class="t-caption">سازمانی</span>
+                <b class="t-sm fa-num">۱۰۷٫۶ م.ت</b>
+                <span class="fa-num">۵۲٪</span>
+              </div>
+              <div class="st-track"><i style="width:52%;background:rgb(56,189,248)"></i></div>
+            </div><div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(59,130,246)"></span>
+                <span class="t-caption">حرفه‌ای</span>
+                <b class="t-sm fa-num">۶۴٫۲ م.ت</b>
+                <span class="fa-num">۳۱٪</span>
+              </div>
+              <div class="st-track"><i style="width:31%;background:rgb(59,130,246)"></i></div>
+            </div><div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(167,139,250)"></span>
+                <span class="t-caption">رشد</span>
+                <b class="t-sm fa-num">۲۹٫۰ م.ت</b>
+                <span class="fa-num">۱۴٪</span>
+              </div>
+              <div class="st-track"><i style="width:14%;background:rgb(167,139,250)"></i></div>
+            </div><div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(113,113,122)"></span>
+                <span class="t-caption">پایه</span>
+                <b class="t-sm fa-num">۶٫۲ م.ت</b>
+                <span class="fa-num">۳٪</span>
+              </div>
+              <div class="st-track"><i style="width:3%;background:rgb(113,113,122)"></i></div>
+            </div></div>
+        </div>
+        <div class="status-seg" role="img" aria-label="نمودار توزیع درآمد به تفکیک پلن: ۵۲٪ سازمانی، ۳۱٪ حرفه‌ای، ۱۴٪ رشد، ۳٪ پایه"><i style="width:52%;background:rgb(56,189,248)"></i><i style="width:31%;background:rgb(59,130,246)"></i><i style="width:14%;background:rgb(167,139,250)"></i><i style="width:3%;background:rgb(113,113,122)"></i></div>
+        <div class="flex-between status-foot">
+          <span class="t-caption">توزیع درآمد — شهریور ۱۴۰۵</span>
+          <b class="t-sm fa-num">۲۰۷ میلیون تومان</b>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>درآمد جدید در برابر موجود</h2><p>میلیون تومان — ۳ ماه اخیر</p></div></div>
+        <div class="chart-holder" style="height:230px"><canvas data-chart data-chart-type="bar" data-labels='["مرداد", "تیر", "خرداد"]' data-values='[[18, 14, 11], [178, 170, 161]]' data-colors='["rgb(52,211,153)", "rgb(56,189,248)"]' data-unit="میلیون تومان" data-name="جدید" data-stacked="1"></canvas><div class="chart-legend"><span><i style="background:#34D399"></i> درآمد جدید</span><span><i style="background:#38BDF8"></i> درآمد موجود</span></div></div>
+      </div>
+    </div><div id="invoices"><div class="chart-card" style="padding:0;overflow:hidden">
+  <div class="chart-card-head" style="padding:18px 22px 0;margin-bottom:10px">
+    <div><h2>فاکتورها</h2><p>فاکتورهای صادرشده‌ی شهریور ۱۴۰۵</p></div>
+    <div class="flex gap-8"><div class="search-input" style="position:relative;min-width:230px"><span style="position:absolute;inset-inline-start:11px;top:50%;transform:translateY(-50%);display:flex;color:var(--text-4)" data-icon="search"></span><input class="input" data-ad-search="invoices" placeholder="جستجوی شماره فاکتور…" style="padding-inline-start:34px;min-width:230px" aria-label="جستجو"></div><button class="btn btn-secondary btn-sm" data-ad-export="خروجی فاکتورها"><i data-icon="download"></i> خروجی فاکتورها</button></div>
+  </div>
+  <div class="table-wrap ad-table-wrap" style="border:none;border-radius:0">
+    <table class="ad-table" data-ad-table="invoices" aria-label="فاکتورها">
+      <thead><tr><th scope="col">شماره<span class="dir"></span></th><th scope="col">مشتری<span class="dir"></span></th><th scope="col" class="sortable" data-sort="amount">مبلغ<span class="dir"></span></th><th scope="col" class="sortable" data-sort="status">وضعیت<span class="dir"></span></th><th scope="col">صدور<span class="dir"></span></th><th scope="col">سررسید<span class="dir"></span></th><th scope="col"><span class="dir"></span></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pager" style="padding:12px 20px 16px" data-ad-pager="invoices">
+    <span class="p-msg" data-ad-pmsg="invoices"></span>
+  </div>
+</div></div><div id="payments"><div class="chart-card" style="padding:0;overflow:hidden">
+  <div class="chart-card-head" style="padding:18px 22px 0;margin-bottom:10px">
+    <div><h2>پرداخت‌ها</h2><p>تراکنش‌های درگاه با وضعیت و دلیل شکست</p></div>
+    <div class="flex gap-8"><div class="search-input" style="position:relative;min-width:230px"><span style="position:absolute;inset-inline-start:11px;top:50%;transform:translateY(-50%);display:flex;color:var(--text-4)" data-icon="search"></span><input class="input" data-ad-search="payments" placeholder="جستجوی شناسه تراکنش…" style="padding-inline-start:34px;min-width:230px" aria-label="جستجو"></div><select class="select" data-ad-filter="payments" data-field="status" aria-label="وضعیت"><option value="">وضعیت: همه</option><option value="success">موفق</option><option value="failed">ناموفق</option><option value="pending">در انتظار</option><option value="refunded">مسترد</option></select><button class="btn btn-secondary btn-sm" data-ad-export="خروجی تراکنش‌ها"><i data-icon="download"></i> خروجی تراکنش‌ها</button></div>
+  </div>
+  <div class="table-wrap ad-table-wrap" style="border:none;border-radius:0">
+    <table class="ad-table" data-ad-table="payments" aria-label="پرداخت‌ها">
+      <thead><tr><th scope="col">شناسه<span class="dir"></span></th><th scope="col">سازمان<span class="dir"></span></th><th scope="col" class="sortable" data-sort="amount">مبلغ<span class="dir"></span></th><th scope="col" class="sortable" data-sort="status">وضعیت<span class="dir"></span></th><th scope="col">روش<span class="dir"></span></th><th scope="col">زمان<span class="dir"></span></th><th scope="col">نتیجه / دلیل<span class="dir"></span></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pager" style="padding:12px 20px 16px" data-ad-pager="payments">
+    <span class="p-msg" data-ad-pmsg="payments"></span>
+  </div>
+</div></div>
+    </div>
+  </main>
+</div>
+<div class="palette-backdrop" id="adPalette" role="dialog" aria-modal="true" aria-label="فرمان‌های ادمین">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="command" style="display:flex"></span>
+      <input id="adPaletteInput" class="palette-input" placeholder="فرمان یا جستجوی سریع…" aria-label="فرمان سریع">
+      <button class="topbar-btn" data-ad-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="adPaletteList"></div>
+    <div class="palette-foot"><span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span><span><span class="kbd">↵</span> انتخاب</span><span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Admin Console</span></div>
+  </div>
+</div>
+<div class="search-view" id="adSearch" role="dialog" aria-modal="true" aria-label="جستجوی سراسری ادمین">
+  <div class="search-panel">
+    <div class="search-header"><span style="display:flex;color:var(--text-3)" data-icon="search"></span>
+      <input id="adSearchInput" placeholder="جستجوی کاربر، سازمان، اشتراک، فاکتور، تیکت، Audit…" aria-label="جستجوی سراسری"><span class="kbd">ESC</span></div>
+    <div class="search-recents" id="adSearchRecents" style="padding:12px 18px"></div>
+    <div class="search-results" id="adSearchResults" style="padding:6px 18px 16px"></div>
+    <div id="adSearchEmpty" style="display:none"><div class="search-empty"><span style="display:inline-flex" data-icon="search-x"></span><p>نتیجه‌ای پیدا نشد. عبارت دیگری را امتحان کنید.</p></div></div>
+    <div class="search-foot"><span>جستجو در داده‌های نمایشی ادمین</span></div>
+  </div>
+</div>
+<div class="modal-backdrop" id="adConfirm" role="dialog" aria-modal="true" aria-label="تأیید عملیات">
+  <div class="modal modal-sm">
+    <div class="modal-head"><div><h2 data-adc-title>تأیید عملیات</h2></div>
+      <button class="modal-close" id="adConfirmClose" aria-label="بستن"><i data-icon="x"></i></button></div>
+    <div class="modal-body" data-adc-body></div>
+    <div class="modal-foot"><button class="btn btn-ghost" data-adc-cancel>انصراف</button><button class="btn btn-primary" data-adc-ok>تأیید</button></div>
+  </div>
+</div>
+<div class="drawer-backdrop" id="adDrBack"></div>
+<aside class="drawer ad-drawer" id="adDrawer" role="dialog" aria-modal="true" aria-label="جزئیات">
+  <div class="drawer-head">
+    <div class="flex gap-8"><h2 class="t-h4">جزئیات</h2></div>
+    <button class="modal-close" id="adDrawerClose" aria-label="بستن"><i data-icon="x"></i></button>
+  </div>
+  <div class="drawer-body" id="adDrawerBody"></div>
+  <div class="drawer-foot" id="adDrawerFoot" style="display:none"></div>
+</aside><div class="toast-region" id="toastRegion"></div>
+<script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/vendor/chart.umd.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/charts.js"></script>
+
+<script src="../assets/js/admin-data.js"></script>
+<script src="../assets/js/admin.js"></script>
+<script>
+(function(){
+  var MRR_RANGES = {
+    monthly: { labels: ['مهر','آبان','آذر','دی','بهمن','اسفند','فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور'], values: [112,118,124,131,139,146,158,165,172,184,196,207] },
+    weekly:  { labels: ['هفته ۱','هفته ۲','هفته ۳','هفته ۴','هفته ۵','هفته ۶','هفته ۷','هفته ۸'], values: [44,46,45,48,47,50,49,52] },
+    daily:   { labels: ['۱','۲','۳','۴','۵','۶','۷','۸','۹','۱۰','۱۱','۱۲','۱۳','۱۴'], values: [6.2,6.4,6.3,6.8,6.6,7.1,6.9,7.4,7.2,7.6,7.4,7.9,7.7,8.1] }
+  };
+  window.ADMIN_CHARTS_MRR = MRR_RANGES;
+})();
+</script>
+</body></html>

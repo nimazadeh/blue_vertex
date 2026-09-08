@@ -1,0 +1,333 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تحلیل‌ها | داشبورد بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="داشبورد توسعه‌دهنده بلو ورتکس — تحلیل‌ها">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="تحلیل‌ها | داشبورد بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="داشبورد توسعه‌دهنده بلو ورتکس — تحلیل‌ها">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise">
+<div class="dash-shell">
+<aside class="dash-side" id="dashSide">
+  <div class="side-brand">
+    <a class="brand" href="../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>DEVELOPER CONSOLE</small></span></a>
+    <button class="topbar-btn" style="margin-inline-start:auto" data-side-close aria-label="بستن منو" onclick="document.getElementById('dashSide').classList.remove('open');document.getElementById('sideBackdrop').classList.remove('show')"><i data-icon="x"></i></button>
+  </div>
+  <div class="dropdown side-ws" data-dd>
+    <button type="button" style="width:100%;display:flex;align-items:center;gap:10px;text-align:start" data-dd-toggle>
+      <span class="ws-avatar">ا</span>
+      <span style="flex:1;min-width:0"><span class="ws-name">ابرینو</span><span class="ws-plan" style="display:block">پلن رشد</span></span>
+      <span data-icon="chevrons-up-down" style="display:flex"></span>
+    </button>
+    <div class="ws-menu">
+      <div class="menu-title">فضاهای کاری</div>
+      <button class="menu-item" type="button"><span class="ws-avatar">ا</span>ابرینو<span class="badge badge-blue" style="margin-inline-start:auto">فعال</span></button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#34D399,#065F46)">د</span>داده‌پرداز</button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#A78BFA,#4C1D95)">ه</span>هوش‌یار</button>
+      <div class="menu-sep"></div>
+      <button class="menu-item" type="button"><span data-icon="plus" style="display:flex"></span>ایجاد فضای کاری جدید</button>
+    </div>
+  </div>
+  <nav class="side-nav" aria-label="منوی داشبورد"><div class="side-section-title">پیشخوان</div><a class="side-link" href="../dashboard/index.html"><span data-icon="layout-dashboard"></span>نمای کلی</a><a class="side-link" href="../dashboard/api-keys.html"><span data-icon="key-round"></span>کلیدهای API</a><a class="side-link" href="../dashboard/usage.html"><span data-icon="gauge"></span>مصرف</a><a class="side-link active" href="../dashboard/analytics.html"><span data-icon="bar-chart-3"></span>تحلیل‌ها</a><a class="side-link" href="../dashboard/logs.html"><span data-icon="scroll-text"></span>گزارش درخواست‌ها<span class="side-badge red">۱۲</span></a><div class="side-section-title">ساخت و توسعه</div><a class="side-link" href="../dashboard/endpoints.html"><span data-icon="braces"></span>Endpointها</a><a class="side-link" href="../dashboard/sdk.html"><span data-icon="package"></span>SDKها<span class="side-badge blue">۳</span></a><div class="side-section-title">مدیریت</div><a class="side-link" href="../dashboard/team.html"><span data-icon="users"></span>تیم</a><a class="side-link" href="../dashboard/billing.html"><span data-icon="credit-card"></span>صورتحساب</a><a class="side-link" href="../dashboard/notifications.html"><span data-icon="bell"></span>اعلان‌ها<span class="side-badge blue">۳</span></a><a class="side-link" href="../dashboard/settings.html"><span data-icon="settings"></span>تنظیمات</a></nav>
+  <div class="side-foot">
+    <div class="side-upgrade">
+      <b><i data-icon="sparkles"></i> ارتقای پلن</b>
+      <p>۸۲٪ از سهمیه درخواست ماهانه مصرف شده است.</p>
+      <div class="progress amber"><i style="width:82%" id="sideQuota"></i></div>
+      <a class="btn btn-primary btn-sm btn-block mt-8" href="billing.html">ارتقا به سازمانی</a>
+    </div>
+  </div>
+</aside>
+<div class="side-backdrop" id="sideBackdrop"></div><header class="dash-topbar">
+  <button class="topbar-btn side-toggle" data-side-open aria-label="باز کردن منو"><i data-icon="panel-right"></i></button>
+  <div class="topbar-breadcrumb">
+    <span>ابرینو</span><span class="sep"><i data-icon="chevron-left"></i></span><b id="crumbHere">تحلیل‌ها</b>
+  </div>
+  <div style="flex:1"></div>
+  <button class="topbar-btn theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+  <button class="topbar-search" data-palette-open aria-label="جستجوی سریع">
+    <i data-icon="search"></i>
+    <span>جستجوی سریع…</span>
+    <span class="kbd">Ctrl K</span>
+  </button>
+  <div class="dropdown" data-dd>
+    <button class="topbar-btn" data-dd-toggle aria-label="اعلان‌ها"><i data-icon="bell"></i><span class="notif-dot"></span></button>
+    <div class="dropdown-menu" style="width:320px">
+      <div class="menu-title">اعلان‌ها</div>
+      <a class="menu-item" href="notifications.html"><span style="flex:1;min-width:0"><b style="color:var(--text-1);font-size:var(--fs-caption)">۳ اعلان جدید</b><span style="display:block;font-size:.66rem;color:var(--text-4)">مشاهده همه اعلان‌ها</span></span></a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="notifications.html"><i data-icon="shield-alert" style="color:var(--amber)"></i>کلید API جدید ساخته شد</a>
+      <a class="menu-item" href="billing.html"><i data-icon="credit-card"></i>صورتحساب مرداد صادر شد</a>
+    </div>
+  </div>
+  <div class="dropdown" data-dd>
+    <button class="topbar-user" data-dd-toggle aria-label="پروفایل کاربر">
+      <span class="avatar avatar-sm">س</span>
+      <span class="u-info"><span class="u-name">سارا احمدی</span><span class="u-mail">sara@abrino.ir</span></span>
+      <i data-icon="chevron-down" class="chev"></i>
+    </button>
+    <div class="dropdown-menu">
+      <div class="menu-title">sara@abrino.ir</div>
+      <a class="menu-item" href="settings.html"><i data-icon="user"></i>پروفایل</a>
+      <a class="menu-item" href="settings.html#panel-security"><i data-icon="shield"></i>امنیت و ورود</a>
+      <a class="menu-item" href="settings.html"><i data-icon="palette"></i>ظاهر</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="../docs/index.html"><i data-icon="book-open"></i>مستندات</a>
+      <a class="menu-item" href="../status/index.html"><i data-icon="activity"></i>وضعیت سرویس</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item danger" href="../index.html"><i data-icon="log-out"></i>خروج از حساب</a>
+    </div>
+  </div>
+</header>
+  <main class="dash-main">
+    <div class="dash-content">
+      <div class="dash-head">
+        <div>
+          <h1 style="margin:0">تحلیل‌ها</h1>
+          <p class="greet-sub" style="margin:0;margin-top:4px">تحلیل عملکرد API، خطاها و تأخیر — فضای کاری ابرینو</p>
+        </div>
+        <div class="dash-actions" data-dash-actions><div class="dropdown" data-dd>
+  <button class="btn btn-secondary btn-sm" data-dd-toggle data-daterange>
+    <i data-icon="calendar"></i>
+    <span id="rangeLabel">۷ روز اخیر</span>
+    <i data-icon="chevron-down" style="width:13px;height:13px"></i>
+  </button>
+  <div class="dropdown-menu" style="min-width:190px">
+    <div class="menu-title">بازه زمانی</div>
+    <button class="menu-item" data-range="24h" data-range-label="۲۴ ساعت اخیر"><i data-icon="clock"></i>۲۴ ساعت اخیر</button>
+    <button class="menu-item active" data-range="7d" data-range-label="۷ روز اخیر"><i data-icon="calendar-days"></i>۷ روز اخیر</button>
+    <button class="menu-item" data-range="30d" data-range-label="۳۰ روز اخیر"><i data-icon="calendar"></i>۳۰ روز اخیر</button>
+    <button class="menu-item" data-range="90d" data-range-label="۹۰ روز اخیر"><i data-icon="calendar-range"></i>۹۰ روز اخیر</button>
+  </div>
+</div><button class="btn btn-secondary btn-sm" data-export><i data-icon="download"></i> خروجی گزارش</button></div>
+      </div>
+      
+    <div class="stats-grid">
+      <div class="stat"><span class="stat-label">حجم درخواست</span><b class="stat-value fa-num">۱۲۴٬۵۸۰</b><span class="stat-delta delta-up"><i data-icon="arrow-up"></i> ۱۲٫۴٪</span></div>
+      <div class="stat"><span class="stat-label">نرخ موفقیت</span><b class="stat-value fa-num">۹۹٫۹۸٪</b><span class="stat-delta delta-up"><i data-icon="arrow-up"></i> ۰٫۰۳٪</span></div>
+      <div class="stat"><span class="stat-label">نرخ خطا</span><b class="stat-value fa-num">۰٫۰۴٪</b><span class="stat-delta delta-down"><i data-icon="arrow-down"></i> ۰٫۰۱٪</span></div>
+      <div class="stat"><span class="stat-label">تأخیر میانگین</span><b class="stat-value fa-num">۱۴۸ms</b><span class="stat-delta delta-down"><i data-icon="arrow-down"></i> ۱۲ms</span></div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>نرخ موفقیت و تعداد خطا</h2><p>پوشش بازه ۳۰ روزه — دو محور مقایسه</p></div>
+          <select class="select" aria-label="فیلتر Endpoint" style="width:auto;padding:6px 30px 6px 10px;font-size:var(--fs-caption)"><option>همه Endpointها</option><option>پرداخت‌ها</option><option>کاربران</option></select></div>
+        <div class="chart-holder">
+          <canvas data-chart data-chart-type="line" data-fill="1"
+            data-labels='["۱","۵","۹","۱۳","۱۷","۲۱","۲۵","۲۹"]'
+            data-values='[99.7,99.8,99.9,99.85,99.95,99.92,99.98,99.97]'
+            data-colors='["rgb(52,211,153)"]' data-name="نرخ موفقیت" data-unit="٪"></canvas>
+        </div>
+        <div class="chart-legend"><span><i style="background:#34D399"></i> نرخ موفقیت (٪)</span></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>خطاها بر اساس کد</h2><p>۳۰ روز اخیر</p></div></div>
+        <div class="status-dist">
+          <div class="status-donut">
+            <svg viewBox="0 0 140 140" role="img" aria-label="نمودار توزیع خطاها بر اساس کد: ۳۹٫۹٪ احراز هویت، ۲۷٪ محدودیت نرخ، ۱۵٫۶٪ یافت نشد، ۱۱٫۸٪ داده نامعتبر، ۵٫۷٪ خطای سرور">
+              <circle cx="70" cy="70" r="54" fill="none" style="stroke:var(--track)" stroke-width="16"/>
+              <g transform="rotate(-90 70 70)">
+                <circle cx="70" cy="70" r="54" fill="none" stroke="rgb(248,113,113)" stroke-width="16" pathLength="100" stroke-dasharray="39.9 100" stroke-dashoffset="0"/>
+                <circle cx="70" cy="70" r="54" fill="none" stroke="rgb(251,191,36)" stroke-width="16" pathLength="100" stroke-dasharray="27 100" stroke-dashoffset="-39.9"/>
+                <circle cx="70" cy="70" r="54" fill="none" stroke="rgb(167,139,250)" stroke-width="16" pathLength="100" stroke-dasharray="15.6 100" stroke-dashoffset="-66.9"/>
+                <circle cx="70" cy="70" r="54" fill="none" stroke="rgb(56,189,248)" stroke-width="16" pathLength="100" stroke-dasharray="11.8 100" stroke-dashoffset="-82.5"/>
+                <circle cx="70" cy="70" r="54" fill="none" stroke="rgb(34,211,238)" stroke-width="16" pathLength="100" stroke-dasharray="5.7 100" stroke-dashoffset="-94.3"/>
+              </g>
+              <text x="70" y="66" text-anchor="middle" class="status-donut-main">۷٬۱۲۰</text>
+              <text x="70" y="86" text-anchor="middle" class="status-donut-sub">خطا</text>
+            </svg>
+          </div>
+          <div class="status-legend">
+            <div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(248,113,113)"></span>
+                <span class="t-caption">401 · احراز هویت</span>
+                <b class="t-sm fa-num">۲٬۸۴۰</b>
+                <span class="fa-num">۳۹٫۹٪</span>
+              </div>
+              <div class="st-track"><i style="width:39.9%;background:rgb(248,113,113)"></i></div>
+            </div>
+            <div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(251,191,36)"></span>
+                <span class="t-caption">429 · محدودیت نرخ</span>
+                <b class="t-sm fa-num">۱٬۹۲۰</b>
+                <span class="fa-num">۲۷٪</span>
+              </div>
+              <div class="st-track"><i style="width:27%;background:rgb(251,191,36)"></i></div>
+            </div>
+            <div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(167,139,250)"></span>
+                <span class="t-caption">404 · یافت نشد</span>
+                <b class="t-sm fa-num">۱٬۱۱۰</b>
+                <span class="fa-num">۱۵٫۶٪</span>
+              </div>
+              <div class="st-track"><i style="width:15.6%;background:rgb(167,139,250)"></i></div>
+            </div>
+            <div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(56,189,248)"></span>
+                <span class="t-caption">422 · داده نامعتبر</span>
+                <b class="t-sm fa-num">۸۴۰</b>
+                <span class="fa-num">۱۱٫۸٪</span>
+              </div>
+              <div class="st-track"><i style="width:11.8%;background:rgb(56,189,248)"></i></div>
+            </div>
+            <div class="st-row">
+              <div class="st-row-head">
+                <span class="st-dot" style="background:rgb(34,211,238)"></span>
+                <span class="t-caption">5xx · خطای سرور</span>
+                <b class="t-sm fa-num">۴۱۰</b>
+                <span class="fa-num">۵٫۷٪</span>
+              </div>
+              <div class="st-track"><i style="width:5.7%;background:rgb(34,211,238)"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="status-seg" role="img" aria-label="نوار توزیع خطاها: ۳۹٫۹٪ احراز هویت، ۲۷٪ محدودیت نرخ، ۱۵٫۶٪ یافت نشد، ۱۱٫۸٪ داده نامعتبر، ۵٫۷٪ خطای سرور">
+          <i style="width:39.9%;background:rgb(248,113,113)"></i><i style="width:27%;background:rgb(251,191,36)"></i><i style="width:15.6%;background:rgb(167,139,250)"></i><i style="width:11.8%;background:rgb(56,189,248)"></i><i style="width:5.7%;background:rgb(34,211,238)"></i>
+        </div>
+        <div class="flex-between status-foot">
+          <span class="t-caption">مجموع خطاها — ۳۰ روز اخیر</span>
+          <b class="t-sm fa-num">۷٬۱۲۰ خطا</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>تأخیر صدک‌ها (P50 / P95 / P99)</h2><p>میلی‌ثانیه — زمان پاسخ خالص سرور</p></div></div>
+        <div class="chart-holder">
+          <canvas data-chart data-chart-type="bar"
+            data-labels='["GET /v1/users","POST /v1/payments","GET /v1/payments/:id","POST /v1/files","GET /v1/projects"]'
+            data-values='[[88,142,116,280,64],[210,318,265,470,150],[390,520,480,690,260]]'
+            data-colors='["rgb(59,130,246)","rgb(56,189,248)","rgb(167,139,250)"]'
+            data-ds-names='["P50","P95","P99"]' data-unit="ms"></canvas>
+        </div>
+        <div class="chart-legend"><span><i style="background:#3B82F6"></i> P50</span><span><i style="background:#38BDF8"></i> P95</span><span><i style="background:#A78BFA"></i> P99</span></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>عملکرد Endpointها</h2><p>نمره سلامت ترکیبی</p></div></div>
+        <div class="chart-holder">
+          <canvas data-chart data-chart-type="bar"
+            data-labels='["کاربران","پروژه‌ها","پرداخت‌ها","فایل‌ها","تحلیل‌ها"]'
+            data-values='[98,99,94,91,97]'
+            data-colors='["rgb(52,211,153)"]' data-name="سلامت" data-unit="٪"></canvas>
+        </div>
+        <div class="chart-legend"><span><i style="background:#34D399"></i> نمره سلامت ترکیبی (٪)</span></div>
+      </div>
+    </div>
+
+    <div class="dash-grid-2">
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>توزیع جغرافیایی</h2><p>بر اساس IP درخواست‌ها — ۳۰ روز اخیر</p></div></div>
+        <div class="table-wrap" style="border:none;border-radius:0">
+          <table class="table">
+            <thead><tr><th>شهر / منطقه</th><th>درخواست</th><th>سهم</th><th>تأخیر میانگین</th></tr></thead>
+            <tbody>
+              <tr><td class="cell-main">تهران</td><td class="fa-num">۴۸٬۲۰۰</td><td><div class="progress thin" style="width:110px"><i style="width:78%"></i></div></td><td class="latency-cell fa-num">۸۴ms</td></tr>
+              <tr><td class="cell-main">اصفهان</td><td class="fa-num">۱۸٬۴۰۰</td><td><div class="progress thin" style="width:110px"><i style="width:30%"></i></div></td><td class="latency-cell fa-num">۹۶ms</td></tr>
+              <tr><td class="cell-main">شیراز</td><td class="fa-num">۱۴٬۱۰۰</td><td><div class="progress thin" style="width:110px"><i style="width:23%"></i></div></td><td class="latency-cell fa-num">۱۰۲ms</td></tr>
+              <tr><td class="cell-main">مشهد</td><td class="fa-num">۱۱٬۸۰۰</td><td><div class="progress thin" style="width:110px"><i style="width:19%"></i></div></td><td class="latency-cell fa-num">۱۱۸ms</td></tr>
+              <tr><td class="cell-main">خارج از کشور</td><td class="fa-num">۴٬۹۰۰</td><td><div class="progress thin" style="width:110px"><i style="width:8%"></i></div></td><td class="latency-cell fa-num">۲۱۰ms</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>پلتفرم و کلاینت</h2><p>بر اساس User-Agent</p></div></div>
+        <div class="chart-card-head" style="margin-bottom:6px"><div><h2 style="font-size:var(--fs-sm)">دستگاه</h2></div></div>
+        <table class="kv-table">
+          <tbody>
+            <tr><td>API / سرویس</td><td class="fa-num">۶۲٪</td></tr>
+            <tr><td>وب (مرورگر)</td><td class="fa-num">۲۱٪</td></tr>
+            <tr><td>اندروید</td><td class="fa-num">۱۲٪</td></tr>
+            <tr><td>iOS</td><td class="fa-num">۵٪</td></tr>
+          </tbody>
+        </table>
+        <div class="chart-card-head" style="margin:14px 0 6px"><div><h2 style="font-size:var(--fs-sm)">کتابخانه</h2></div></div>
+        <table class="kv-table">
+          <tbody>
+            <tr><td>@bluevertex/sdk</td><td class="fa-num">۵۸٪</td></tr>
+            <tr><td>bluevertex (Python)</td><td class="fa-num">۲۶٪</td></tr>
+            <tr><td>cURL / سایر</td><td class="fa-num">۱۶٪</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    </div>
+  </main>
+</div>
+<div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/vendor/chart.umd.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/charts.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('[data-export]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('success', 'گزارش آماده شد', 'فایل analytics.xlsx دانلود شد (نسخه دمو).');
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var now = new Date();
+  var el = document.getElementById('jalaliToday');
+  if (el && window.BV) el.textContent = BV.faDateFull(now);
+})();
+</script>
+</body></html>

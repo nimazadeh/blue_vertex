@@ -1,0 +1,287 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مستندات | بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="مستندات فارسی بلو ورتکس: شروع سریع، احراز هویت، مرجع API، SDKها، نمونه‌ها، خطاها و سوالات متداول.">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مستندات | بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="مستندات فارسی بلو ورتکس: شروع سریع، احراز هویت، مرجع API، SDKها، نمونه‌ها، خطاها و سوالات متداول.">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise">
+<div class="announce">
+  <span class="badge badge-blue">جدید</span>
+  <span>نسخه ۲٫۴٫۰ منتشر شد؛ SDK پایتون با پشتیبانی کامل از تایپ منتشر شد.</span>
+  <a href="../changelog/index.html">مشاهده تغییرات <span data-icon="chevron-left"></span></a>
+</div>
+<header class="navbar">
+  <div class="container-wide nav-inner">
+    <a class="brand" href="../index.html" aria-label="بلو ورتکس">
+      <span class="brand-mark"><i data-icon="zap"></i></span>
+      <span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span>
+    </a>
+    <nav class="nav-links" aria-label="ناوبری اصلی"><a class="nav-link" href="../index.html">خانه</a><div class="nav-item dropdown" data-dd><a class="nav-link" href="#" data-dd-toggle>محصولات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../pages/features.html"><span class="icon-tile icon-tile-sm"><i data-icon="sparkles"></i></span><span><b class="mega-title">امکانات</b><p>هر آنچه برای ساخت محصول API نیاز دارید</p></span></a><a class="mega-item" href="../pages/solutions.html"><span class="icon-tile icon-tile-sm"><i data-icon="layers"></i></span><span><b class="mega-title">راهکارها</b><p>راهکار برای استارتاپ و سازمان</p></span></a><a class="mega-item" href="../pages/pricing.html"><span class="icon-tile icon-tile-sm"><i data-icon="credit-card"></i></span><span><b class="mega-title">قیمت‌گذاری</b><p>پلن شفاف و منعطف به تومان</p></span></a><a class="mega-item" href="../pages/customers.html"><span class="icon-tile icon-tile-sm"><i data-icon="users"></i></span><span><b class="mega-title">مشتریان</b><p>داستان شرکت‌هایی که با ما ساختند</p></span></a><a class="mega-item" href="../pages/about.html"><span class="icon-tile icon-tile-sm"><i data-icon="building-2"></i></span><span><b class="mega-title">درباره ما</b><p>تیم و فلسفه بلو استودیو</p></span></a><a class="mega-item" href="../pages/contact.html"><span class="icon-tile icon-tile-sm"><i data-icon="mail"></i></span><span><b class="mega-title">تماس با ما</b><p>گفتگو با تیم فروش</p></span></a></div></div><div class="nav-item dropdown" data-dd><a class="nav-link active" href="#" data-dd-toggle>مستندات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../docs/getting-started.html"><span class="icon-tile icon-tile-sm"><i data-icon="rocket"></i></span><span><b class="mega-title">شروع سریع</b><p>اولین درخواست در ۵ دقیقه</p></span></a><a class="mega-item" href="../docs/authentication.html"><span class="icon-tile icon-tile-sm"><i data-icon="shield-check"></i></span><span><b class="mega-title">احراز هویت</b><p>کلید API و مدیریت نشست</p></span></a><a class="mega-item" href="../docs/api-reference.html"><span class="icon-tile icon-tile-sm"><i data-icon="braces"></i></span><span><b class="mega-title">مرجع کامل API</b><p>پایان‌پوینت‌های /v1</p></span></a><a class="mega-item" href="../docs/sdks.html"><span class="icon-tile icon-tile-sm"><i data-icon="package"></i></span><span><b class="mega-title">SDK رسمی</b><p>جاوااسکریپت، پایتون، PHP، گو</p></span></a><a class="mega-item" href="../docs/examples.html"><span class="icon-tile icon-tile-sm"><i data-icon="code-2"></i></span><span><b class="mega-title">نمونه‌ها</b><p>کد آماده برای کپی</p></span></a><a class="mega-item" href="../docs/errors.html"><span class="icon-tile icon-tile-sm"><i data-icon="alert-triangle"></i></span><span><b class="mega-title">خطاها و کدها</b><p>رفع خطای رایج</p></span></a></div></div><a class="nav-link" href="../changelog/index.html">تغییرات</a><a class="nav-link" href="../pages/blog.html">وبلاگ</a></nav>
+    <div class="nav-cta">
+      <button class="btn-icon theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+      <a class="btn btn-ghost nav-keep" href="../auth/login.html">ورود</a>
+      <a class="btn btn-primary nav-keep" href="../auth/register.html">شروع کنید</a>
+      <button class="nav-burger" data-mobile-open="mobileMenu" aria-label="باز کردن منو"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="منوی موبایل">
+  <div class="mobile-panel">
+    <div class="flex-between">
+      <a class="brand" href="../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span></a>
+      <button class="modal-close" data-mobile-close aria-label="بستن"><i data-icon="x"></i></button>
+    </div>
+    <div class="mobile-theme-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 22px 10px">
+      <span class="t-caption" style="color:var(--text-3)">حالت نمایش</span>
+      <button class="btn btn-outline btn-sm theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش"><i data-icon="sun"></i></button>
+    </div>
+    <nav class="mobile-links" aria-label="منوی موبایل">
+      <a class="mobile-link" href="../index.html">خانه</a>
+      <a class="mobile-link" href="../pages/features.html">امکانات</a>
+      <a class="mobile-link" href="../pages/solutions.html">راهکارها</a>
+      <a class="mobile-link" href="../pages/pricing.html">قیمت‌گذاری</a>
+      <a class="mobile-link" href="../docs/index.html">مستندات</a>
+      <a class="mobile-link" href="../changelog/index.html">تغییرات</a>
+      <a class="mobile-link" href="../pages/blog.html">وبلاگ</a>
+      <a class="mobile-link" href="../status/index.html">وضعیت سرویس</a>
+      <a class="mobile-link" href="../auth/login.html">ورود به حساب</a>
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn btn-primary btn-block" href="../auth/register.html">شروع کنید — رایگان</a>
+      <a class="btn btn-secondary btn-block" href="../auth/login.html">ورود</a>
+    </div>
+  </div>
+</div>
+<section class="page-hero" style="text-align:center;padding-bottom:56px">
+  <div class="hero-bg bg-grid" aria-hidden="true"><div class="glow-1" style="top:-300px"></div></div>
+  <div class="container" style="position:relative;max-width:780px">
+    <nav class="breadcrumb" style="justify-content:center">
+      <a href="../index.html">خانه</a><span class="sep"><i data-icon="chevron-left"></i></span><span class="current">مستندات</span>
+    </nav>
+    <h1 style="font-size:clamp(1.8rem,3.6vw,2.5rem);font-weight:800;line-height:1.4;margin-bottom:12px">مستندات <span class="grad-text-blue">بلو ورتکس</span></h1>
+    <p style="color:var(--text-2);font-size:var(--fs-body-lg);max-width:56ch;margin:0 auto 30px;line-height:2">هر آنچه برای اتصال به API بلو ورتکس نیاز دارید — به فارسی، با نمونه‌کد آماده و مرورگر تعاملی.</p>
+    <button class="docs-searchbox" data-search-open aria-label="جستجو در مستندات" style="width:100%;max-width:560px;margin:0 auto;padding:14px 18px">
+      <i data-icon="search"></i>
+      <span style="flex:1;text-align:start;color:var(--text-4)">جستجو در مستندات… (مثلاً «کلید API»)</span>
+      <span class="kbd">Ctrl K</span>
+    </button>
+    <p class="t-caption" style="margin-top:14px">یا از میان‌بر صفحه‌کلید <span class="kbd">⌘K</span> / <span class="kbd">Ctrl K</span> استفاده کنید</p>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="quickstart-card" data-reveal>
+      <span class="icon-tile" style="width:56px;height:56px;border-radius:16px"><i data-icon="rocket"></i></span>
+      <div class="txt">
+        <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:6px">شروع در ۵ دقیقه</h2>
+        <p style="color:var(--text-2);font-size:var(--fs-sm);line-height:1.9;margin:0">حساب بسازید، کلید API تولید کنید و اولین درخواست را ارسال کنید — با راهنمای گام‌به‌گام.</p>
+        <div class="kbd-strip"><span class="kbd">۱</span><span class="kbd">۲</span><span class="kbd">۳</span><span class="kbd wide">بدون نصب پیش‌نیاز</span></div>
+      </div>
+      <a class="btn btn-primary btn-lg" href="getting-started.html">شروع سریع <i data-icon="arrow-left"></i></a>
+    </div>
+
+    <div class="docs-home-grid mt-32">
+      <div class="docs-cat-card" data-reveal>
+        <span class="icon-tile icon-tile-blue icon-tile-sm" style="margin-top:2px"><i data-icon="rocket"></i></span>
+        <div><h3>شروع کار</h3><p>معرفی، شروع سریع و نصب SDK</p><div class="links"><a href="../docs/getting-started.html">شروع سریع</a><a href="../docs/authentication.html">احراز هویت</a><a href="../docs/sdks.html">نصب SDK</a></div></div>
+      </div><div class="docs-cat-card" data-reveal>
+        <span class="icon-tile icon-tile-green icon-tile-sm" style="margin-top:2px"><i data-icon="lightbulb"></i></span>
+        <div><h3>مفاهیم</h3><p>پروژه‌ها، کلیدها و Webhookها</p><div class="links"><a href="../docs/projects.html">پروژه‌ها</a><a href="../docs/authentication.html#keys">کلیدهای API</a><a href="../docs/webhooks.html">Webhookها</a></div></div>
+      </div><div class="docs-cat-card" data-reveal>
+        <span class="icon-tile icon-tile-violet icon-tile-sm" style="margin-top:2px"><i data-icon="braces"></i></span>
+        <div><h3>مرجع API</h3><p>همه Endpointهای نسخه ۱</p><div class="links"><a href="../docs/api-reference.html">معرفی API</a><a href="../docs/api/users.html">کاربران</a><a href="../docs/api/payments.html">پرداخت‌ها</a></div></div>
+      </div><div class="docs-cat-card" data-reveal>
+        <span class="icon-tile icon-tile-amber icon-tile-sm" style="margin-top:2px"><i data-icon="package"></i></span>
+        <div><h3>SDK رسمی</h3><p>چهار زبان، یک تجربه</p><div class="links"><a href="../docs/sdks.html#js">JavaScript</a><a href="../docs/sdks.html#py">Python</a><a href="../docs/sdks.html#php">PHP و Go</a></div></div>
+      </div><div class="docs-cat-card" data-reveal>
+        <span class="icon-tile icon-tile-cyan icon-tile-sm" style="margin-top:2px"><i data-icon="help-circle"></i></span>
+        <div><h3>راهنما</h3><p>نمونه‌ها، خطاها و محدودیت‌ها</p><div class="links"><a href="../docs/examples.html">نمونه‌ها</a><a href="../docs/errors.html">کدهای خطا</a><a href="../docs/limits.html">محدودیت‌ها</a></div></div>
+      </div><div class="docs-cat-card" data-reveal>
+        <span class="icon-tile icon-tile-red icon-tile-sm" style="margin-top:2px"><i data-icon="headphones"></i></span>
+        <div><h3>پشتیبانی</h3><p>وقتی به کمک نیاز دارید</p><div class="links"><a href="../docs/faq.html">سوالات متداول</a><a href="../docs/../status/index.html">وضعیت سرویس</a><a href="../docs/../pages/contact.html">تماس با ما</a></div></div>
+      </div>
+    </div>
+
+    <div class="sec-head mt-64" data-reveal style="margin-bottom:32px"><h2>جدیدترین مستندات</h2></div>
+    <div class="grid-3" data-reveal>
+      <a class="card card-pad card-hover" href="api/users.html"><span class="method method-post mb-16" style="margin-bottom:12px">POST</span><h3 class="t-h4 mb-8">ساخت کاربر</h3><p class="t-caption">نمونه کامل درخواست، پارامترها و پاسخ</p></a>
+      <a class="card card-pad card-hover" href="webhooks.html"><span class="badge badge-blue mb-16" style="margin-bottom:12px">راهنما</span><h3 class="t-h4 mb-8">اعتبارسنجی Webhook</h3><p class="t-caption">امضای HMAC و بررسی replay</p></a>
+      <a class="card card-pad card-hover" href="errors.html"><span class="badge badge-red mb-16" style="margin-bottom:12px">مرجع</span><h3 class="t-h4 mb-8">کدهای خطا</h3><p class="t-caption">رفع خطاهای 401، 429 و 5xx</p></a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../index.html">
+          <span class="brand-mark"><i data-icon="zap"></i></span>
+          <span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span>
+        </a>
+        <p class="footer-desc">پلتفرم توسعه‌دهنده فارسی برای ساخت، مستندسازی و نظارت بر APIهای محصول شما؛ از استارتاپ تا سازمان.</p>
+        <div class="newsletter">
+          <input class="input" type="email" placeholder="ایمیل شما" aria-label="ایمیل برای خبرنامه">
+          <button class="btn btn-primary btn-sm" data-newsletter type="button">عضویت</button>
+        </div>
+        <div class="footer-status mt-16"><span class="status-ind st-green"><span class="pulse"></span> همه سرویس‌ها فعال</span></div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">محصول</h2>
+        <a href="../pages/features.html">امکانات</a>
+        <a href="../pages/solutions.html">راهکارها</a>
+        <a href="../pages/pricing.html">قیمت‌گذاری</a>
+        <a href="../pages/customers.html">مشتریان</a>
+        <a href="../changelog/index.html">تغییرات</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">مستندات</h2>
+        <a href="../docs/index.html">خانه مستندات</a>
+        <a href="../docs/getting-started.html">شروع سریع</a>
+        <a href="../docs/authentication.html">احراز هویت</a>
+        <a href="../docs/api-reference.html">مرجع API</a>
+        <a href="../docs/sdks.html">SDKها</a>
+        <a href="../docs/faq.html">سوالات متداول</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">توسعه‌دهندگان</h2>
+        <a href="../dashboard/index.html">داشبورد</a>
+        <a href="../dashboard/api-keys.html">کلیدهای API</a>
+        <a href="../dashboard/logs.html">گزارش درخواست‌ها</a>
+        <a href="../status/index.html">وضعیت سرویس</a>
+        <a href="../docs/errors.html">خطاها</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">شرکت</h2>
+        <a href="../pages/about.html">درباره ما</a>
+        <a href="../pages/blog.html">وبلاگ</a>
+        <a href="../pages/contact.html">تماس با ما</a>
+        <a href="../auth/register.html">ایجاد حساب</a>
+        <a href="../auth/login.html">ورود</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ۱۴۰۵ بلو استودیو — Blue Studio. تمامی حقوق محفوظ است.</span>
+      <span class="ltr" style="font-size:.72rem;color:var(--text-4)">Blue Vertex v2.4.1</span>
+      <div class="footer-social">
+        <a href="#" aria-label="گیت‌هاب"><i data-icon="github"></i></a>
+        <a href="#" aria-label="لینکدین"><i data-icon="linkedin"></i></a>
+        <a href="#" aria-label="تلگرام"><i data-icon="send"></i></a>
+        <a href="#" aria-label="ایمیل"><i data-icon="mail"></i></a>
+      </div>
+    </div>
+  </div>
+</footer><div class="search-view" id="docsSearch" role="dialog" aria-modal="true" aria-label="جستجو در مستندات">
+  <div class="search-panel">
+    <div class="search-header">
+      <span style="display:flex;color:var(--text-3)" data-icon="search"></span>
+      <input id="searchInput" placeholder="جستجو در مستندات، API و راهنماها…" aria-label="جستجو در مستندات">
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="search-filters" id="searchFilters">
+      <button class="chip active" data-search-cat="all">همه</button>
+      <button class="chip" data-search-cat="guide">راهنما</button>
+      <button class="chip" data-search-cat="api">API</button>
+      <button class="chip" data-search-cat="sdk">SDK</button>
+      <button class="chip" data-search-cat="faq">سوالات</button>
+    </div>
+    <div class="search-recents" id="searchRecents"></div>
+    <div class="search-results" id="searchResults"></div>
+    <div id="searchEmpty" style="display:none">
+      <div class="search-empty">
+        <span style="display:inline-flex" data-icon="search-x"></span>
+        <p>نتیجه‌ای پیدا نشد. عبارت دیگری را امتحان کنید.</p>
+      </div>
+    </div>
+    <div class="search-foot">
+      <span>برای جستجوی سریع، ⟨Ctrl⟩ + ⟨K⟩ را بزنید</span>
+    </div>
+  </div>
+</div><script>
+window.BV_DOCS = [
+  {title:'شروع سریع', url:'../docs/getting-started.html', cat:'guide', catLabel:'راهنما', icon:'rocket', desc:'اولین درخواست API در کمتر از ۵ دقیقه'},
+  {title:'احراز هویت', url:'../docs/authentication.html', cat:'guide', catLabel:'راهنما', icon:'shield-check', desc:'تولید کلید API و ارسال هدر Authorization'},
+  {title:'مرجع کامل API', url:'../docs/api-reference.html', cat:'api', catLabel:'API', icon:'braces', desc:'پایان‌پوینت‌های /v1 با نمونه درخواست و پاسخ'},
+  {title:'پایان‌پوینت کاربران', url:'../docs/api/users.html', cat:'api', catLabel:'API', icon:'users', desc:'لیست، ساخت و ویرایش کاربران'},
+  {title:'پایان‌پوینت پروژه‌ها', url:'../docs/api/projects.html', cat:'api', catLabel:'API', icon:'folder-kanban', desc:'مدیریت پروژه‌ها و اعضای تیم'},
+  {title:'پایان‌پوینت پرداخت‌ها', url:'../docs/api/payments.html', cat:'api', catLabel:'API', icon:'credit-card', desc:'ایجاد و استعلام پرداخت'},
+  {title:'پایان‌پوینت فایل‌ها', url:'../docs/api/files.html', cat:'api', catLabel:'API', icon:'file-text', desc:'بارگذاری و مدیریت فایل'},
+  {title:'SDK رسمی', url:'../docs/sdks.html', cat:'sdk', catLabel:'SDK', icon:'package', desc:'JavaScript ،Python ،PHP و Go'},
+  {title:'نمونه‌های کاربردی', url:'../docs/examples.html', cat:'guide', catLabel:'راهنما', icon:'code-2', desc:'سناریوهای آماده برای کپی'},
+  {title:'کدهای خطا', url:'../docs/errors.html', cat:'guide', catLabel:'راهنما', icon:'alert-triangle', desc:'فهرست کامل خطاها و راه‌حل'},
+  {title:'محدودیت‌ها و نرخ', url:'../docs/limits.html', cat:'guide', catLabel:'راهنما', icon:'gauge', desc:'محدودیت نرخ درخواست و سهمیه هر پلن'},
+  {title:'سوالات متداول', url:'../docs/faq.html', cat:'faq', catLabel:'سوالات', icon:'help-circle', desc:'پاسخ پرسش‌های رایج توسعه‌دهندگان'},
+  {title:'نصب', url:'../docs/getting-started.html#install', cat:'guide', catLabel:'راهنما', icon:'download', desc:'نصب SDK با npm و pip'},
+  {title:'کلیدهای API', url:'../docs/authentication.html#keys', cat:'guide', catLabel:'راهنما', icon:'key-round', desc:'ساخت، چرخش و باطل‌سازی کلید'},
+  {title:'Webhookها', url:'../docs/webhooks.html', cat:'guide', catLabel:'راهنما', icon:'webhook', desc:'رویدادها، امضا و تحویل مجدد'},
+  {title:'خانه مستندات', url:'../docs/index.html', cat:'guide', catLabel:'راهنما', icon:'book-open', desc:'نقشه راه مستندات'}
+];
+</script><div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/vendor/prism-core.min.js"></script>
+<script src="../assets/js/vendor/prism-clike.min.js"></script>
+<script src="../assets/js/vendor/prism-javascript.min.js"></script>
+<script src="../assets/js/vendor/prism-json.min.js"></script>
+<script src="../assets/js/vendor/prism-bash.min.js"></script>
+<script src="../assets/js/vendor/prism-python.min.js"></script>
+<script src="../assets/js/vendor/prism-markup.min.js"></script>
+<script src="../assets/js/vendor/prism-markup-templating.min.js"></script>
+<script src="../assets/js/vendor/prism-php.min.js"></script>
+<script src="../assets/js/vendor/prism-go.min.js"></script>
+<script src="../assets/js/vendor/prism-css.min.js"></script>
+<script src="../assets/js/vendor/prism-yaml.min.js"></script>
+<script src="../assets/js/vendor/prism-line-numbers.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body></html>

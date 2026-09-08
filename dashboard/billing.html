@@ -1,0 +1,250 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صورتحساب | داشبورد بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="داشبورد توسعه‌دهنده بلو ورتکس — صورتحساب">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="صورتحساب | داشبورد بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="داشبورد توسعه‌دهنده بلو ورتکس — صورتحساب">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise">
+<div class="dash-shell">
+<aside class="dash-side" id="dashSide">
+  <div class="side-brand">
+    <a class="brand" href="../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>DEVELOPER CONSOLE</small></span></a>
+    <button class="topbar-btn" style="margin-inline-start:auto" data-side-close aria-label="بستن منو" onclick="document.getElementById('dashSide').classList.remove('open');document.getElementById('sideBackdrop').classList.remove('show')"><i data-icon="x"></i></button>
+  </div>
+  <div class="dropdown side-ws" data-dd>
+    <button type="button" style="width:100%;display:flex;align-items:center;gap:10px;text-align:start" data-dd-toggle>
+      <span class="ws-avatar">ا</span>
+      <span style="flex:1;min-width:0"><span class="ws-name">ابرینو</span><span class="ws-plan" style="display:block">پلن رشد</span></span>
+      <span data-icon="chevrons-up-down" style="display:flex"></span>
+    </button>
+    <div class="ws-menu">
+      <div class="menu-title">فضاهای کاری</div>
+      <button class="menu-item" type="button"><span class="ws-avatar">ا</span>ابرینو<span class="badge badge-blue" style="margin-inline-start:auto">فعال</span></button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#34D399,#065F46)">د</span>داده‌پرداز</button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#A78BFA,#4C1D95)">ه</span>هوش‌یار</button>
+      <div class="menu-sep"></div>
+      <button class="menu-item" type="button"><span data-icon="plus" style="display:flex"></span>ایجاد فضای کاری جدید</button>
+    </div>
+  </div>
+  <nav class="side-nav" aria-label="منوی داشبورد"><div class="side-section-title">پیشخوان</div><a class="side-link" href="../dashboard/index.html"><span data-icon="layout-dashboard"></span>نمای کلی</a><a class="side-link" href="../dashboard/api-keys.html"><span data-icon="key-round"></span>کلیدهای API</a><a class="side-link" href="../dashboard/usage.html"><span data-icon="gauge"></span>مصرف</a><a class="side-link" href="../dashboard/analytics.html"><span data-icon="bar-chart-3"></span>تحلیل‌ها</a><a class="side-link" href="../dashboard/logs.html"><span data-icon="scroll-text"></span>گزارش درخواست‌ها<span class="side-badge red">۱۲</span></a><div class="side-section-title">ساخت و توسعه</div><a class="side-link" href="../dashboard/endpoints.html"><span data-icon="braces"></span>Endpointها</a><a class="side-link" href="../dashboard/sdk.html"><span data-icon="package"></span>SDKها<span class="side-badge blue">۳</span></a><div class="side-section-title">مدیریت</div><a class="side-link" href="../dashboard/team.html"><span data-icon="users"></span>تیم</a><a class="side-link active" href="../dashboard/billing.html"><span data-icon="credit-card"></span>صورتحساب</a><a class="side-link" href="../dashboard/notifications.html"><span data-icon="bell"></span>اعلان‌ها<span class="side-badge blue">۳</span></a><a class="side-link" href="../dashboard/settings.html"><span data-icon="settings"></span>تنظیمات</a></nav>
+  <div class="side-foot">
+    <div class="side-upgrade">
+      <b><i data-icon="sparkles"></i> ارتقای پلن</b>
+      <p>۸۲٪ از سهمیه درخواست ماهانه مصرف شده است.</p>
+      <div class="progress amber"><i style="width:82%" id="sideQuota"></i></div>
+      <a class="btn btn-primary btn-sm btn-block mt-8" href="billing.html">ارتقا به سازمانی</a>
+    </div>
+  </div>
+</aside>
+<div class="side-backdrop" id="sideBackdrop"></div><header class="dash-topbar">
+  <button class="topbar-btn side-toggle" data-side-open aria-label="باز کردن منو"><i data-icon="panel-right"></i></button>
+  <div class="topbar-breadcrumb">
+    <span>ابرینو</span><span class="sep"><i data-icon="chevron-left"></i></span><b id="crumbHere">صورتحساب</b>
+  </div>
+  <div style="flex:1"></div>
+  <button class="topbar-btn theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+  <button class="topbar-search" data-palette-open aria-label="جستجوی سریع">
+    <i data-icon="search"></i>
+    <span>جستجوی سریع…</span>
+    <span class="kbd">Ctrl K</span>
+  </button>
+  <div class="dropdown" data-dd>
+    <button class="topbar-btn" data-dd-toggle aria-label="اعلان‌ها"><i data-icon="bell"></i><span class="notif-dot"></span></button>
+    <div class="dropdown-menu" style="width:320px">
+      <div class="menu-title">اعلان‌ها</div>
+      <a class="menu-item" href="notifications.html"><span style="flex:1;min-width:0"><b style="color:var(--text-1);font-size:var(--fs-caption)">۳ اعلان جدید</b><span style="display:block;font-size:.66rem;color:var(--text-4)">مشاهده همه اعلان‌ها</span></span></a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="notifications.html"><i data-icon="shield-alert" style="color:var(--amber)"></i>کلید API جدید ساخته شد</a>
+      <a class="menu-item" href="billing.html"><i data-icon="credit-card"></i>صورتحساب مرداد صادر شد</a>
+    </div>
+  </div>
+  <div class="dropdown" data-dd>
+    <button class="topbar-user" data-dd-toggle aria-label="پروفایل کاربر">
+      <span class="avatar avatar-sm">س</span>
+      <span class="u-info"><span class="u-name">سارا احمدی</span><span class="u-mail">sara@abrino.ir</span></span>
+      <i data-icon="chevron-down" class="chev"></i>
+    </button>
+    <div class="dropdown-menu">
+      <div class="menu-title">sara@abrino.ir</div>
+      <a class="menu-item" href="settings.html"><i data-icon="user"></i>پروفایل</a>
+      <a class="menu-item" href="settings.html#panel-security"><i data-icon="shield"></i>امنیت و ورود</a>
+      <a class="menu-item" href="settings.html"><i data-icon="palette"></i>ظاهر</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="../docs/index.html"><i data-icon="book-open"></i>مستندات</a>
+      <a class="menu-item" href="../status/index.html"><i data-icon="activity"></i>وضعیت سرویس</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item danger" href="../index.html"><i data-icon="log-out"></i>خروج از حساب</a>
+    </div>
+  </div>
+</header>
+  <main class="dash-main">
+    <div class="dash-content">
+      <div class="dash-head">
+        <div>
+          <h1 style="margin:0">صورتحساب</h1>
+          <p class="greet-sub" style="margin:0;margin-top:4px">پلن، پرداخت‌ها و فاکتورهای فضای کاری ابرینو — به تومان</p>
+        </div>
+        <div class="dash-actions" data-dash-actions><span class="badge badge-blue" id="planBadge">پلن رشد</span><button class="btn btn-primary btn-sm" data-upgrade-panel><i data-icon="arrow-up-circle"></i> ارتقا</button></div>
+      </div>
+      
+    <div class="plan-card">
+      <div class="flex-between" style="flex-wrap:wrap;gap:20px;position:relative;z-index:2">
+        <div>
+          <span class="badge badge-blue">پلن فعال: رشد</span>
+          <h2 class="t-h2 mt-16" style="font-size:1.5rem">۳٬۹۰۰٬۰۰۰ تومان <span class="t-caption" style="font-weight:500">/ ماهانه</span></h2>
+          <p class="t-caption mt-8" style="max-width:46ch">دوره فعلی: ۱ مرداد تا ۱ شهریور ۱۴۰۵ · تمدید خودکار فعال است. <a class="link" href="#" style="font-size:inherit">غیرفعال‌سازی</a></p>
+        </div>
+        <div style="text-align:end">
+          <p class="t-caption" style="margin-bottom:8px">پرداخت بعدی: <b class="text-1">۱ شهریور ۱۴۰۵</b></p>
+          <div class="flex gap-8" style="justify-content:flex-end;flex-wrap:wrap">
+            <button class="btn btn-outline" data-upgrade-panel><i data-icon="arrow-up-circle"></i> تغییر پلن</button>
+            <button class="btn btn-ghost" data-invoice-demo><i data-icon="receipt"></i> فاکتور این ماه</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan-usage-summary">
+      <div class="quota-card"><div class="quota-head"><b><i data-icon="activity"></i>درخواست</b></div><div class="quota-nums"><b class="fa-num">۳٫۴M</b><span>/ ۵M</span></div><div class="progress"><i style="width:68%"></i></div><p class="t-caption mt-8">هزینه تخمینی ماه: ۳٬۹۰۰٬۰۰۰ تومان</p></div>
+      <div class="quota-card"><div class="quota-head"><b><i data-icon="cpu"></i>توکن</b></div><div class="quota-nums"><b class="fa-num">۸۲۰K</b><span>/ ۲M</span></div><div class="progress green"><i style="width:41%"></i></div><p class="t-caption mt-8">در پلن رشد لحاظ شده</p></div>
+      <div class="quota-card"><div class="quota-head"><b><i data-icon="database"></i>ذخیره‌سازی</b></div><div class="quota-nums"><b class="fa-num">۴۶GB</b><span>/ ۲۰۰GB</span></div><div class="progress"><i style="width:23%"></i></div><p class="t-caption mt-8">هزینه: لحاظ‌شده</p></div>
+    </div>
+
+    <div class="bill-grid">
+      <div class="chart-card">
+        <div class="chart-card-head"><div><h2>صورتحساب‌ها</h2><p>دانلود فاکتور رسمی به تومان — با تاریخ شمسی</p></div></div>
+        <div class="table-wrap" style="border:none;border-radius:0">
+          <table class="table">
+            <thead><tr><th>شماره</th><th>دوره</th><th>مبلغ</th><th>وضعیت</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline text-code">INV-1405-008</code></td><td class="fa-num">مرداد ۱۴۰۵</td><td class="fa-num">۴٬۰۴۷٬۰۰۰</td><td><span class="badge badge-green">پرداخت‌شده</span></td><td><button class="btn btn-ghost btn-sm" data-invoice="INV-1405-008"><i data-icon="download"></i> فاکتور</button></td></tr>
+              <tr><td><code class="inline text-code">INV-1405-007</code></td><td class="fa-num">تیر ۱۴۰۵</td><td class="fa-num">۳٬۹۸۱٬۰۰۰</td><td><span class="badge badge-green">پرداخت‌شده</span></td><td><button class="btn btn-ghost btn-sm" data-invoice="INV-1405-007"><i data-icon="download"></i> فاکتور</button></td></tr>
+              <tr><td><code class="inline text-code">INV-1405-006</code></td><td class="fa-num">خرداد ۱۴۰۵</td><td class="fa-num">۳٬۹۰۰٬۰۰۰</td><td><span class="badge badge-green">پرداخت‌شده</span></td><td><button class="btn btn-ghost btn-sm" data-invoice="INV-1405-006"><i data-icon="download"></i> فاکتور</button></td></tr>
+              <tr><td><code class="inline text-code">INV-1405-005</code></td><td class="fa-num">اردیبهشت ۱۴۰۵</td><td class="fa-num">۳٬۷۲۰٬۰۰۰</td><td><span class="badge badge-green">پرداخت‌شده</span></td><td><button class="btn btn-ghost btn-sm" data-invoice="INV-1405-005"><i data-icon="download"></i> فاکتور</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="chart-card" style="margin-bottom:16px">
+          <div class="chart-card-head"><div><h2>روش پرداخت</h2><p>پرداخت ریالی — کارت شتاب</p></div></div>
+          <div class="payment-method">
+            <span class="pm-icon"><i data-icon="credit-card"></i></span>
+            <div style="flex:1"><b class="t-sm">کارت به نام سارا احمدی</b><p class="t-caption ltr" dir="ltr" style="margin-top:2px">•••• ۴۴۲۱ — شتاب</p></div>
+            <button class="btn btn-ghost btn-sm" id="pmChange">تغییر</button>
+          </div>
+          <button class="btn btn-outline btn-block btn-sm" id="pmAdd"><i data-icon="plus"></i> افزودن روش پرداخت</button>
+        </div>
+        <div class="card card-pad" style="padding:18px 20px">
+          <div class="flex-between mb-16"><span class="t-caption">مصرف این دوره</span><b class="t-sm fa-num">۷۸٪</b></div>
+          <div class="progress amber" style="margin-bottom:14px"><i style="width:78%"></i></div>
+          <p class="t-caption">در این نرخ، دوره در <b class="text-1">۲۵ شهریور</b> تمام می‌شود. پلن سازمانی را در نظر بگیرید.</p>
+          <button class="btn btn-primary btn-sm btn-block mt-16" data-upgrade-panel>مشاوره ارتقا</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- upgrade modal -->
+    <div class="modal-backdrop" id="upgradeModal" role="dialog" aria-modal="true" aria-label="تغییر پلن">
+      <div class="modal modal-lg">
+        <div class="modal-head"><div><h2>تغییر پلن</h2><p>ارتقا فوری با محاسبه روزشمار؛ کاهش پلن از دوره بعد.</p></div>
+          <button class="modal-close" data-modal-close="upgradeModal" aria-label="بستن"><i data-icon="x"></i></button></div>
+        <div class="modal-body">
+          <div class="grid-3" style="gap:12px;margin-bottom:18px">
+            <div class="price-card" style="padding:18px"><span class="price-name">توسعه‌دهنده</span><div class="price-amount"><b class="fa-num" style="font-size:1.3rem">۹۹۰٬۰۰۰</b><span>تومان/ماه</span></div><a class="btn btn-outline btn-sm btn-block mt-8" data-pick-plan="توسعه‌دهنده">انتخاب</a></div>
+            <div class="price-card popular" style="padding:18px"><span class="popular-tag" style="top:-9px">پلن فعلی</span><span class="price-name">رشد</span><div class="price-amount"><b class="fa-num" style="font-size:1.3rem">۳٬۹۰۰٬۰۰۰</b><span>تومان/ماه</span></div><a class="btn btn-secondary btn-sm btn-block mt-8" disabled>فعال</a></div>
+            <div class="price-card" style="padding:18px"><span class="price-name">سازمانی</span><div class="price-amount"><b>توافقی</b></div><a class="btn btn-soft btn-sm btn-block mt-8" data-pick-plan="سازمانی">گفتگو با فروش</a></div>
+          </div>
+          <div class="security-note"><i data-icon="info"></i><span>در نسخه دمو، انتخاب پلن فقط نمایش داده می‌شود — هیچ پرداختی انجام نمی‌شود و هیچ داده‌ای ارسال نمی‌گردد.</span></div>
+        </div>
+        <div class="modal-foot"><button class="btn btn-ghost" data-modal-close="upgradeModal">بستن</button></div>
+      </div>
+    </div>
+
+    </div>
+  </main>
+</div>
+<div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('[data-upgrade-panel]').forEach(function(b){
+    b.addEventListener('click', function(){ if (window.BV) BV.openModal('upgradeModal'); });
+  });
+  document.querySelectorAll('[data-pick-plan]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('success', b.getAttribute('data-pick-plan'), 'درخواست شما ثبت شد؛ این یک نسخه دمو است.');
+    });
+  });
+  document.querySelectorAll('[data-invoice], [data-invoice-demo]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('success', 'فاکتور آماده شد', 'فایل PDF فاکتور دانلود شد (نسخه دمو).');
+    });
+  });
+  document.getElementById('pmChange').addEventListener('click', function(){
+    if (window.BV) BV.toast('info', 'تغییر کارت', 'در نسخه دمو، مدیریت کارت شبیه‌سازی می‌شود.');
+  });
+  document.getElementById('pmAdd').addEventListener('click', function(){
+    if (window.BV) BV.toast('info', 'روش پرداخت جدید', 'روش‌های افزودن: کارت شتاب، حواله بانکی (دمو).');
+  });
+})();
+</script>
+<script>
+(function(){
+  var now = new Date();
+  var el = document.getElementById('jalaliToday');
+  if (el && window.BV) el.textContent = BV.faDateFull(now);
+})();
+</script>
+</body></html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کاربران | مرجع API بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="Endpointهای کاربران: لیست، ساخت، دریافت، ویرایش و حذف — با پارامترها، نمونه کد و پاسخ.">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/docs/api/users.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="کاربران | مرجع API بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="Endpointهای کاربران: لیست، ساخت، دریافت، ویرایش و حذف — با پارامترها، نمونه کد و پاسخ.">
+<meta property="og:url" content="https://bluevertex.ir/docs/api/users.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/docs.css">
+<link rel="stylesheet" href="../../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise">
+<div class="announce">
+  <span class="badge badge-blue">جدید</span>
+  <span>نسخه ۲٫۴٫۰ منتشر شد؛ SDK پایتون با پشتیبانی کامل از تایپ منتشر شد.</span>
+  <a href="../../changelog/index.html">مشاهده تغییرات <span data-icon="chevron-left"></span></a>
+</div>
+<header class="navbar">
+  <div class="container-wide nav-inner">
+    <a class="brand" href="../../index.html" aria-label="بلو ورتکس">
+      <span class="brand-mark"><i data-icon="zap"></i></span>
+      <span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span>
+    </a>
+    <nav class="nav-links" aria-label="ناوبری اصلی"><a class="nav-link" href="../../index.html">خانه</a><div class="nav-item dropdown" data-dd><a class="nav-link" href="#" data-dd-toggle>محصولات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../../pages/features.html"><span class="icon-tile icon-tile-sm"><i data-icon="sparkles"></i></span><span><b class="mega-title">امکانات</b><p>هر آنچه برای ساخت محصول API نیاز دارید</p></span></a><a class="mega-item" href="../../pages/solutions.html"><span class="icon-tile icon-tile-sm"><i data-icon="layers"></i></span><span><b class="mega-title">راهکارها</b><p>راهکار برای استارتاپ و سازمان</p></span></a><a class="mega-item" href="../../pages/pricing.html"><span class="icon-tile icon-tile-sm"><i data-icon="credit-card"></i></span><span><b class="mega-title">قیمت‌گذاری</b><p>پلن شفاف و منعطف به تومان</p></span></a><a class="mega-item" href="../../pages/customers.html"><span class="icon-tile icon-tile-sm"><i data-icon="users"></i></span><span><b class="mega-title">مشتریان</b><p>داستان شرکت‌هایی که با ما ساختند</p></span></a><a class="mega-item" href="../../pages/about.html"><span class="icon-tile icon-tile-sm"><i data-icon="building-2"></i></span><span><b class="mega-title">درباره ما</b><p>تیم و فلسفه بلو استودیو</p></span></a><a class="mega-item" href="../../pages/contact.html"><span class="icon-tile icon-tile-sm"><i data-icon="mail"></i></span><span><b class="mega-title">تماس با ما</b><p>گفتگو با تیم فروش</p></span></a></div></div><div class="nav-item dropdown" data-dd><a class="nav-link active" href="#" data-dd-toggle>مستندات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../../docs/getting-started.html"><span class="icon-tile icon-tile-sm"><i data-icon="rocket"></i></span><span><b class="mega-title">شروع سریع</b><p>اولین درخواست در ۵ دقیقه</p></span></a><a class="mega-item" href="../../docs/authentication.html"><span class="icon-tile icon-tile-sm"><i data-icon="shield-check"></i></span><span><b class="mega-title">احراز هویت</b><p>کلید API و مدیریت نشست</p></span></a><a class="mega-item" href="../../docs/api-reference.html"><span class="icon-tile icon-tile-sm"><i data-icon="braces"></i></span><span><b class="mega-title">مرجع کامل API</b><p>پایان‌پوینت‌های /v1</p></span></a><a class="mega-item" href="../../docs/sdks.html"><span class="icon-tile icon-tile-sm"><i data-icon="package"></i></span><span><b class="mega-title">SDK رسمی</b><p>جاوااسکریپت، پایتون، PHP، گو</p></span></a><a class="mega-item" href="../../docs/examples.html"><span class="icon-tile icon-tile-sm"><i data-icon="code-2"></i></span><span><b class="mega-title">نمونه‌ها</b><p>کد آماده برای کپی</p></span></a><a class="mega-item" href="../../docs/errors.html"><span class="icon-tile icon-tile-sm"><i data-icon="alert-triangle"></i></span><span><b class="mega-title">خطاها و کدها</b><p>رفع خطای رایج</p></span></a></div></div><a class="nav-link" href="../../changelog/index.html">تغییرات</a><a class="nav-link" href="../../pages/blog.html">وبلاگ</a></nav>
+    <div class="nav-cta">
+      <button class="btn-icon theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+      <a class="btn btn-ghost nav-keep" href="../../auth/login.html">ورود</a>
+      <a class="btn btn-primary nav-keep" href="../../auth/register.html">شروع کنید</a>
+      <button class="nav-burger" data-mobile-open="mobileMenu" aria-label="باز کردن منو"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="منوی موبایل">
+  <div class="mobile-panel">
+    <div class="flex-between">
+      <a class="brand" href="../../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span></a>
+      <button class="modal-close" data-mobile-close aria-label="بستن"><i data-icon="x"></i></button>
+    </div>
+    <div class="mobile-theme-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 22px 10px">
+      <span class="t-caption" style="color:var(--text-3)">حالت نمایش</span>
+      <button class="btn btn-outline btn-sm theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش"><i data-icon="sun"></i></button>
+    </div>
+    <nav class="mobile-links" aria-label="منوی موبایل">
+      <a class="mobile-link" href="../../index.html">خانه</a>
+      <a class="mobile-link" href="../../pages/features.html">امکانات</a>
+      <a class="mobile-link" href="../../pages/solutions.html">راهکارها</a>
+      <a class="mobile-link" href="../../pages/pricing.html">قیمت‌گذاری</a>
+      <a class="mobile-link" href="../../docs/index.html">مستندات</a>
+      <a class="mobile-link" href="../../changelog/index.html">تغییرات</a>
+      <a class="mobile-link" href="../../pages/blog.html">وبلاگ</a>
+      <a class="mobile-link" href="../../status/index.html">وضعیت سرویس</a>
+      <a class="mobile-link" href="../../auth/login.html">ورود به حساب</a>
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn btn-primary btn-block" href="../../auth/register.html">شروع کنید — رایگان</a>
+      <a class="btn btn-secondary btn-block" href="../../auth/login.html">ورود</a>
+    </div>
+  </div>
+</div>
+<div class="api-shell api-shell-notoc">
+  <div class="api-side"><div class="docs-group"><div class="docs-group-title"><i data-icon="braces"></i>مرجع API</div></div><div class="docs-group" style="padding-top:14px"><div class="docs-group-title">شروع</div><a class="docs-link-sub" href="../../docs/api-reference.html"><span class="method method-get">get</span><span class="api-path">مرجع API</span></a></div><div class="docs-group" style="padding-top:14px"><div class="docs-group-title">کاربران</div><a class="docs-link-sub" href="../../docs/api/users.html"><span class="method method-get">get</span><span class="api-path">/v1/users</span></a><a class="docs-link-sub" href="../../docs/api/users.html#create"><span class="method method-post">post</span><span class="api-path">/v1/users</span></a><a class="docs-link-sub" href="../../docs/api/users.html#show"><span class="method method-get">get</span><span class="api-path">/v1/users/:id</span></a><a class="docs-link-sub" href="../../docs/api/users.html#delete"><span class="method method-delete">delete</span><span class="api-path">/v1/users/:id</span></a></div><div class="docs-group" style="padding-top:14px"><div class="docs-group-title">پروژه‌ها</div><a class="docs-link-sub" href="../../docs/api/projects.html"><span class="method method-get">get</span><span class="api-path">/v1/projects</span></a><a class="docs-link-sub" href="../../docs/api/projects.html#create"><span class="method method-post">post</span><span class="api-path">/v1/projects</span></a></div><div class="docs-group" style="padding-top:14px"><div class="docs-group-title">پرداخت‌ها</div><a class="docs-link-sub" href="../../docs/api/payments.html"><span class="method method-post">post</span><span class="api-path">/v1/payments</span></a><a class="docs-link-sub" href="../../docs/api/payments.html#show"><span class="method method-get">get</span><span class="api-path">/v1/payments/:id</span></a><a class="docs-link-sub" href="../../docs/api/payments.html#list"><span class="method method-get">get</span><span class="api-path">/v1/payments</span></a></div><div class="docs-group" style="padding-top:14px"><div class="docs-group-title">فایل‌ها</div><a class="docs-link-sub" href="../../docs/api/files.html"><span class="method method-post">post</span><span class="api-path">/v1/files</span></a><a class="docs-link-sub" href="../../docs/api/files.html#show"><span class="method method-get">get</span><span class="api-path">/v1/files/:id</span></a></div><div class="docs-group" style="padding-top:14px"><div class="docs-group-title">عمومی</div><a class="docs-link " href="../../docs/api-reference.html">نمای کلی</a><a class="docs-link" href="../../docs/errors.html">کدهای خطا</a><a class="docs-link" href="../../docs/authentication.html">احراز هویت</a></div></div>
+  <main class="api-main">
+    <div class="docs-search-sticky">
+      <button class="docs-searchbox w-full" data-search-open aria-label="جستجو در مستندات" style="width:100%">
+        <i data-icon="search"></i>
+        <span style="color:var(--text-4);font-size:var(--fs-sm)">جستجو در مستندات، API و راهنماها…</span>
+        <span class="kbd">Ctrl K</span>
+      </button>
+    </div>
+    <nav class="breadcrumb" aria-label="مسیر صفحه">
+      <a href="../../docs/index.html">مستندات</a><span class="sep"><i data-icon="chevron-left"></i></span>
+      <span class="current">مدل کاربر</span>
+    </nav>
+    <div class="doc-article">
+    
+<h1>کاربران</h1>
+<p class="doc-desc">منبع <code class="inline">users</code> برای مدیریت کاربران نهایی محصول شماست — نه اعضای تیم. برای هر کاربر، مواردی مثل شناسه، نقش و تاریخ ثبت ذخیره می‌شود.</p>
+<div class="doc-updated"><i data-icon="clock"></i> نسخه v1 · آخرین به‌روزرسانی: ۲۸ مرداد ۱۴۰۵</div>
+
+<h2 id="object"><span class="hash">#</span>مدل کاربر</h2>
+<div data-code-tabs><div class="code-tabs"><button class="code-tab active" data-lang="json">json</button><button class="code-tab" data-lang="typescript">typescript</button></div><div class="code-tab-panel active" data-lang-panel="json"><div class="code-block"><div class="code-head"><span class="code-lang">json</span><button class="code-copy" data-copy-target="#cb_0" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_0" class="line-numbers"><code class="language-json">{
+  "id": "usr_8f2k1",
+  "name": "سارا احمدی",
+  "email": "sara@abrino.ir",
+  "role": "developer",
+  "status": "active",
+  "created_at": "2026-08-02T10:14:22Z"
+}</code></pre></div></div><div class="code-tab-panel" data-lang-panel="typescript"><div class="code-block"><div class="code-head"><span class="code-lang">typescript</span><button class="code-copy" data-copy-target="#cb_1" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_1" class="line-numbers"><code class="language-typescript">interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: 'developer' | 'admin' | 'viewer';
+  status: 'active' | 'suspended';
+  created_at: string;
+}</code></pre></div></div></div>
+<h2 id="list"><span class="hash">#</span>لیست کاربران</h2>
+<div class="endpoint-card" id="v1_users">
+  <div class="ep-line"><span class="method method-get">GET</span><span class="ep-url">/v1/users</span></div>
+  <p class="ep-desc">فهرست همه کاربران با فیلتر و صفحه‌بندی.</p>
+  
+</div>
+<div class="table-wrap" style="margin:16px 0"><table class="table param-table">
+  <thead><tr><th>پارامتر</th><th>نوع</th><th>وضعیت</th><th>توضیح</th></tr></thead>
+  <tbody><tr><td><code class="inline">page</code></td><td><span class="t-caption ltr">number</span></td><td><span class="param-optional">اختیاری</span></td><td>شماره صفحه — پیش‌فرض ۱</td></tr><tr><td><code class="inline">limit</code></td><td><span class="t-caption ltr">number</span></td><td><span class="param-optional">اختیاری</span></td><td>تعداد در هر صفحه، حداکثر ۱۰۰ — پیش‌فرض ۲۰</td></tr><tr><td><code class="inline">role</code></td><td><span class="t-caption ltr">enum</span></td><td><span class="param-optional">اختیاری</span></td><td>فیلتر نقش: <code class="inline">developer</code> | <code class="inline">admin</code> | <code class="inline">viewer</code></td></tr><tr><td><code class="inline">status</code></td><td><span class="t-caption ltr">enum</span></td><td><span class="param-optional">اختیاری</span></td><td>فیلتر وضعیت: <code class="inline">active</code> | <code class="inline">suspended</code></td></tr><tr><td><code class="inline">search</code></td><td><span class="t-caption ltr">string</span></td><td><span class="param-optional">اختیاری</span></td><td>جستجوی نام یا ایمیل (حداقل ۲ کاراکتر)</td></tr></tbody></table></div>
+<div class="callout"><b class="icon-title"><i data-icon="info"></i> نکته</b><p>فیلترها با هم ترکیب می‌شوند (<code class="inline">AND</code>). برای جستجوی پیشرفته از پارامتر <code class="inline">search</code> استفاده کنید.</p></div>
+
+<h2 id="create"><span class="hash">#</span>ساخت کاربر</h2>
+<div class="endpoint-card" id="v1_users">
+  <div class="ep-line"><span class="method method-post">POST</span><span class="ep-url">/v1/users</span></div>
+  <p class="ep-desc">یک کاربر جدید می‌سازد و آن را با کد <code class="inline">201</code> برمی‌گرداند.</p>
+  
+</div>
+<div class="table-wrap" style="margin:16px 0"><table class="table param-table">
+  <thead><tr><th>پارامتر</th><th>نوع</th><th>وضعیت</th><th>توضیح</th></tr></thead>
+  <tbody><tr><td><code class="inline">name</code></td><td><span class="t-caption ltr">string</span></td><td><span class="param-required">الزامی</span></td><td>نام کامل کاربر — ۲ تا ۱۲۰ کاراکتر</td></tr><tr><td><code class="inline">email</code></td><td><span class="t-caption ltr">email</span></td><td><span class="param-required">الزامی</span></td><td>ایمیل یکتا — در صورت تکرار خطای <code class="inline">already_exists</code></td></tr><tr><td><code class="inline">role</code></td><td><span class="t-caption ltr">enum</span></td><td><span class="param-optional">اختیاری</span></td><td>نقش کاربر — پیش‌فرض <code class="inline">developer</code></td></tr><tr><td><code class="inline">metadata</code></td><td><span class="t-caption ltr">object</span></td><td><span class="param-optional">اختیاری</span></td><td>داده دلخواه (JSON) تا ۱۰ کیلوبایت</td></tr></tbody></table></div>
+<div data-code-tabs><div class="code-tabs"><button class="code-tab active" data-lang="cURL">cURL</button><button class="code-tab" data-lang="JavaScript">JavaScript</button><button class="code-tab" data-lang="Python">Python</button><button class="code-tab" data-lang="PHP">PHP</button><button class="code-tab" data-lang="Go">Go</button></div><div class="code-tab-panel active" data-lang-panel="cURL"><div class="code-block"><div class="code-head"><span class="code-lang">cURL</span><button class="code-copy" data-copy-target="#cb_0" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_0" class="line-numbers"><code class="language-bash">curl -X POST https://api.bluevertex.ir/v1/users \
+  -H "Authorization: Bearer $BV_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "سارا احمدی",
+    "email": "sara@abrino.ir",
+    "role": "developer"
+  }' </code></pre></div></div><div class="code-tab-panel" data-lang-panel="JavaScript"><div class="code-block"><div class="code-head"><span class="code-lang">JavaScript</span><button class="code-copy" data-copy-target="#cb_1" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_1" class="line-numbers"><code class="language-javascript">const { data } = await bv.users.create({
+  name: 'سارا احمدی',
+  email: 'sara@abrino.ir',
+  role: 'developer',
+});
+console.log(data.id); // usr_8f2k1</code></pre></div></div><div class="code-tab-panel" data-lang-panel="Python"><div class="code-block"><div class="code-head"><span class="code-lang">Python</span><button class="code-copy" data-copy-target="#cb_2" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_2" class="line-numbers"><code class="language-python">user = bv.users.create(
+    name="سارا احمدی",
+    email="sara@abrino.ir",
+    role="developer",
+)
+print(user.id)  # usr_8f2k1</code></pre></div></div><div class="code-tab-panel" data-lang-panel="PHP"><div class="code-block"><div class="code-head"><span class="code-lang">PHP</span><button class="code-copy" data-copy-target="#cb_3" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_3" class="line-numbers"><code class="language-php">$user = $bv->users->create([
+    'name' => 'سارا احمدی',
+    'email' => 'sara@abrino.ir',
+]);</code></pre></div></div><div class="code-tab-panel" data-lang-panel="Go"><div class="code-block"><div class="code-head"><span class="code-lang">Go</span><button class="code-copy" data-copy-target="#cb_4" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_4" class="line-numbers"><code class="language-go">user, err := client.Users.Create(ctx, bluevertex.CreateUser{
+  Name: "سارا احمدی", Email: "sara@abrino.ir",
+})</code></pre></div></div></div>
+<div class="rr" id="expRR" data-tabs-scope>
+  <div class="rr-tabs" data-tabs>
+    <button class="rr-tab active" data-tab="req"><i data-icon="arrow-up-circle"></i> درخواست</button>
+    <button class="rr-tab" data-tab="res"><i data-icon="arrow-down-circle"></i> پاسخ</button>
+    <button class="rr-tab" data-tab="headers"><i data-icon="list"></i> هدرها</button>
+  </div>
+  <div class="rr-panel active" data-panel="req"><div class="code-block"><pre class="line-numbers" style="margin:0;background:transparent;border:none"><code class="language-json">{
+  "name": "سارا احمدی",
+  "email": "sara@abrino.ir",
+  "role": "developer"
+}</code></pre></div></div>
+  <div class="rr-panel" data-panel="res">
+    <div class="rr-meta">
+      <div class="rr-meta-item"><span>وضعیت</span><b class="ltr">201 Created</b></div>
+      <div class="rr-meta-item"><span>تأخیر</span><b class="fa-num">۴۸ms</b></div>
+      <div class="rr-meta-item"><span>اندازه</span><b class="fa-num">۸۴۲ بایت</b></div>
+      <div class="rr-meta-item"><span>Request ID</span><b class="ltr" style="font-size:.7rem">req_9d41c7</b></div>
+    </div>
+    <div class="code-block"><div class="code-head"><span class="code-lang">json</span><button class="code-copy" aria-label="کپی"><i data-icon="copy"></i></button></div><pre class="line-numbers" style="margin:0;background:transparent;border:none"><code class="language-json">{
+  "data": {
+    "id": "usr_8f2k1",
+    "name": "سارا احمدی",
+    "email": "sara@abrino.ir",
+    "role": "developer",
+    "status": "active",
+    "created_at": "2026-08-30T10:14:22Z"
+  },
+  "meta": { "request_id": "req_9d41c7" }
+}</code></pre></div>
+  </div>
+  <div class="rr-panel" data-panel="headers">
+    <div class="kv-group-title">هدرهای درخواست</div>
+    <table class="kv-table"><tbody>
+      <tr><td>Authorization</td><td>Bearer bv_live_••••••••</td></tr>
+      <tr><td>Content-Type</td><td>application/json</td></tr>
+      <tr><td>Idempotency-Key</td><td>8f2k-41d7-9a01</td></tr>
+    </tbody></table>
+    <div class="kv-group-title">هدرهای پاسخ</div>
+    <table class="kv-table"><tbody>
+      <tr><td>content-type</td><td>application/json</td></tr>
+      <tr><td>x-request-id</td><td>req_9d41c7</td></tr>
+      <tr><td>x-ratelimit-remaining</td><td>9991</td></tr>
+      <tr><td>x-ratelimit-limit</td><td>10000</td></tr>
+    </tbody></table>
+  </div>
+</div>
+<p>برای جلوگیری از ساخت تکراری در تلاش‌های مجدد، هدر <code class="inline">Idempotency-Key</code> را ارسال کنید؛ بلو ورتکس درخواست‌های تکراری را با همان پاسخ اولیه برمی‌گرداند:</p>
+<div data-code-tabs><div class="code-tabs"><button class="code-tab active" data-lang="cURL">cURL</button></div><div class="code-tab-panel active" data-lang-panel="cURL"><div class="code-block"><div class="code-head"><span class="code-lang">cURL</span><button class="code-copy" data-copy-target="#cb_0" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_0" class="line-numbers"><code class="language-bash">curl -X POST https://api.bluevertex.ir/v1/users \
+  -H "Authorization: Bearer $BV_API_KEY" \
+  -H "Idempotency-Key: 8f2k-41d7-9a01" \
+  -d '{"name":"سارا احمدی","email":"sara@abrino.ir"}'</code></pre></div></div></div>
+<h2 id="show"><span class="hash">#</span>دریافت کاربر</h2>
+<div class="endpoint-card" id="v1_users_{id}">
+  <div class="ep-line"><span class="method method-get">GET</span><span class="ep-url">/v1/users/{id}</span></div>
+  <p class="ep-desc">جزئیات یک کاربر بر اساس شناسه. اگر کاربر وجود نداشته باشد <code class="inline">404</code> برمی‌گردد.</p>
+  
+</div>
+<h2 id="update"><span class="hash">#</span>ویرایش کاربر</h2>
+<div class="endpoint-card" id="v1_users_{id}">
+  <div class="ep-line"><span class="method method-patch">PATCH</span><span class="ep-url">/v1/users/{id}</span></div>
+  <p class="ep-desc">ویرایش جزئی: فقط فیلدهای ارسال‌شده تغییر می‌کنند. برای تغییر ایمیل، ایمیل جدید باید یکتا باشد.</p>
+  
+</div>
+<h2 id="delete"><span class="hash">#</span>حذف کاربر</h2>
+<div class="endpoint-card" id="v1_users_{id}">
+  <div class="ep-line"><span class="method method-delete">DELETE</span><span class="ep-url">/v1/users/{id}</span></div>
+  <p class="ep-desc">به‌صورت نرم حذف می‌کند؛ کاربر به وضعیت <code class="inline">deleted</code> می‌رود و دیگر در لیست‌ها نمی‌آید. این عملیات قابل بازگشت نیست.</p>
+  
+</div>
+<div class="callout danger"><b class="icon-title"><i data-icon="alert-triangle"></i> هشدار</b><p>حذف کاربر قابل بازگشت نیست. ابتدا با <code class="inline">status=suspended</code> کاربر را معلق کنید و پس از بررسی، حذف نهایی کنید.</p></div>
+
+<h2 id="errors"><span class="hash">#</span>خطاهای ویژه این منبع</h2>
+<div class="table-wrap" style="margin:16px 0"><table class="table param-table">
+  <thead><tr><th>کد</th><th>HTTP</th><th>وضعیت</th><th>توضیح</th></tr></thead>
+  <tbody><tr><td><code class="inline">already_exists</code></td><td><span class="t-caption ltr">409</span></td><td><span class="param-required">الزامی</span></td><td>ایمیل قبلاً ثبت شده است — <code class="inline">error.fields.email</code> را چک کنید.</td></tr><tr><td><code class="inline">invalid_role</code></td><td><span class="t-caption ltr">422</span></td><td><span class="param-required">الزامی</span></td><td>نقش ارسال‌شده مجاز نیست.</td></tr><tr><td><code class="inline">email_blocked</code></td><td><span class="t-caption ltr">422</span></td><td><span class="param-required">الزامی</span></td><td>دامنه ایمیل در لیست مسدودهاست.</td></tr></tbody></table></div>
+
+    </div>
+    <div class="doc-pager"><a class="pager-card prev" href="../../docs/api-reference.html"><span class="pager-label"><i data-icon="arrow-right"></i> قبلی</span><b>مرجع API</b></a><a class="pager-card next" href="../../docs/api/projects.html"><span class="pager-label"><i data-icon="arrow-left"></i> بعدی</span><b>پروژه‌ها</b></a></div>
+  </main>
+  <aside class="docs-toc" aria-label="فهرست مطالب" style="display:none">
+    <div class="toc-title"><i data-icon="list"></i> در این صفحه</div>
+    <nav class="toc-list" id="tocList"><a class="toc-link" href="#object">مدل کاربر</a><a class="toc-link" href="#list">لیست</a><a class="toc-link" href="#create">ساخت</a><a class="toc-link" href="#show">دریافت</a><a class="toc-link" href="#update">ویرایش</a><a class="toc-link" href="#delete">حذف</a><a class="toc-link" href="#errors">خطاها</a></nav>
+    <div class="mt-32">
+      <div class="toc-title"><i data-icon="life-buoy"></i> کمک بگیرید</div>
+      <a class="btn btn-outline btn-sm btn-block" href="../../pages/contact.html">تماس با پشتیبانی</a>
+      <a class="btn btn-ghost btn-sm btn-block mt-8" href="../../status/index.html"><i data-icon="activity"></i> وضعیت سرویس</a>
+    </div>
+  </aside>
+</div>
+<div class="search-view" id="docsSearch" role="dialog" aria-modal="true" aria-label="جستجو در مستندات">
+  <div class="search-panel">
+    <div class="search-header">
+      <span style="display:flex;color:var(--text-3)" data-icon="search"></span>
+      <input id="searchInput" placeholder="جستجو در مستندات، API و راهنماها…" aria-label="جستجو در مستندات">
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="search-filters" id="searchFilters">
+      <button class="chip active" data-search-cat="all">همه</button>
+      <button class="chip" data-search-cat="guide">راهنما</button>
+      <button class="chip" data-search-cat="api">API</button>
+      <button class="chip" data-search-cat="sdk">SDK</button>
+      <button class="chip" data-search-cat="faq">سوالات</button>
+    </div>
+    <div class="search-recents" id="searchRecents"></div>
+    <div class="search-results" id="searchResults"></div>
+    <div id="searchEmpty" style="display:none">
+      <div class="search-empty">
+        <span style="display:inline-flex" data-icon="search-x"></span>
+        <p>نتیجه‌ای پیدا نشد. عبارت دیگری را امتحان کنید.</p>
+      </div>
+    </div>
+    <div class="search-foot">
+      <span>برای جستجوی سریع، ⟨Ctrl⟩ + ⟨K⟩ را بزنید</span>
+    </div>
+  </div>
+</div><script>
+window.BV_DOCS = [
+  {title:'شروع سریع', url:'../../docs/getting-started.html', cat:'guide', catLabel:'راهنما', icon:'rocket', desc:'اولین درخواست API در کمتر از ۵ دقیقه'},
+  {title:'احراز هویت', url:'../../docs/authentication.html', cat:'guide', catLabel:'راهنما', icon:'shield-check', desc:'تولید کلید API و ارسال هدر Authorization'},
+  {title:'مرجع کامل API', url:'../../docs/api-reference.html', cat:'api', catLabel:'API', icon:'braces', desc:'پایان‌پوینت‌های /v1 با نمونه درخواست و پاسخ'},
+  {title:'پایان‌پوینت کاربران', url:'../../docs/api/users.html', cat:'api', catLabel:'API', icon:'users', desc:'لیست، ساخت و ویرایش کاربران'},
+  {title:'پایان‌پوینت پروژه‌ها', url:'../../docs/api/projects.html', cat:'api', catLabel:'API', icon:'folder-kanban', desc:'مدیریت پروژه‌ها و اعضای تیم'},
+  {title:'پایان‌پوینت پرداخت‌ها', url:'../../docs/api/payments.html', cat:'api', catLabel:'API', icon:'credit-card', desc:'ایجاد و استعلام پرداخت'},
+  {title:'پایان‌پوینت فایل‌ها', url:'../../docs/api/files.html', cat:'api', catLabel:'API', icon:'file-text', desc:'بارگذاری و مدیریت فایل'},
+  {title:'SDK رسمی', url:'../../docs/sdks.html', cat:'sdk', catLabel:'SDK', icon:'package', desc:'JavaScript ،Python ،PHP و Go'},
+  {title:'نمونه‌های کاربردی', url:'../../docs/examples.html', cat:'guide', catLabel:'راهنما', icon:'code-2', desc:'سناریوهای آماده برای کپی'},
+  {title:'کدهای خطا', url:'../../docs/errors.html', cat:'guide', catLabel:'راهنما', icon:'alert-triangle', desc:'فهرست کامل خطاها و راه‌حل'},
+  {title:'محدودیت‌ها و نرخ', url:'../../docs/limits.html', cat:'guide', catLabel:'راهنما', icon:'gauge', desc:'محدودیت نرخ درخواست و سهمیه هر پلن'},
+  {title:'سوالات متداول', url:'../../docs/faq.html', cat:'faq', catLabel:'سوالات', icon:'help-circle', desc:'پاسخ پرسش‌های رایج توسعه‌دهندگان'},
+  {title:'نصب', url:'../../docs/getting-started.html#install', cat:'guide', catLabel:'راهنما', icon:'download', desc:'نصب SDK با npm و pip'},
+  {title:'کلیدهای API', url:'../../docs/authentication.html#keys', cat:'guide', catLabel:'راهنما', icon:'key-round', desc:'ساخت، چرخش و باطل‌سازی کلید'},
+  {title:'Webhookها', url:'../../docs/webhooks.html', cat:'guide', catLabel:'راهنما', icon:'webhook', desc:'رویدادها، امضا و تحویل مجدد'},
+  {title:'خانه مستندات', url:'../../docs/index.html', cat:'guide', catLabel:'راهنما', icon:'book-open', desc:'نقشه راه مستندات'}
+];
+</script><div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../../assets/js/vendor/lucide.min.js"></script>
+<script src="../../assets/js/vendor/prism-core.min.js"></script>
+<script src="../../assets/js/vendor/prism-clike.min.js"></script>
+<script src="../../assets/js/vendor/prism-javascript.min.js"></script>
+<script src="../../assets/js/vendor/prism-json.min.js"></script>
+<script src="../../assets/js/vendor/prism-bash.min.js"></script>
+<script src="../../assets/js/vendor/prism-python.min.js"></script>
+<script src="../../assets/js/vendor/prism-markup.min.js"></script>
+<script src="../../assets/js/vendor/prism-markup-templating.min.js"></script>
+<script src="../../assets/js/vendor/prism-php.min.js"></script>
+<script src="../../assets/js/vendor/prism-go.min.js"></script>
+<script src="../../assets/js/vendor/prism-css.min.js"></script>
+<script src="../../assets/js/vendor/prism-yaml.min.js"></script>
+<script src="../../assets/js/vendor/prism-line-numbers.min.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+<script>window.BV_DOCS_PAGE = true;</script>
+</body></html>

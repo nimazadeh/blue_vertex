@@ -1,0 +1,328 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endpointها | داشبورد بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="داشبورد توسعه‌دهنده بلو ورتکس — Endpointها">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Endpointها | داشبورد بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="داشبورد توسعه‌دهنده بلو ورتکس — Endpointها">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise">
+<div class="dash-shell">
+<aside class="dash-side" id="dashSide">
+  <div class="side-brand">
+    <a class="brand" href="../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>DEVELOPER CONSOLE</small></span></a>
+    <button class="topbar-btn" style="margin-inline-start:auto" data-side-close aria-label="بستن منو" onclick="document.getElementById('dashSide').classList.remove('open');document.getElementById('sideBackdrop').classList.remove('show')"><i data-icon="x"></i></button>
+  </div>
+  <div class="dropdown side-ws" data-dd>
+    <button type="button" style="width:100%;display:flex;align-items:center;gap:10px;text-align:start" data-dd-toggle>
+      <span class="ws-avatar">ا</span>
+      <span style="flex:1;min-width:0"><span class="ws-name">ابرینو</span><span class="ws-plan" style="display:block">پلن رشد</span></span>
+      <span data-icon="chevrons-up-down" style="display:flex"></span>
+    </button>
+    <div class="ws-menu">
+      <div class="menu-title">فضاهای کاری</div>
+      <button class="menu-item" type="button"><span class="ws-avatar">ا</span>ابرینو<span class="badge badge-blue" style="margin-inline-start:auto">فعال</span></button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#34D399,#065F46)">د</span>داده‌پرداز</button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#A78BFA,#4C1D95)">ه</span>هوش‌یار</button>
+      <div class="menu-sep"></div>
+      <button class="menu-item" type="button"><span data-icon="plus" style="display:flex"></span>ایجاد فضای کاری جدید</button>
+    </div>
+  </div>
+  <nav class="side-nav" aria-label="منوی داشبورد"><div class="side-section-title">پیشخوان</div><a class="side-link" href="../dashboard/index.html"><span data-icon="layout-dashboard"></span>نمای کلی</a><a class="side-link" href="../dashboard/api-keys.html"><span data-icon="key-round"></span>کلیدهای API</a><a class="side-link" href="../dashboard/usage.html"><span data-icon="gauge"></span>مصرف</a><a class="side-link" href="../dashboard/analytics.html"><span data-icon="bar-chart-3"></span>تحلیل‌ها</a><a class="side-link" href="../dashboard/logs.html"><span data-icon="scroll-text"></span>گزارش درخواست‌ها<span class="side-badge red">۱۲</span></a><div class="side-section-title">ساخت و توسعه</div><a class="side-link active" href="../dashboard/endpoints.html"><span data-icon="braces"></span>Endpointها</a><a class="side-link" href="../dashboard/sdk.html"><span data-icon="package"></span>SDKها<span class="side-badge blue">۳</span></a><div class="side-section-title">مدیریت</div><a class="side-link" href="../dashboard/team.html"><span data-icon="users"></span>تیم</a><a class="side-link" href="../dashboard/billing.html"><span data-icon="credit-card"></span>صورتحساب</a><a class="side-link" href="../dashboard/notifications.html"><span data-icon="bell"></span>اعلان‌ها<span class="side-badge blue">۳</span></a><a class="side-link" href="../dashboard/settings.html"><span data-icon="settings"></span>تنظیمات</a></nav>
+  <div class="side-foot">
+    <div class="side-upgrade">
+      <b><i data-icon="sparkles"></i> ارتقای پلن</b>
+      <p>۸۲٪ از سهمیه درخواست ماهانه مصرف شده است.</p>
+      <div class="progress amber"><i style="width:82%" id="sideQuota"></i></div>
+      <a class="btn btn-primary btn-sm btn-block mt-8" href="billing.html">ارتقا به سازمانی</a>
+    </div>
+  </div>
+</aside>
+<div class="side-backdrop" id="sideBackdrop"></div><header class="dash-topbar">
+  <button class="topbar-btn side-toggle" data-side-open aria-label="باز کردن منو"><i data-icon="panel-right"></i></button>
+  <div class="topbar-breadcrumb">
+    <span>ابرینو</span><span class="sep"><i data-icon="chevron-left"></i></span><b id="crumbHere">Endpointها</b>
+  </div>
+  <div style="flex:1"></div>
+  <button class="topbar-btn theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+  <button class="topbar-search" data-palette-open aria-label="جستجوی سریع">
+    <i data-icon="search"></i>
+    <span>جستجوی سریع…</span>
+    <span class="kbd">Ctrl K</span>
+  </button>
+  <div class="dropdown" data-dd>
+    <button class="topbar-btn" data-dd-toggle aria-label="اعلان‌ها"><i data-icon="bell"></i><span class="notif-dot"></span></button>
+    <div class="dropdown-menu" style="width:320px">
+      <div class="menu-title">اعلان‌ها</div>
+      <a class="menu-item" href="notifications.html"><span style="flex:1;min-width:0"><b style="color:var(--text-1);font-size:var(--fs-caption)">۳ اعلان جدید</b><span style="display:block;font-size:.66rem;color:var(--text-4)">مشاهده همه اعلان‌ها</span></span></a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="notifications.html"><i data-icon="shield-alert" style="color:var(--amber)"></i>کلید API جدید ساخته شد</a>
+      <a class="menu-item" href="billing.html"><i data-icon="credit-card"></i>صورتحساب مرداد صادر شد</a>
+    </div>
+  </div>
+  <div class="dropdown" data-dd>
+    <button class="topbar-user" data-dd-toggle aria-label="پروفایل کاربر">
+      <span class="avatar avatar-sm">س</span>
+      <span class="u-info"><span class="u-name">سارا احمدی</span><span class="u-mail">sara@abrino.ir</span></span>
+      <i data-icon="chevron-down" class="chev"></i>
+    </button>
+    <div class="dropdown-menu">
+      <div class="menu-title">sara@abrino.ir</div>
+      <a class="menu-item" href="settings.html"><i data-icon="user"></i>پروفایل</a>
+      <a class="menu-item" href="settings.html#panel-security"><i data-icon="shield"></i>امنیت و ورود</a>
+      <a class="menu-item" href="settings.html"><i data-icon="palette"></i>ظاهر</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="../docs/index.html"><i data-icon="book-open"></i>مستندات</a>
+      <a class="menu-item" href="../status/index.html"><i data-icon="activity"></i>وضعیت سرویس</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item danger" href="../index.html"><i data-icon="log-out"></i>خروج از حساب</a>
+    </div>
+  </div>
+</header>
+  <main class="dash-main">
+    <div class="dash-content">
+      <div class="dash-head">
+        <div>
+          <h1 style="margin:0">Endpointها</h1>
+          <p class="greet-sub" style="margin:0;margin-top:4px">فهرست Endpointها، عملکرد و مرورگر تعاملی — فضای کاری ابرینو</p>
+        </div>
+        <div class="dash-actions" data-dash-actions><a class="btn btn-secondary btn-sm" href="logs.html"><i data-icon="scroll-text"></i> گزارش‌ها</a></div>
+      </div>
+      
+    <div class="filter-bar" id="epFilterBar" data-table-scope>
+      <div class="search-input">
+        <i data-icon="search"></i>
+        <input class="input" data-filter="text" placeholder="جستجوی Endpoint یا مسیر…" aria-label="جستجوی Endpoint">
+      </div>
+      <select class="select" data-filter="method" aria-label="فیلتر متد">
+        <option value="">همه متدها</option><option>GET</option><option>POST</option>
+      </select>
+      <span class="filter-count" data-filter-count>نمایش ۱۰ Endpoint</span>
+    </div>
+
+    <div class="card" style="overflow:hidden;margin-bottom:20px">
+      <div class="card-head"><div><h2>Endpointهای فضای کاری</h2><p class="t-caption" style="margin-top:4px">عملکرد ۷ روز اخیر — کلیک روی «مستندات» برای مرجع کامل</p></div>
+        <a class="btn btn-ghost btn-sm" href="../docs/api-reference.html"><i data-icon="book-open"></i> مرجع API</a></div>
+      <div class="table-wrap" style="border:none;border-radius:0">
+        <table class="table ep-table">
+          <thead><tr><th>متد</th><th>Endpoint</th><th>درخواست‌ها</th><th>روند</th><th>تأخیر P50</th><th>نرخ خطا</th><th></th></tr></thead>
+          <tbody><tr data-row data-search="/v1/users GET" data-status="/v1/users" data-method="GET" data-env="prod">
+      <td><span class="method method-get">GET</span></td>
+      <td><code class="ep-path">/v1/users</code></td>
+      <td class="fa-num">۴۸٬۲۱۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:40%"></i><i style="height:62%"></i><i style="height:50%"></i><i style="height:78%"></i><i style="height:66%"></i><i style="height:90%"></i><i style="height:74%"></i></span></td>
+      <td class="latency-cell fa-num">88ms</td>
+      <td><span class="badge badge-green">0.01٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_users">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/users POST" data-status="/v1/users" data-method="POST" data-env="prod">
+      <td><span class="method method-post">POST</span></td>
+      <td><code class="ep-path">/v1/users</code></td>
+      <td class="fa-num">۹٬۳۲۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:20%"></i><i style="height:34%"></i><i style="height:28%"></i><i style="height:45%"></i><i style="height:38%"></i><i style="height:52%"></i><i style="height:44%"></i></span></td>
+      <td class="latency-cell fa-num">142ms</td>
+      <td><span class="badge badge-green">0.04٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_users">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/users/:id GET" data-status="/v1/users/:id" data-method="GET" data-env="prod">
+      <td><span class="method method-get">GET</span></td>
+      <td><code class="ep-path">/v1/users/:id</code></td>
+      <td class="fa-num">۲۱٬۱۲۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:30%"></i><i style="height:42%"></i><i style="height:36%"></i><i style="height:50%"></i><i style="height:44%"></i><i style="height:58%"></i><i style="height:48%"></i></span></td>
+      <td class="latency-cell fa-num">116ms</td>
+      <td><span class="badge badge-green">0.02٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_users_idid">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/projects GET" data-status="/v1/projects" data-method="GET" data-env="prod">
+      <td><span class="method method-get">GET</span></td>
+      <td><code class="ep-path">/v1/projects</code></td>
+      <td class="fa-num">۸٬۹۹۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:12%"></i><i style="height:20%"></i><i style="height:16%"></i><i style="height:26%"></i><i style="height:22%"></i><i style="height:30%"></i><i style="height:24%"></i></span></td>
+      <td class="latency-cell fa-num">64ms</td>
+      <td><span class="badge badge-green">0.00٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_projects">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/projects POST" data-status="/v1/projects" data-method="POST" data-env="prod">
+      <td><span class="method method-post">POST</span></td>
+      <td><code class="ep-path">/v1/projects</code></td>
+      <td class="fa-num">۱٬۲۴۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:6%"></i><i style="height:9%"></i><i style="height:8%"></i><i style="height:12%"></i><i style="height:10%"></i><i style="height:14%"></i><i style="height:11%"></i></span></td>
+      <td class="latency-cell fa-num">158ms</td>
+      <td><span class="badge badge-green">0.08٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_projects">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/payments POST" data-status="/v1/payments" data-method="POST" data-env="prod">
+      <td><span class="method method-post">POST</span></td>
+      <td><code class="ep-path">/v1/payments</code></td>
+      <td class="fa-num">۲۹٬۴۴۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:50%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:88%"></i><i style="height:76%"></i><i style="height:95%"></i><i style="height:80%"></i></span></td>
+      <td class="latency-cell fa-num">142ms</td>
+      <td><span class="badge badge-amber">0.6٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_payments">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/payments/:id GET" data-status="/v1/payments/:id" data-method="GET" data-env="prod">
+      <td><span class="method method-get">GET</span></td>
+      <td><code class="ep-path">/v1/payments/:id</code></td>
+      <td class="fa-num">۲۱٬۱۰۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:30%"></i><i style="height:44%"></i><i style="height:38%"></i><i style="height:52%"></i><i style="height:46%"></i><i style="height:60%"></i><i style="height:50%"></i></span></td>
+      <td class="latency-cell fa-num">116ms</td>
+      <td><span class="badge badge-green">0.1٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_payments_idid">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/payments GET" data-status="/v1/payments" data-method="GET" data-env="prod">
+      <td><span class="method method-get">GET</span></td>
+      <td><code class="ep-path">/v1/payments</code></td>
+      <td class="fa-num">۶٬۸۰۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:10%"></i><i style="height:16%"></i><i style="height:13%"></i><i style="height:20%"></i><i style="height:17%"></i><i style="height:24%"></i><i style="height:19%"></i></span></td>
+      <td class="latency-cell fa-num">124ms</td>
+      <td><span class="badge badge-green">0.2٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_payments">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/files POST" data-status="/v1/files" data-method="POST" data-env="prod">
+      <td><span class="method method-post">POST</span></td>
+      <td><code class="ep-path">/v1/files</code></td>
+      <td class="fa-num">۱۲٬۴۰۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:8%"></i><i style="height:12%"></i><i style="height:10%"></i><i style="height:15%"></i><i style="height:13%"></i><i style="height:18%"></i><i style="height:14%"></i></span></td>
+      <td class="latency-cell fa-num">280ms</td>
+      <td><span class="badge badge-green">0.3٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_files">مستندات</button></td>
+    </tr><tr data-row data-search="/v1/files/:id GET" data-status="/v1/files/:id" data-method="GET" data-env="prod">
+      <td><span class="method method-get">GET</span></td>
+      <td><code class="ep-path">/v1/files/:id</code></td>
+      <td class="fa-num">۵٬۲۰۰</td>
+      <td><span class="mini-bars" aria-hidden="true"><i style="height:5%"></i><i style="height:8%"></i><i style="height:6%"></i><i style="height:10%"></i><i style="height:8%"></i><i style="height:12%"></i><i style="height:9%"></i></span></td>
+      <td class="latency-cell fa-num">98ms</td>
+      <td><span class="badge badge-green">0.05٪</span></td>
+      <td><button class="btn btn-ghost btn-sm" data-ep-doc="v1_files_idid">مستندات</button></td>
+    </tr></tbody>
+        </table>
+        <div class="empty-state" data-filter-empty style="display:none">
+          <span class="es-icon"><i data-icon="search-x"></i></span>
+          <h2>Endpointی پیدا نشد</h2><p>عبارت جستجو را تغییر دهید.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="explorer">
+      <div class="explorer-head">
+        <div style="flex:1;min-width:200px">
+          <h2 class="t-h4">مرورگر تعاملی API <span class="badge badge-blue">شبیه‌سازی</span></h2>
+          <p class="t-caption" style="margin-top:4px">درخواست نمونه بسازید و پاسخ شبیه‌سازی‌شده ببینید — هیچ درخواست واقعی ارسال نمی‌شود.</p>
+        </div>
+        <div class="flex gap-8"><span class="badge">پایه: api.bluevertex.ir</span></div>
+      </div>
+      <div class="explorer-body">
+        <form id="expForm" class="modal-inputs" novalidate>
+          <div class="grid-2" style="gap:14px">
+            <div class="field">
+              <label class="field-label" for="expEndpoint">Endpoint</label>
+              <select class="select ltr" id="expEndpoint" dir="ltr">
+                <option>GET /v1/users</option>
+                <option>POST /v1/users</option>
+                <option>GET /v1/projects</option>
+                <option>POST /v1/payments</option>
+                <option>POST /v1/files</option>
+                <option>GET /v1/users/nonexistent</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">پارامترها و هدرها</label>
+              <div class="flex gap-12" style="flex-wrap:wrap;height:44px;align-items:center">
+                <label class="check"><input type="checkbox" id="expAuth" checked><span class="box"><i data-icon="check"></i></span><span>ارسال کلید API</span></label>
+                <label class="check"><input type="checkbox" checked><span class="box"><i data-icon="check"></i></span><span>Content-Type: JSON</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label" for="expBody">بدنه درخواست (JSON)</label>
+            <textarea class="textarea ltr" id="expBody" dir="ltr" rows="5" spellcheck="false"></textarea>
+          </div>
+          <div class="flex gap-12" style="margin-top:6px">
+            <button class="btn btn-primary" type="submit" id="expSend"><i data-icon="send"></i> ارسال درخواست (شبیه‌سازی)</button>
+            <button class="btn btn-ghost" type="button" id="expClear">پاک کردن</button>
+            <span class="t-caption" style="align-self:center">پاسخ پس از ~۱٫۳ ثانیه نمایش داده می‌شود</span>
+          </div>
+        </form>
+        <div class="explorer-response" id="expResponse">
+          <div class="explorer-stats">
+            <span class="exp-stat ok" data-exp-stat><span class="dot"></span> HTTP 200 — موفق</span>
+            <span class="exp-stat"><i data-icon="timer" style="width:12px;height:12px"></i> <span data-exp-time>۲۲۰ms</span></span>
+            <span class="exp-stat"><i data-icon="file" style="width:12px;height:12px"></i> حجم: <span data-exp-size>سازگار</span></span>
+            <span class="exp-stat"><i data-icon="hash" style="width:12px;height:12px"></i> Request ID: <span class="ltr">req_<span data-exp-rid>demo</span></span></span>
+          </div>
+          <div class="code-block">
+            <div class="code-head"><span class="code-lang">json</span><button class="code-copy" data-copy-target="#expBodyResult" aria-label="کپی"><i data-icon="copy"></i></button></div>
+            <pre id="expBodyResult" style="margin:0;padding:16px 20px;overflow-x:auto"><code class="language-json">{}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </main>
+</div>
+<div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  document.getElementById('expClear').addEventListener('click', function(){
+    document.getElementById('expBody').value = '';
+    document.getElementById('expResponse').classList.remove('show');
+  });
+  document.querySelectorAll('[data-ep-doc]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('info', 'باز کردن مستندات', 'در نسخه دمو، به مرجع API هدایت می‌شوید.');
+      setTimeout(function(){ window.location.href = '../docs/api-reference.html'; }, 700);
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var now = new Date();
+  var el = document.getElementById('jalaliToday');
+  if (el && window.BV) el.textContent = BV.faDateFull(now);
+})();
+</script>
+</body></html>

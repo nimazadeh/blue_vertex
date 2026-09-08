@@ -1,0 +1,450 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تنظیمات | داشبورد بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="داشبورد توسعه‌دهنده بلو ورتکس — تنظیمات">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="تنظیمات | داشبورد بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="داشبورد توسعه‌دهنده بلو ورتکس — تنظیمات">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise">
+<div class="dash-shell">
+<aside class="dash-side" id="dashSide">
+  <div class="side-brand">
+    <a class="brand" href="../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>DEVELOPER CONSOLE</small></span></a>
+    <button class="topbar-btn" style="margin-inline-start:auto" data-side-close aria-label="بستن منو" onclick="document.getElementById('dashSide').classList.remove('open');document.getElementById('sideBackdrop').classList.remove('show')"><i data-icon="x"></i></button>
+  </div>
+  <div class="dropdown side-ws" data-dd>
+    <button type="button" style="width:100%;display:flex;align-items:center;gap:10px;text-align:start" data-dd-toggle>
+      <span class="ws-avatar">ا</span>
+      <span style="flex:1;min-width:0"><span class="ws-name">ابرینو</span><span class="ws-plan" style="display:block">پلن رشد</span></span>
+      <span data-icon="chevrons-up-down" style="display:flex"></span>
+    </button>
+    <div class="ws-menu">
+      <div class="menu-title">فضاهای کاری</div>
+      <button class="menu-item" type="button"><span class="ws-avatar">ا</span>ابرینو<span class="badge badge-blue" style="margin-inline-start:auto">فعال</span></button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#34D399,#065F46)">د</span>داده‌پرداز</button>
+      <button class="menu-item" type="button"><span class="ws-avatar" style="background:linear-gradient(135deg,#A78BFA,#4C1D95)">ه</span>هوش‌یار</button>
+      <div class="menu-sep"></div>
+      <button class="menu-item" type="button"><span data-icon="plus" style="display:flex"></span>ایجاد فضای کاری جدید</button>
+    </div>
+  </div>
+  <nav class="side-nav" aria-label="منوی داشبورد"><div class="side-section-title">پیشخوان</div><a class="side-link" href="../dashboard/index.html"><span data-icon="layout-dashboard"></span>نمای کلی</a><a class="side-link" href="../dashboard/api-keys.html"><span data-icon="key-round"></span>کلیدهای API</a><a class="side-link" href="../dashboard/usage.html"><span data-icon="gauge"></span>مصرف</a><a class="side-link" href="../dashboard/analytics.html"><span data-icon="bar-chart-3"></span>تحلیل‌ها</a><a class="side-link" href="../dashboard/logs.html"><span data-icon="scroll-text"></span>گزارش درخواست‌ها<span class="side-badge red">۱۲</span></a><div class="side-section-title">ساخت و توسعه</div><a class="side-link" href="../dashboard/endpoints.html"><span data-icon="braces"></span>Endpointها</a><a class="side-link" href="../dashboard/sdk.html"><span data-icon="package"></span>SDKها<span class="side-badge blue">۳</span></a><div class="side-section-title">مدیریت</div><a class="side-link" href="../dashboard/team.html"><span data-icon="users"></span>تیم</a><a class="side-link" href="../dashboard/billing.html"><span data-icon="credit-card"></span>صورتحساب</a><a class="side-link" href="../dashboard/notifications.html"><span data-icon="bell"></span>اعلان‌ها<span class="side-badge blue">۳</span></a><a class="side-link active" href="../dashboard/settings.html"><span data-icon="settings"></span>تنظیمات</a></nav>
+  <div class="side-foot">
+    <div class="side-upgrade">
+      <b><i data-icon="sparkles"></i> ارتقای پلن</b>
+      <p>۸۲٪ از سهمیه درخواست ماهانه مصرف شده است.</p>
+      <div class="progress amber"><i style="width:82%" id="sideQuota"></i></div>
+      <a class="btn btn-primary btn-sm btn-block mt-8" href="billing.html">ارتقا به سازمانی</a>
+    </div>
+  </div>
+</aside>
+<div class="side-backdrop" id="sideBackdrop"></div><header class="dash-topbar">
+  <button class="topbar-btn side-toggle" data-side-open aria-label="باز کردن منو"><i data-icon="panel-right"></i></button>
+  <div class="topbar-breadcrumb">
+    <span>ابرینو</span><span class="sep"><i data-icon="chevron-left"></i></span><b id="crumbHere">تنظیمات</b>
+  </div>
+  <div style="flex:1"></div>
+  <button class="topbar-btn theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+  <button class="topbar-search" data-palette-open aria-label="جستجوی سریع">
+    <i data-icon="search"></i>
+    <span>جستجوی سریع…</span>
+    <span class="kbd">Ctrl K</span>
+  </button>
+  <div class="dropdown" data-dd>
+    <button class="topbar-btn" data-dd-toggle aria-label="اعلان‌ها"><i data-icon="bell"></i><span class="notif-dot"></span></button>
+    <div class="dropdown-menu" style="width:320px">
+      <div class="menu-title">اعلان‌ها</div>
+      <a class="menu-item" href="notifications.html"><span style="flex:1;min-width:0"><b style="color:var(--text-1);font-size:var(--fs-caption)">۳ اعلان جدید</b><span style="display:block;font-size:.66rem;color:var(--text-4)">مشاهده همه اعلان‌ها</span></span></a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="notifications.html"><i data-icon="shield-alert" style="color:var(--amber)"></i>کلید API جدید ساخته شد</a>
+      <a class="menu-item" href="billing.html"><i data-icon="credit-card"></i>صورتحساب مرداد صادر شد</a>
+    </div>
+  </div>
+  <div class="dropdown" data-dd>
+    <button class="topbar-user" data-dd-toggle aria-label="پروفایل کاربر">
+      <span class="avatar avatar-sm">س</span>
+      <span class="u-info"><span class="u-name">سارا احمدی</span><span class="u-mail">sara@abrino.ir</span></span>
+      <i data-icon="chevron-down" class="chev"></i>
+    </button>
+    <div class="dropdown-menu">
+      <div class="menu-title">sara@abrino.ir</div>
+      <a class="menu-item" href="settings.html"><i data-icon="user"></i>پروفایل</a>
+      <a class="menu-item" href="settings.html#panel-security"><i data-icon="shield"></i>امنیت و ورود</a>
+      <a class="menu-item" href="settings.html"><i data-icon="palette"></i>ظاهر</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="../docs/index.html"><i data-icon="book-open"></i>مستندات</a>
+      <a class="menu-item" href="../status/index.html"><i data-icon="activity"></i>وضعیت سرویس</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item danger" href="../index.html"><i data-icon="log-out"></i>خروج از حساب</a>
+    </div>
+  </div>
+</header>
+  <main class="dash-main">
+    <div class="dash-content">
+      <div class="dash-head">
+        <div>
+          <h1 style="margin:0">تنظیمات</h1>
+          <p class="greet-sub" style="margin:0;margin-top:4px">پروفایل، فضای کاری، امنیت و ترجیحات — فضای کاری ابرینو</p>
+        </div>
+        <div class="dash-actions" data-dash-actions></div>
+      </div>
+      
+    <div class="settings-layout">
+      <nav class="settings-nav" aria-label="تنظیمات">
+        <a href="#panel-general" class="active" data-settings-nav="general"><i data-icon="settings"></i>عمومی</a>
+        <a href="#panel-workspace" data-settings-nav="workspace"><i data-icon="building-2"></i>فضای کاری</a>
+        <a href="#panel-security" data-settings-nav="security"><i data-icon="shield"></i>امنیت</a>
+        <a href="#panel-notif" data-settings-nav="notif"><i data-icon="bell"></i>اعلان‌ها</a>
+        <a href="#panel-webhooks" data-settings-nav="webhooks"><i data-icon="webhook"></i>Webhookها</a>
+        <a href="#panel-api" data-settings-nav="api"><i data-icon="braces"></i>API</a>
+        <a href="#panel-members" data-settings-nav="members"><i data-icon="users"></i>اعضا</a>
+        <a href="#panel-appearance" data-settings-nav="appearance"><i data-icon="palette"></i>ظاهر</a>
+        <a href="#panel-danger" data-settings-nav="danger" style="color:var(--red)"><i data-icon="alert-triangle" style="color:var(--red)"></i>منطقه خطر</a>
+      </nav>
+
+      <div style="min-width:0">
+        <!-- GENERAL -->
+        <section class="settings-panel active" id="panel-general">
+          <h2>عمومی</h2>
+          <p class="panel-desc">اطلاعات حساب و پروفایل شما.</p>
+          <div class="card card-pad" style="margin-bottom:18px">
+            <div class="avatar-upload">
+              <span class="avatar">س</span>
+              <div style="flex:1">
+                <b class="t-sm">عکس پروفایل</b>
+                <p class="t-caption" style="margin-top:2px">PNG یا JPG — حداکثر ۲ مگابایت</p>
+                <div class="flex gap-8 mt-16">
+                  <button class="btn btn-secondary btn-sm" data-upload-demo>آپلود عکس جدید</button>
+                  <button class="btn btn-ghost btn-sm">حذف</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-pad">
+            <form data-form data-success-title="ذخیره شد" data-success-msg="تغییرات پروفایل ذخیره شد." novalidate>
+              <div class="grid-2" style="gap:16px">
+                <div class="field"><label class="field-label" for="setName">نام و نام خانوادگی</label><input id="setName" class="input" value="سارا احمدی" required></div>
+                <div class="field"><label class="field-label" for="setTitle">عنوان شغلی</label><input id="setTitle" class="input" value="مدیر فنی"></div>
+                <div class="field"><label class="field-label" for="setEmail">ایمیل</label><input id="setEmail" class="input ltr" dir="ltr" type="email" value="sara@abrino.ir" required></div>
+                <div class="field"><label class="field-label" for="setMobile">شماره موبایل</label><input id="setMobile" class="input ltr" dir="ltr" type="tel" value="09120000000"></div>
+              </div>
+              <div class="flex gap-12 mt-16"><button class="btn btn-primary" type="submit">ذخیره تغییرات</button><span class="t-caption" style="align-self:center">آخرین ویرایش: ۱۴۰۵/۰۶/۰۲</span></div>
+            </form>
+          </div>
+        </section>
+
+        <!-- WORKSPACE -->
+        <section class="settings-panel" id="panel-workspace">
+          <h2>فضای کاری</h2>
+          <p class="panel-desc">اطلاعات فضای کاری ابرینو و تنظیمات آن.</p>
+          <div class="card card-pad" style="margin-bottom:18px">
+            <div class="flex gap-16" style="flex-wrap:wrap">
+              <span class="ws-avatar" style="width:52px;height:52px;border-radius:14px;font-size:1.1rem">ا</span>
+              <form style="flex:1;min-width:240px" data-form data-success-title="ذخیره شد" data-success-msg="اطلاعات فضای کاری ذخیره شد." novalidate>
+                <div class="grid-2" style="gap:16px">
+                  <div class="field"><label class="field-label" for="setWs">نام فضای کاری</label><input id="setWs" class="input" value="ابرینو" required></div>
+                  <div class="field"><label class="field-label" for="setSlug">شناسه</label><input id="setSlug" class="input ltr" dir="ltr" value="abrino" readonly><span class="field-hint">در پایه URL استفاده می‌شود — قابل تغییر نیست.</span></div>
+                  <div class="field"><label class="field-label" for="setRegion">منطقه داده</label><select id="setRegion" class="select"><option>تهران (tehran)</option><option>استانبول</option><option>فرانکفورت</option></select></div>
+                  <div class="field"><label class="field-label" for="setDesc">توضیح</label><input id="setDesc" class="input" value="زیرساخت API محصولات ابرینو"></div>
+                </div>
+                <button class="btn btn-primary mt-16" type="submit">ذخیره</button>
+              </form>
+            </div>
+          </div>
+          <div class="setting-row"><div><b>حذف فضای کاری</b><p>به بخش «منطقه خطر» مراجعه کنید.</p></div><a class="btn btn-danger-soft btn-sm" href="#panel-danger" data-goto-danger>رفتن به منطقه خطر</a></div>
+        </section>
+
+        <!-- SECURITY -->
+        <section class="settings-panel" id="panel-security">
+          <h2>امنیت</h2>
+          <p class="panel-desc">ورود دومرحله‌ای، نشست‌ها و رمز عبور.</p>
+          <div class="card card-pad" style="margin-bottom:18px;background:linear-gradient(135deg,rgba(52,211,153,.07),var(--bg-elev) 60%)">
+            <div class="flex-between" style="flex-wrap:wrap;gap:16px">
+              <div class="flex gap-16">
+                <span class="icon-tile icon-tile-green"><i data-icon="shield-check"></i></span>
+                <div><b class="t-h4">ورود دومرحله‌ای (2FA)</b><p class="t-caption" style="margin-top:4px;max-width:44ch">با کد TOTP هر ۳۰ ثانیه — برای محافظت از حساب شما فعال است.</p></div>
+              </div>
+              <span class="badge badge-green"><span class="dot"></span> فعال</span>
+            </div>
+            <div class="flex gap-8 mt-16" style="flex-wrap:wrap">
+              <button class="btn btn-outline btn-sm" data-2fa-sim><i data-icon="key-round"></i> بررسی کد</button>
+              <button class="btn btn-ghost btn-sm" data-2fa-disable>غیرفعال‌سازی</button>
+            </div>
+          </div>
+          <div class="card card-pad" style="margin-bottom:18px">
+            <h2 class="t-h4 mb-8">تغییر رمز عبور</h2>
+            <form data-form data-success-title="رمز تغییر کرد" data-success-msg="از ورودی بعدی با رمز جدید وارد شوید." novalidate style="max-width:420px">
+              <div class="field" style="margin-bottom:14px"><label class="field-label" for="curPw">رمز فعلی</label><div class="input-wrap"><input class="input" type="password" id="curPw" required minlength="8" placeholder="••••••••"><button type="button" class="icon-btn" data-pw-toggle="curPw" aria-label="نمایش رمز عبور"><i data-icon="eye"></i></button></div></div>
+              <div class="field" style="margin-bottom:14px"><label class="field-label" for="newPw">رمز جدید</label><div class="input-wrap"><input class="input" type="password" id="newPw" required minlength="8" placeholder="حداقل ۸ کاراکتر"><button type="button" class="icon-btn" data-pw-toggle="newPw" aria-label="نمایش رمز عبور"><i data-icon="eye"></i></button></div></div>
+              <button class="btn btn-primary" type="submit">تغییر رمز</button>
+            </form>
+          </div>
+          <div class="card card-pad">
+            <h2 class="t-h4 mb-8">نشست‌های فعال</h2>
+            <table class="kv-table"><tbody>
+              <tr><td>Chrome · تهران</td><td class="fa-num">همین حالا <span class="badge badge-green" style="margin-inline-start:6px">این دستگاه</span></td></tr>
+              <tr><td>VS Code · تهران</td><td class="fa-num">۲ ساعت پیش</td></tr>
+              <tr><td>iPhone · اصفهان</td><td class="fa-num">دیروز</td></tr>
+            </tbody></table>
+            <button class="btn btn-danger-soft btn-sm mt-16" data-session-kill>خروج از همه دستگاه‌های دیگر</button>
+          </div>
+        </section>
+
+        <!-- NOTIFICATIONS -->
+        <section class="settings-panel" id="panel-notif">
+          <h2>اعلان‌ها</h2>
+          <p class="panel-desc">کدام رویدادها و از چه کانالی اطلاع بگیرید.</p>
+          <div class="card card-pad">
+            <div class="setting-row"><div><b>هشدار نرخ خطا</b><p>آستانه ۱٪ در بازه ۱۵ دقیقه</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+            <div class="setting-row"><div><b>هشدار مصرف</b><p>در ۸۰٪ سهمیه ماهانه</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+            <div class="setting-row"><div><b>رویدادهای امنیتی</b><p>ورود جدید و تغییرات حساس</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+            <div class="setting-row"><div><b>خبرنامه محصول</b><p>نسخه‌های جدید SDK و امکانات</p></div><label class="switch"><input type="checkbox"><span class="track"></span></label></div>
+            <div class="setting-row"><div><b>ارسال به تلگرام</b><p>اتصال ربات بلو ورتکس</p></div><button class="btn btn-outline btn-sm" data-notif-test>اتصال</button></div>
+          </div>
+        </section>
+
+        <!-- WEBHOOKS -->
+        <section class="settings-panel" id="panel-webhooks">
+          <h2>Webhookها</h2>
+          <p class="panel-desc">رویدادها را به سیستم خودتان بفرستید — با امضای HMAC.</p>
+          <div class="webhook-card">
+            <div class="wk-head">
+              <div style="flex:1;min-width:0"><b class="t-sm">پرداخت و کاربران</b><span class="badge badge-green" style="margin-inline-start:8px"><span class="dot"></span> فعال</span></div>
+              <div class="flex gap-8"><button class="btn btn-ghost btn-sm" data-wk-test><i data-icon="send"></i> ارسال نمونه</button><button class="btn btn-ghost btn-sm" data-wk-edit aria-label="ویرایش وب‌هوک"><i data-icon="pencil"></i></button></div>
+            </div>
+            <div class="wk-url">https://api.abrino.ir/webhooks/bluevertex</div>
+            <div class="wk-events"><span class="badge badge-blue">payment.updated</span><span class="badge badge-blue">user.created</span><span class="badge badge-blue">user.updated</span></div>
+            <div class="wk-stats"><span>۳۲۰ تحویل</span><span>موفقیت: ۹۹٫۴٪</span><span>آخرین: ۱۲ دقیقه پیش</span></div>
+          </div>
+          <button class="btn btn-primary btn-sm" data-wk-add><i data-icon="plus"></i> Webhook جدید</button>
+        </section>
+
+        <!-- API -->
+        <section class="settings-panel" id="panel-api">
+          <h2>API</h2>
+          <p class="panel-desc">تنظیمات عمومی API: نسخه، محدودیت‌ها و آدرس‌های پایه.</p>
+          <div class="card card-pad">
+            <div class="setting-row"><div><b>پایه آدرس</b><p>آدرس پایه همه Endpointها</p></div><code class="inline text-code ltr">https://api.bluevertex.ir/v1</code></div>
+            <div class="setting-row"><div><b>حداکثر نرخ پیش‌فرض</b><p>برای کلیدهای بدون تنظیم خاص</p></div><select class="select" aria-label="حداکثر نرخ پیش‌فرض" style="width:auto"><option>۶۰ در دقیقه</option><option>۳۰۰ در دقیقه</option><option selected>۱٬۰۰۰ در دقیقه</option></select></div>
+            <div class="setting-row"><div><b>زمان‌بندی timeout</b><p>پیش‌فرض برای همه درخواست‌ها</p></div><select class="select" aria-label="زمان‌بندی timeout" style="width:auto"><option>۱۰ ثانیه</option><option selected>۳۰ ثانیه</option><option>۶۰ ثانیه</option></select></div>
+            <div class="setting-row"><div><b>اعلان تغییرات API</b><p>در صورت خروجی breaking</p></div><label class="switch"><input type="checkbox" checked><span class="track"></span></label></div>
+          </div>
+        </section>
+
+        <!-- MEMBERS -->
+        <section class="settings-panel" id="panel-members">
+          <h2>اعضا و دسترسی‌ها</h2>
+          <p class="panel-desc">خلاصه دسترسی‌های تیم — مدیریت کامل در صفحه «تیم».</p>
+          <div class="card card-pad">
+            <div class="flex gap-12 mb-16" style="flex-wrap:wrap">
+              <span class="avatar-stack" style="display:flex"><span class="avatar">س</span><span class="avatar" style="background:linear-gradient(135deg,#34D399,#065F46)">ع</span><span class="avatar" style="background:linear-gradient(135deg,#A78BFA,#4C1D95)">م</span><span class="avatar" style="background:linear-gradient(135deg,#FBBF24,#92400E)">ر</span></span>
+              <span class="badge">۶ عضو</span><span class="badge">۳ نقش</span>
+            </div>
+            <a class="btn btn-outline btn-sm" href="team.html">مدیریت اعضای تیم <i data-icon="arrow-left"></i></a>
+          </div>
+        </section>
+
+        <!-- APPEARANCE -->
+        <section class="settings-panel" id="panel-appearance">
+          <h2>ظاهر</h2>
+          <p class="panel-desc">حالت نمایش و رنگ سازمانی کنسول.</p>
+          <div class="card card-pad">
+            <div class="setting-row"><div><b>حالت نمایش</b><p>حالت تیره برای کار طولانی؛ حالت روشن برای محیط‌های پرنور</p></div>
+              <div class="segmented" data-theme-seg>
+                <button data-theme-opt="dark" class="active"><i data-icon="moon"></i> تیره <span class="badge badge-blue" style="font-size:.6rem">پیش‌فرض</span></button>
+                <button data-theme-opt="light"><i data-icon="sun"></i> روشن</button>
+              </div></div>
+            <div class="setting-row" style="align-items:flex-start"><div><b>رنگ سازمانی</b><p>رنگ تاکیدی کنسول — روی همه بخش‌ها اعمال می‌شود</p></div>
+              <div class="flex gap-8" id="accentPicker">
+                <button class="color-swatch" data-accent="blue" title="آبی" aria-label="رنگ آبی" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#3B82F6,#1D4ED8);border:2px solid var(--bg)"></button>
+                <button class="color-swatch" data-accent="sky" title="آبی آسمانی" aria-label="رنگ آبی آسمانی" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#38BDF8,#0284C7);border:2px solid transparent"></button>
+                <button class="color-swatch" data-accent="violet" title="بنفش" aria-label="رنگ بنفش" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#A78BFA,#6D28D9);border:2px solid transparent"></button>
+                <button class="color-swatch" data-accent="emerald" title="سبز" aria-label="رنگ سبز" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#34D399,#047857);border:2px solid transparent"></button>
+              </div></div>
+            <div class="setting-row"><div><b>تراکم اطلاعات</b><p>فاصله‌های جدول‌ها و کارت‌ها</p></div>
+              <div class="segmented" data-density>
+                <button>فشرده</button><button class="active">راحت</button>
+              </div></div>
+          </div>
+        </section>
+
+        <!-- DANGER -->
+        <section class="settings-panel" id="panel-danger">
+          <div class="danger-zone">
+            <h2><i data-icon="alert-triangle"></i> منطقه خطر</h2>
+            <p>این عملیات‌ها غیرقابل بازگشت هستند. قبل از هر اقدام، مطمئن شوید و در صورت نیاز با پشتیبانی هماهنگ کنید.</p>
+            <div class="setting-row" style="border-color:var(--red-line)"><div><b>انتقال مالکیت</b><p>به یک عضو دیگر — شما به نقش مدیر منتقل می‌شوید.</p></div><button class="btn btn-outline btn-sm">انتقال</button></div>
+            <div class="setting-row" style="border-color:var(--red-line)"><div><b>حذف فضای کاری</b><p>همه داده‌ها، کلیدها و گزارش‌ها برای همیشه حذف می‌شوند.</p></div><button class="btn btn-danger-soft btn-sm" id="dangerDelete">حذف فضای کاری</button></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="dangerModal" role="dialog" aria-modal="true" aria-label="حذف فضای کاری">
+      <div class="modal modal-sm">
+        <div class="modal-head"><div><h2 style="color:var(--red)">حذف فضای کاری «ابرینو»</h2><p>این عملیات غیرقابل بازگشت است.</p></div>
+          <button class="modal-close" data-modal-close="dangerModal" aria-label="بستن"><i data-icon="x"></i></button></div>
+        <div class="modal-body">
+          <div class="field"><label class="field-label">برای تأیید، عبارت <code class="inline">حذف ابرینو</code> را بنویسید</label>
+            <input class="input ltr" dir="ltr" id="dangerConfirm" placeholder="حذف ابرینو"></div>
+        </div>
+        <div class="modal-foot">
+          <button class="btn btn-ghost" data-modal-close="dangerModal">انصراف</button>
+          <button class="btn btn-danger" id="dangerConfirmBtn" disabled>حذف کامل</button>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </main>
+</div>
+<div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+  var navs = document.querySelectorAll('[data-settings-nav]');
+  navs.forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      navs.forEach(function(x){ x.classList.remove('active'); });
+      a.classList.add('active');
+      var target = a.getAttribute('data-settings-nav');
+      document.querySelectorAll('.settings-panel').forEach(function(p){
+        p.classList.toggle('active', p.id === 'panel-' + target);
+      });
+      if (window.BV) window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  var goto = document.querySelector('[data-goto-danger]');
+  if (goto) goto.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelectorAll('[data-settings-nav]').forEach(function(x){ x.classList.remove('active'); });
+    document.querySelector('[data-settings-nav="danger"]').classList.add('active');
+    document.querySelectorAll('.settings-panel').forEach(function(p){ p.classList.remove('active'); });
+    document.getElementById('panel-danger').classList.add('active');
+  });
+  document.getElementById('dangerDelete').addEventListener('click', function(){
+    if (window.BV) BV.openModal('dangerModal');
+  });
+  var inp = document.getElementById('dangerConfirm');
+  var btn = document.getElementById('dangerConfirmBtn');
+  inp.addEventListener('input', function(){
+    btn.disabled = inp.value.trim() !== 'حذف ابرینو';
+  });
+  btn.addEventListener('click', function(){
+    btn.classList.add('btn-loading');
+    setTimeout(function(){
+      btn.classList.remove('btn-loading');
+      if (window.BV) { BV.closeModal('dangerModal'); BV.toast('error', 'عملیات دمو', 'در نسخه دمو، حذف فضای کاری شبیه‌سازی و لغو شد.'); }
+    }, 1000);
+  });
+  document.querySelectorAll('[data-upload-demo], [data-wk-add]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('info', 'در نسخه دمو', 'این عملیات شبیه‌سازی می‌شود.');
+    });
+  });
+  document.querySelectorAll('[data-2fa-sim]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('success', 'کد صحیح است', 'ورود دومرحله‌ای بدون مشکل کار می‌کند. (دمو)');
+    });
+  });
+  document.querySelectorAll('[data-2fa-disable], [data-session-kill]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('warning', 'تأیید لازم است', 'این عملیات حساس نیاز به تأیید دومرحله‌ای دارد. (دمو)');
+    });
+  });
+  document.querySelectorAll('[data-wk-test], [data-wk-edit]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (window.BV) BV.toast('success', 'Webhook', 'در نسخه دمو: ارسال نمونه / ویرایش شبیه‌سازی شد.');
+    });
+  });
+  /* accent color */
+  var accents = {
+    blue:   { '--blue-600': '#1D4ED8', '--blue-500': '#2563EB', '--blue-400': '#3B82F6', '--blue-300': '#60A5FA', '--electric': '#38BDF8', '--blue-soft': 'rgba(37,99,235,.14)', '--blue-line': 'rgba(59,130,246,.35)', '--blue-glow': 'rgba(56,189,248,.22)', '--border-focus': 'rgba(59,130,246,.55)' },
+    sky:    { '--blue-600': '#0284C7', '--blue-500': '#0EA5E9', '--blue-400': '#38BDF8', '--blue-300': '#7DD3FC', '--electric': '#22D3EE', '--blue-soft': 'rgba(14,165,233,.14)', '--blue-line': 'rgba(56,189,248,.35)', '--blue-glow': 'rgba(34,211,238,.2)', '--border-focus': 'rgba(56,189,248,.55)' },
+    violet: { '--blue-600': '#6D28D9', '--blue-500': '#7C3AED', '--blue-400': '#A78BFA', '--blue-300': '#C4B5FD', '--electric': '#A78BFA', '--blue-soft': 'rgba(124,58,237,.16)', '--blue-line': 'rgba(167,139,250,.35)', '--blue-glow': 'rgba(167,139,250,.22)', '--border-focus': 'rgba(167,139,250,.55)' },
+    emerald:{ '--blue-600': '#047857', '--blue-500': '#059669', '--blue-400': '#34D399', '--blue-300': '#6EE7B7', '--electric': '#34D399', '--blue-soft': 'rgba(5,150,105,.14)', '--blue-line': 'rgba(52,211,153,.35)', '--blue-glow': 'rgba(52,211,153,.2)', '--border-focus': 'rgba(52,211,153,.5)' }
+  };
+  document.querySelectorAll('.color-swatch').forEach(function(s){
+    s.addEventListener('click', function(){
+      var a = accents[s.getAttribute('data-accent')];
+      if (!a) return;
+      for (var k in a) document.documentElement.style.setProperty(k, a[k]);
+      document.querySelectorAll('.color-swatch').forEach(function(x){ x.style.borderColor = 'transparent'; });
+      s.style.borderColor = '#fff';
+      if (window.BV) BV.toast('success', 'رنگ سازمانی تغییر کرد', 'تم کنسول با موفقیت به‌روزرسانی شد. (دمو)');
+    });
+  });
+  var dseg = document.querySelector('[data-density]');
+  dseg.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){
+      dseg.querySelectorAll('button').forEach(function(x){ x.classList.remove('active'); });
+      b.classList.add('active');
+      if (window.BV) BV.toast('info', b.textContent, 'تراکم در نسخه دمو ثبت شد.');
+    });
+  });
+  /* anchor deep-link: #security */
+  var hash = location.hash.replace('#', '').replace(/^panel-/, '');
+  if (hash && ['general','workspace','security','notif','webhooks','api','members','appearance','danger'].indexOf(hash) > -1) {
+    var target = document.querySelector('[data-settings-nav="' + hash + '"]');
+    if (target) target.click();
+  }
+})();
+</script>
+<script>
+(function(){
+  var now = new Date();
+  var el = document.getElementById('jalaliToday');
+  if (el && window.BV) el.textContent = BV.faDateFull(now);
+})();
+</script>
+</body></html>

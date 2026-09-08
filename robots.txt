@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /auth/
+Disallow: /dashboard/*#*
+
+Sitemap: https://bluevertex.ir/sitemap.xml

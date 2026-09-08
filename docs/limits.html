@@ -1,0 +1,231 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محدودیت‌ها | مستندات بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="محدودیت نرخ درخواست و سهمیه هر پلن بلو ورتکس به‌همراه مدیریت پاسخ 429.">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/docs/limits.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="محدودیت‌ها | مستندات بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="محدودیت نرخ درخواست و سهمیه هر پلن بلو ورتکس به‌همراه مدیریت پاسخ 429.">
+<meta property="og:url" content="https://bluevertex.ir/docs/limits.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise">
+<div class="announce">
+  <span class="badge badge-blue">جدید</span>
+  <span>نسخه ۲٫۴٫۰ منتشر شد؛ SDK پایتون با پشتیبانی کامل از تایپ منتشر شد.</span>
+  <a href="../changelog/index.html">مشاهده تغییرات <span data-icon="chevron-left"></span></a>
+</div>
+<header class="navbar">
+  <div class="container-wide nav-inner">
+    <a class="brand" href="../index.html" aria-label="بلو ورتکس">
+      <span class="brand-mark"><i data-icon="zap"></i></span>
+      <span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span>
+    </a>
+    <nav class="nav-links" aria-label="ناوبری اصلی"><a class="nav-link" href="../index.html">خانه</a><div class="nav-item dropdown" data-dd><a class="nav-link" href="#" data-dd-toggle>محصولات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../pages/features.html"><span class="icon-tile icon-tile-sm"><i data-icon="sparkles"></i></span><span><b class="mega-title">امکانات</b><p>هر آنچه برای ساخت محصول API نیاز دارید</p></span></a><a class="mega-item" href="../pages/solutions.html"><span class="icon-tile icon-tile-sm"><i data-icon="layers"></i></span><span><b class="mega-title">راهکارها</b><p>راهکار برای استارتاپ و سازمان</p></span></a><a class="mega-item" href="../pages/pricing.html"><span class="icon-tile icon-tile-sm"><i data-icon="credit-card"></i></span><span><b class="mega-title">قیمت‌گذاری</b><p>پلن شفاف و منعطف به تومان</p></span></a><a class="mega-item" href="../pages/customers.html"><span class="icon-tile icon-tile-sm"><i data-icon="users"></i></span><span><b class="mega-title">مشتریان</b><p>داستان شرکت‌هایی که با ما ساختند</p></span></a><a class="mega-item" href="../pages/about.html"><span class="icon-tile icon-tile-sm"><i data-icon="building-2"></i></span><span><b class="mega-title">درباره ما</b><p>تیم و فلسفه بلو استودیو</p></span></a><a class="mega-item" href="../pages/contact.html"><span class="icon-tile icon-tile-sm"><i data-icon="mail"></i></span><span><b class="mega-title">تماس با ما</b><p>گفتگو با تیم فروش</p></span></a></div></div><div class="nav-item dropdown" data-dd><a class="nav-link active" href="#" data-dd-toggle>مستندات <span data-icon="chevron-down"></span></a>
+  <div class="dropdown-menu nav-mega"><a class="mega-item" href="../docs/getting-started.html"><span class="icon-tile icon-tile-sm"><i data-icon="rocket"></i></span><span><b class="mega-title">شروع سریع</b><p>اولین درخواست در ۵ دقیقه</p></span></a><a class="mega-item" href="../docs/authentication.html"><span class="icon-tile icon-tile-sm"><i data-icon="shield-check"></i></span><span><b class="mega-title">احراز هویت</b><p>کلید API و مدیریت نشست</p></span></a><a class="mega-item" href="../docs/api-reference.html"><span class="icon-tile icon-tile-sm"><i data-icon="braces"></i></span><span><b class="mega-title">مرجع کامل API</b><p>پایان‌پوینت‌های /v1</p></span></a><a class="mega-item" href="../docs/sdks.html"><span class="icon-tile icon-tile-sm"><i data-icon="package"></i></span><span><b class="mega-title">SDK رسمی</b><p>جاوااسکریپت، پایتون، PHP، گو</p></span></a><a class="mega-item" href="../docs/examples.html"><span class="icon-tile icon-tile-sm"><i data-icon="code-2"></i></span><span><b class="mega-title">نمونه‌ها</b><p>کد آماده برای کپی</p></span></a><a class="mega-item" href="../docs/errors.html"><span class="icon-tile icon-tile-sm"><i data-icon="alert-triangle"></i></span><span><b class="mega-title">خطاها و کدها</b><p>رفع خطای رایج</p></span></a></div></div><a class="nav-link" href="../changelog/index.html">تغییرات</a><a class="nav-link" href="../pages/blog.html">وبلاگ</a></nav>
+    <div class="nav-cta">
+      <button class="btn-icon theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+      <a class="btn btn-ghost nav-keep" href="../auth/login.html">ورود</a>
+      <a class="btn btn-primary nav-keep" href="../auth/register.html">شروع کنید</a>
+      <button class="nav-burger" data-mobile-open="mobileMenu" aria-label="باز کردن منو"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="منوی موبایل">
+  <div class="mobile-panel">
+    <div class="flex-between">
+      <a class="brand" href="../index.html"><span class="brand-mark"><i data-icon="zap"></i></span><span class="brand-name">بلو ورتکس<small>BLUE VERTEX</small></span></a>
+      <button class="modal-close" data-mobile-close aria-label="بستن"><i data-icon="x"></i></button>
+    </div>
+    <div class="mobile-theme-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 22px 10px">
+      <span class="t-caption" style="color:var(--text-3)">حالت نمایش</span>
+      <button class="btn btn-outline btn-sm theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش"><i data-icon="sun"></i></button>
+    </div>
+    <nav class="mobile-links" aria-label="منوی موبایل">
+      <a class="mobile-link" href="../index.html">خانه</a>
+      <a class="mobile-link" href="../pages/features.html">امکانات</a>
+      <a class="mobile-link" href="../pages/solutions.html">راهکارها</a>
+      <a class="mobile-link" href="../pages/pricing.html">قیمت‌گذاری</a>
+      <a class="mobile-link" href="../docs/index.html">مستندات</a>
+      <a class="mobile-link" href="../changelog/index.html">تغییرات</a>
+      <a class="mobile-link" href="../pages/blog.html">وبلاگ</a>
+      <a class="mobile-link" href="../status/index.html">وضعیت سرویس</a>
+      <a class="mobile-link" href="../auth/login.html">ورود به حساب</a>
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn btn-primary btn-block" href="../auth/register.html">شروع کنید — رایگان</a>
+      <a class="btn btn-secondary btn-block" href="../auth/login.html">ورود</a>
+    </div>
+  </div>
+</div>
+<div class="docs-shell">
+  <div class="docs-side"><div class="docs-side-inner"><div class="docs-group"><div class="docs-group-title"><i data-icon="rocket"></i>شروع کار</div><a class="docs-link" href="../docs/index.html"><span data-icon="book-open"></span>معرفی</a><a class="docs-link" href="../docs/getting-started.html"><span data-icon="zap"></span>شروع سریع</a><a class="docs-link" href="../docs/getting-started.html#install"><span data-icon="download"></span>نصب</a></div><div class="docs-group"><div class="docs-group-title"><i data-icon="lightbulb"></i>مفاهیم</div><a class="docs-link" href="../docs/authentication.html"><span data-icon="shield-check"></span>احراز هویت</a><a class="docs-link" href="../docs/projects.html"><span data-icon="folder-kanban"></span>پروژه‌ها</a><a class="docs-link" href="../docs/authentication.html#keys"><span data-icon="key-round"></span>کلیدهای API</a><a class="docs-link" href="../docs/webhooks.html"><span data-icon="webhook"></span>Webhookها</a></div><div class="docs-group"><div class="docs-group-title"><i data-icon="braces"></i>API</div><a class="docs-link" href="../docs/api-reference.html"><span data-icon="book-open"></span>معرفی API</a><a class="docs-link" href="../docs/api/users.html"><span data-icon="users"></span>کاربران</a><a class="docs-link" href="../docs/api/projects.html"><span data-icon="folder-kanban"></span>پروژه‌ها</a><a class="docs-link" href="../docs/api/payments.html"><span data-icon="credit-card"></span>پرداخت‌ها</a><a class="docs-link" href="../docs/api/files.html"><span data-icon="file-text"></span>فایل‌ها</a></div><div class="docs-group"><div class="docs-group-title"><i data-icon="package"></i>SDK</div><a class="docs-link" href="../docs/sdks.html#js"><span data-icon="braces"></span>JavaScript</a><a class="docs-link" href="../docs/sdks.html#py"><span data-icon="braces"></span>Python</a><a class="docs-link" href="../docs/sdks.html#php"><span data-icon="braces"></span>PHP</a><a class="docs-link" href="../docs/sdks.html#go"><span data-icon="braces"></span>Go</a></div><div class="docs-group"><div class="docs-group-title"><i data-icon="help-circle"></i>راهنما</div><a class="docs-link" href="../docs/examples.html"><span data-icon="code-2"></span>نمونه‌ها</a><a class="docs-link" href="../docs/errors.html"><span data-icon="alert-triangle"></span>خطاها</a><a class="docs-link" href="../docs/limits.html"><span data-icon="gauge"></span>محدودیت‌ها</a><a class="docs-link" href="../docs/faq.html"><span data-icon="help-circle"></span>سوالات متداول</a></div><div class="docs-group"><div class="docs-group-title"><i data-icon="life-buoy"></i>پشتیبانی</div><a class="docs-link" href="../status/index.html"><span data-icon="activity"></span>وضعیت سرویس</a><a class="docs-link" href="../pages/contact.html"><span data-icon="message-square"></span>تماس با پشتیبانی</a></div></div></div>
+  <main class="docs-main">
+    <div class="docs-search-sticky">
+      <button class="docs-searchbox w-full" data-search-open aria-label="جستجو در مستندات" style="width:100%">
+        <i data-icon="search"></i>
+        <span style="color:var(--text-4);font-size:var(--fs-sm)">جستجو در مستندات، API و راهنماها…</span>
+        <span class="kbd">Ctrl K</span>
+      </button>
+    </div>
+    <nav class="breadcrumb" aria-label="مسیر صفحه">
+      <a href="../docs/index.html">مستندات</a><span class="sep"><i data-icon="chevron-left"></i></span>
+      <span class="current">سقف هر پلن</span>
+    </nav>
+    <div class="doc-article">
+    
+<h1>محدودیت‌ها و نرخ</h1>
+<p class="doc-desc">هر کلید در هر دقیقه سقف درخواست دارد. با عبور از سقف، پاسخ <code class="inline">429</code> همراه هدر <code class="inline">Retry-After</code> برمی‌گردد — درخواست شما هرگز بی‌سروصدا رها نمی‌شود.</p>
+<div class="doc-updated"><i data-icon="clock"></i> آخرین به‌روزرسانی: ۲۴ مرداد ۱۴۰۵</div>
+
+<h2 id="limits"><span class="hash">#</span>سقف نرخ هر پلن</h2>
+<div class="table-wrap"><table class="table param-table">
+  <thead><tr><th>پلن</th><th>درخواست در دقیقه</th><th>درخواست در ماه</th><th>پاسخ‌های هم‌زمان</th></tr></thead>
+  <tbody>
+    <tr><td class="cell-main">رایگان</td><td>۶۰</td><td>۱۰ هزار</td><td>۱۰</td></tr>
+    <tr><td class="cell-main">توسعه‌دهنده</td><td>۳۰۰</td><td>۵۰۰ هزار</td><td>۵۰</td></tr>
+    <tr><td class="cell-main">رشد</td><td>۱٬۰۰۰</td><td>۵ میلیون</td><td>۲۰۰</td></tr>
+    <tr><td class="cell-main">سازمانی</td><td>سفارشی</td><td>سفارشی</td><td>سفارشی</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="headers"><span class="hash">#</span>هدرهای نرخ</h2>
+<p>هر پاسخ شامل این هدرهاست:</p>
+<div data-code-tabs><div class="code-tabs"><button class="code-tab active" data-lang="json">json</button></div><div class="code-tab-panel active" data-lang-panel="json"><div class="code-block"><div class="code-head"><span class="code-lang">json</span><button class="code-copy" data-copy-target="#cb_0" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_0" class="line-numbers"><code class="language-json">x-ratelimit-limit: 300
+x-ratelimit-remaining: 299
+x-ratelimit-reset: 42
+retry-after: 7   # فقط در پاسخ 429</code></pre></div></div></div>
+<h2 id="handle"><span class="hash">#</span>مدیریت پاسخ 429</h2>
+<div data-code-tabs><div class="code-tabs"><button class="code-tab active" data-lang="JavaScript">JavaScript</button><button class="code-tab" data-lang="Python">Python</button></div><div class="code-tab-panel active" data-lang-panel="JavaScript"><div class="code-block"><div class="code-head"><span class="code-lang">JavaScript</span><button class="code-copy" data-copy-target="#cb_0" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_0" class="line-numbers"><code class="language-javascript">if (res.status === 429) {
+  const wait = Number(res.headers.get('retry-after')) * 1000;
+  await sleep(wait);
+  return fetch(url, { headers });
+}</code></pre></div></div><div class="code-tab-panel" data-lang-panel="Python"><div class="code-block"><div class="code-head"><span class="code-lang">Python</span><button class="code-copy" data-copy-target="#cb_1" aria-label="کپی"><i data-icon="copy"></i></button></div><pre id="cb_1" class="line-numbers"><code class="language-python">if resp.status_code == 429:
+    wait = int(resp.headers["retry-after"])
+    time.sleep(wait)
+    return client.get(url)</code></pre></div></div></div>
+<div class="callout"><b class="icon-title"><i data-icon="info"></i> حرفه‌ای‌تر</b><p>در SDKها این کار به‌صورت خودکار انجام می‌شود؛ اما حداکثر ۳ تلاش مجدد — بعد از آن خطای <code class="inline">rate_limited</code> می‌گیرید.</p></div>
+
+    </div>
+    <div class="doc-pager"><a class="pager-card prev" href="../docs/errors.html"><span class="pager-label"><i data-icon="arrow-right"></i> قبلی</span><b>خطاها</b></a><a class="pager-card next" href="../docs/faq.html"><span class="pager-label"><i data-icon="arrow-left"></i> بعدی</span><b>سوالات متداول</b></a></div>
+  </main>
+  <aside class="docs-toc" aria-label="فهرست مطالب" style="display:">
+    <div class="toc-title"><i data-icon="list"></i> در این صفحه</div>
+    <nav class="toc-list" id="tocList"><a class="toc-link" href="#limits">سقف هر پلن</a><a class="toc-link" href="#headers">هدرها</a><a class="toc-link" href="#handle">مدیریت 429</a></nav>
+    <div class="mt-32">
+      <div class="toc-title"><i data-icon="life-buoy"></i> کمک بگیرید</div>
+      <a class="btn btn-outline btn-sm btn-block" href="../pages/contact.html">تماس با پشتیبانی</a>
+      <a class="btn btn-ghost btn-sm btn-block mt-8" href="../status/index.html"><i data-icon="activity"></i> وضعیت سرویس</a>
+    </div>
+  </aside>
+</div>
+<div class="search-view" id="docsSearch" role="dialog" aria-modal="true" aria-label="جستجو در مستندات">
+  <div class="search-panel">
+    <div class="search-header">
+      <span style="display:flex;color:var(--text-3)" data-icon="search"></span>
+      <input id="searchInput" placeholder="جستجو در مستندات، API و راهنماها…" aria-label="جستجو در مستندات">
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="search-filters" id="searchFilters">
+      <button class="chip active" data-search-cat="all">همه</button>
+      <button class="chip" data-search-cat="guide">راهنما</button>
+      <button class="chip" data-search-cat="api">API</button>
+      <button class="chip" data-search-cat="sdk">SDK</button>
+      <button class="chip" data-search-cat="faq">سوالات</button>
+    </div>
+    <div class="search-recents" id="searchRecents"></div>
+    <div class="search-results" id="searchResults"></div>
+    <div id="searchEmpty" style="display:none">
+      <div class="search-empty">
+        <span style="display:inline-flex" data-icon="search-x"></span>
+        <p>نتیجه‌ای پیدا نشد. عبارت دیگری را امتحان کنید.</p>
+      </div>
+    </div>
+    <div class="search-foot">
+      <span>برای جستجوی سریع، ⟨Ctrl⟩ + ⟨K⟩ را بزنید</span>
+    </div>
+  </div>
+</div><script>
+window.BV_DOCS = [
+  {title:'شروع سریع', url:'../docs/getting-started.html', cat:'guide', catLabel:'راهنما', icon:'rocket', desc:'اولین درخواست API در کمتر از ۵ دقیقه'},
+  {title:'احراز هویت', url:'../docs/authentication.html', cat:'guide', catLabel:'راهنما', icon:'shield-check', desc:'تولید کلید API و ارسال هدر Authorization'},
+  {title:'مرجع کامل API', url:'../docs/api-reference.html', cat:'api', catLabel:'API', icon:'braces', desc:'پایان‌پوینت‌های /v1 با نمونه درخواست و پاسخ'},
+  {title:'پایان‌پوینت کاربران', url:'../docs/api/users.html', cat:'api', catLabel:'API', icon:'users', desc:'لیست، ساخت و ویرایش کاربران'},
+  {title:'پایان‌پوینت پروژه‌ها', url:'../docs/api/projects.html', cat:'api', catLabel:'API', icon:'folder-kanban', desc:'مدیریت پروژه‌ها و اعضای تیم'},
+  {title:'پایان‌پوینت پرداخت‌ها', url:'../docs/api/payments.html', cat:'api', catLabel:'API', icon:'credit-card', desc:'ایجاد و استعلام پرداخت'},
+  {title:'پایان‌پوینت فایل‌ها', url:'../docs/api/files.html', cat:'api', catLabel:'API', icon:'file-text', desc:'بارگذاری و مدیریت فایل'},
+  {title:'SDK رسمی', url:'../docs/sdks.html', cat:'sdk', catLabel:'SDK', icon:'package', desc:'JavaScript ،Python ،PHP و Go'},
+  {title:'نمونه‌های کاربردی', url:'../docs/examples.html', cat:'guide', catLabel:'راهنما', icon:'code-2', desc:'سناریوهای آماده برای کپی'},
+  {title:'کدهای خطا', url:'../docs/errors.html', cat:'guide', catLabel:'راهنما', icon:'alert-triangle', desc:'فهرست کامل خطاها و راه‌حل'},
+  {title:'محدودیت‌ها و نرخ', url:'../docs/limits.html', cat:'guide', catLabel:'راهنما', icon:'gauge', desc:'محدودیت نرخ درخواست و سهمیه هر پلن'},
+  {title:'سوالات متداول', url:'../docs/faq.html', cat:'faq', catLabel:'سوالات', icon:'help-circle', desc:'پاسخ پرسش‌های رایج توسعه‌دهندگان'},
+  {title:'نصب', url:'../docs/getting-started.html#install', cat:'guide', catLabel:'راهنما', icon:'download', desc:'نصب SDK با npm و pip'},
+  {title:'کلیدهای API', url:'../docs/authentication.html#keys', cat:'guide', catLabel:'راهنما', icon:'key-round', desc:'ساخت، چرخش و باطل‌سازی کلید'},
+  {title:'Webhookها', url:'../docs/webhooks.html', cat:'guide', catLabel:'راهنما', icon:'webhook', desc:'رویدادها، امضا و تحویل مجدد'},
+  {title:'خانه مستندات', url:'../docs/index.html', cat:'guide', catLabel:'راهنما', icon:'book-open', desc:'نقشه راه مستندات'}
+];
+</script><div class="palette-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="فرمان سریع">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="search" style="display:flex"></span>
+      <input id="paletteInput" class="palette-input" placeholder="جستجو در بلو ورتکس…" aria-label="جستجو">
+      <button class="topbar-btn" data-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="paletteList"></div>
+    <div class="palette-foot">
+      <span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span>
+      <span><span class="kbd">↵</span> انتخاب</span>
+      <span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Blue Vertex</span>
+    </div>
+  </div>
+</div><div class="toast-region" aria-live="polite"></div><script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/vendor/prism-core.min.js"></script>
+<script src="../assets/js/vendor/prism-clike.min.js"></script>
+<script src="../assets/js/vendor/prism-javascript.min.js"></script>
+<script src="../assets/js/vendor/prism-json.min.js"></script>
+<script src="../assets/js/vendor/prism-bash.min.js"></script>
+<script src="../assets/js/vendor/prism-python.min.js"></script>
+<script src="../assets/js/vendor/prism-markup.min.js"></script>
+<script src="../assets/js/vendor/prism-markup-templating.min.js"></script>
+<script src="../assets/js/vendor/prism-php.min.js"></script>
+<script src="../assets/js/vendor/prism-go.min.js"></script>
+<script src="../assets/js/vendor/prism-css.min.js"></script>
+<script src="../assets/js/vendor/prism-yaml.min.js"></script>
+<script src="../assets/js/vendor/prism-line-numbers.min.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>window.BV_DOCS_PAGE = true;</script>
+</body></html>

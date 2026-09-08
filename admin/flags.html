@@ -1,0 +1,195 @@
+<!DOCTYPE html>'
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feature Flags | پنل مدیریت بلو ورتکس — بلو ورتکس | پلتفرم توسعه‌دهنده فارسی</title>
+<meta name="description" content="پنل مدیریت بلو ورتکس — Feature Flags">
+<meta name="keywords" content="پلتفرم توسعه‌دهنده، API فارسی، داشبورد توسعه‌دهنده، مستندات API، SDK، Blue Vertex">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bluevertex.ir/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Feature Flags | پنل مدیریت بلو ورتکس — بلو ورتکس">
+<meta property="og:description" content="پنل مدیریت بلو ورتکس — Feature Flags">
+<meta property="og:url" content="https://bluevertex.ir/index.html">
+<meta property="og:site_name" content="بلو ورتکس">
+<meta property="og:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bluevertex.ir/assets/og/og-cover.jpg">
+<meta name="theme-color" content="#050505">
+<script>/* theme bootstrap - runs before CSS paint to avoid flash */
+(function(){try{var q=(location.search.match(/[?&]theme=(light|dark)/i)||[])[1];var t=q||localStorage.getItem('bv-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="icon" type="image/svg+xml" href="../assets/css/../icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+<script>/* fonts under file:// — browsers block woff2 via CORS from origin null, so
+  inline the variable font as a data URI (last @font-face wins for all weights) */
+(function(){try{
+  if(location.protocol==='file:'){
+    var base=document.querySelector('link[rel="stylesheet"][href$="base.css"]');
+    var l=document.createElement('link');l.rel='stylesheet';
+    l.href=(base?base.getAttribute('href'):'assets/css/base.css').replace(/base\.css$/,'fonts-embed.css');
+    document.head.appendChild(l);
+  }
+}catch(e){}})();</script>
+</head>
+<body class="noise admin">
+<div class="dash-shell">
+<aside class="dash-side" id="dashSide">
+  <div class="side-brand">
+    <a class="brand" href="index.html"><span class="brand-mark"><i data-icon="shield"></i></span><span class="brand-name">بلو ورتکس<small>ADMIN CONSOLE</small></span></a>
+    <button class="topbar-btn" style="margin-inline-start:auto" data-side-open-close aria-label="بستن منو"><i data-icon="x"></i></button>
+  </div>
+  <nav class="side-nav" aria-label="منوی مدیریت"><div class="side-section-title">عملیات</div><a class="side-link" href="index.html"><i data-icon="layout-dashboard"></i><span>نمای کلی</span></a><a class="side-link" href="activity.html"><i data-icon="activity"></i><span>فعالیت سیستم</span></a><a class="side-link" href="activity.html#incidents"><i data-icon="siren"></i><span>Incidentها</span></a><div class="side-section-title">مشتریان</div><a class="side-link" href="users.html"><i data-icon="users-round"></i><span>کاربران</span></a><a class="side-link" href="organizations.html"><i data-icon="building-2"></i><span>سازمان‌ها</span></a><a class="side-link" href="subscriptions.html"><i data-icon="credit-card"></i><span>اشتراک‌ها</span></a><div class="side-section-title">مالی</div><a class="side-link" href="revenue.html"><i data-icon="wallet"></i><span>درآمد</span></a><div class="side-section-title">پلتفرم</div><a class="side-link" href="api.html"><i data-icon="server"></i><span>مصرف API</span></a><a class="side-link active" href="flags.html" aria-current="page"><i data-icon="flag"></i><span>Feature Flags</span></a><a class="side-link" href="content.html"><i data-icon="file-text"></i><span>محتوا</span></a><a class="side-link" href="settings.html"><i data-icon="settings"></i><span>تنظیمات سیستم</span></a><div class="side-section-title">پشتیبانی</div><a class="side-link" href="support.html"><i data-icon="life-buoy"></i><span>تیکت‌ها</span><span class="side-badge blue">۱</span></a><a class="side-link" href="notifications.html"><i data-icon="bell"></i><span>اعلان‌ها</span></a><div class="side-section-title">امنیت</div><a class="side-link" href="security.html"><i data-icon="shield-check"></i><span>مرکز امنیت و Audit</span></a></nav>
+  <div class="side-foot" style="margin-top:auto">
+    <div class="side-upgrade">
+      <b><i data-icon="activity"></i> وضعیت سرویس</b>
+      <p>همه سرویس‌ها پایدارند — آپ‌تایم ۳۰ روز: <b class="fa-num">۹۹٫۹۸٪</b></p>
+      <div class="progress green"><i style="width:99.98%"></i></div>
+      <div class="flex gap-8 mt-8">
+        <a class="btn btn-ghost btn-sm btn-block" href="../status/index.html">صفحه وضعیت</a>
+        <button class="btn btn-secondary btn-sm btn-block" data-ad-palette-open>⌘K فرمان</button>
+      </div>
+    </div>
+  </div>
+</aside>
+<div class="side-backdrop" id="sideBackdrop"></div><header class="dash-topbar">
+  <button class="topbar-btn side-toggle" data-side-open aria-label="باز کردن منو"><i data-icon="panel-right"></i></button>
+  <div class="topbar-breadcrumb">
+    <span>پلتفرم بلو ورتکس</span><span class="sep"><i data-icon="chevron-left"></i></span><b>Feature Flags</b>
+  </div>
+  <div style="flex:1"></div>
+  <button class="topbar-btn theme-toggle" data-theme-toggle aria-label="تغییر حالت نمایش" title="حالت روشن"><i data-icon="sun"></i></button>
+  <div class="dropdown" data-dd>
+    <button class="env-chip" data-dd-toggle aria-haspopup="true" aria-label="محیط نمایش — تغییر محیط">
+      <span class="env-dot"></span>محیط: <b data-env-name>Production</b>
+      <i data-icon="chevron-down" style="width:12px;height:12px"></i>
+    </button>
+    <div class="dropdown-menu" style="min-width:210px">
+      <div class="menu-title">محیط نمایش</div>
+      <button class="menu-item" data-env-opt="production"><span class="env-dot" style="background:#FBBF24;box-shadow:0 0 8px #FBBF24"></span>Production<span class="badge badge-amber" style="margin-inline-start:auto">فعال</span></button>
+      <button class="menu-item" data-env-opt="staging"><span class="env-dot" style="background:#A78BFA;box-shadow:0 0 8px #A78BFA"></span>Staging</button>
+      <button class="menu-item" data-env-opt="dev"><span class="env-dot" style="background:#38BDF8;box-shadow:0 0 8px #38BDF8"></span>Development</button>
+    </div>
+  </div>
+  <button class="topbar-search" data-ad-search-open aria-label="جستجوی سراسری">
+    <i data-icon="search"></i><span>جستجوی کاربر، سازمان، تراکنش…</span><span class="kbd">Ctrl /</span>
+  </button>
+  <div class="dropdown" data-dd>
+    <button class="topbar-btn" data-dd-toggle aria-label="اعلان‌ها"><i data-icon="bell"></i><span class="notif-dot"></span></button>
+    <div class="dropdown-menu" style="width:330px">
+      <div class="menu-title">اعلان‌ها <span class="badge badge-blue" data-ad-unread>۳</span></div>
+      <a class="menu-item ma-top" href="notifications.html"><span style="flex:1;min-width:0"><b style="color:var(--text-1);font-size:var(--fs-caption)">۳ اعلان جدید</b><span style="display:block;font-size:.66rem;color:var(--text-4)">مشاهده همه اعلان‌ها</span></span><i data-icon="arrow-left"></i></a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="revenue.html"><i data-icon="credit-card" style="color:var(--red)"></i>پرداخت ناموفق سازمان رایانش</a>
+      <a class="menu-item" href="security.html"><i data-icon="shield-alert" style="color:var(--amber)"></i>۳ تلاش ورود ناموفق مسدود شد</a>
+      <a class="menu-item" href="activity.html"><i data-icon="activity" style="color:var(--amber)"></i>کندی صف گزارش‌گیری</a>
+    </div>
+  </div>
+  <div class="dropdown" data-dd>
+    <button class="topbar-user" data-dd-toggle aria-label="پروفایل ادمین">
+      <span class="avatar avatar-sm" style="background:linear-gradient(135deg,#A78BFA,#6D28D9)">م</span>
+      <span class="u-info"><span class="u-name">مریم کریمی</span><span class="u-mail">admin@bluevertex.ir</span></span>
+      <i data-icon="chevron-down" class="chev"></i>
+    </button>
+    <div class="dropdown-menu">
+      <div class="menu-title">admin@bluevertex.ir</div>
+      <span class="role-chip" data-role="super" style="margin:0 10px 8px">Super Admin</span>
+      <a class="menu-item" href="settings.html#settings-profile"><i data-icon="user-round"></i>پروفایل و نشست‌ها</a>
+      <a class="menu-item" href="settings.html"><i data-icon="settings"></i>تنظیمات سیستم</a>
+      <div class="menu-sep"></div>
+      <a class="menu-item" href="../index.html"><i data-icon="external-link"></i>مشاهده سایت</a>
+      <a class="menu-item" href="../dashboard/index.html"><i data-icon="layout-dashboard"></i>کنسول توسعه‌دهنده</a>
+      <a class="menu-item" href="../auth/login.html"><i data-icon="log-out"></i>خروج</a>
+    </div>
+  </div>
+</header>
+  <main class="dash-main">
+    <div class="dash-content">
+      <div class="dash-head">
+        <div><h1 style="margin:0">Feature Flags</h1><p class="greet-sub" style="margin:0;margin-top:4px">کنترل ویژگی‌ها و توزیع تدریجی روی محیط‌های مختلف</p></div>
+        <div class="dash-actions"></div>
+      </div>
+      <div class="kpi-grid"><div class="kpi-card accent">
+      <div class="kpi-top"><i data-icon="flag"></i><span>Feature Flags</span></div>
+      <div class="kpi-num">۸</div>
+      <div class="kpi-sub">در ۲ محیط</div><span class="kpi-delta mid"><i data-icon="minus"></i> —</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="check-circle-2"></i><span>فعال در تولید</span></div>
+      <div class="kpi-num">۴</div>
+      <div class="kpi-sub">۲ مورد در حال توزیع</div><span class="kpi-delta up"><i data-icon="arrow-up-right"></i> —</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="sliders-horizontal"></i><span>در حال توزیع</span></div>
+      <div class="kpi-num">۳</div>
+      <div class="kpi-sub">۱۰٪ · ۲۵٪ · ۵۰٪</div><span class="kpi-delta mid"><i data-icon="minus"></i> —</span></div><div class="kpi-card">
+      <div class="kpi-top"><i data-icon="toggle-right"></i><span>غیرفعال</span></div>
+      <div class="kpi-num">۳</div>
+      <div class="kpi-sub">نیاز به بازبینی</div><span class="kpi-delta mid"><i data-icon="minus"></i> —</span></div></div><div class="ad-note"><i data-icon="shield-check"></i><span>تغییر توزیع (Rollout) روی محیط <b>تولید</b> نیاز به تأیید دارد و در سابقه‌ی ممیزی ثبت می‌شود. سوییچ هر ردیف نیز همین‌قاعده را دنبال می‌کند.</span></div><div class="chart-card" style="padding:0;overflow:hidden">
+  <div class="chart-card-head" style="padding:18px 22px 0;margin-bottom:10px">
+    <div><h2>Feature Flags</h2><p>ویژگی‌های پلتفرم با توزیع تدریجی</p></div>
+    <div class="flex gap-8"><div class="search-input" style="position:relative;min-width:230px"><span style="position:absolute;inset-inline-start:11px;top:50%;transform:translateY(-50%);display:flex;color:var(--text-4)" data-icon="search"></span><input class="input" data-ad-search="flags" placeholder="جستجوی نام یا کلید…" style="padding-inline-start:34px;min-width:230px" aria-label="جستجو"></div><select class="select" data-ad-filter="flags" data-field="env" aria-label="محیط"><option value="">محیط: همه</option><option value="production">تولید</option><option value="staging">آزمایش</option></select><button class="btn btn-secondary btn-sm" data-ad-export="خروجی"><i data-icon="download"></i> خروجی</button></div>
+  </div>
+  <div class="table-wrap ad-table-wrap" style="border:none;border-radius:0">
+    <table class="ad-table" data-ad-table="flags" aria-label="Feature Flags">
+      <thead><tr><th scope="col">Feature<span class="dir"></span></th><th scope="col">وضعیت<span class="dir"></span></th><th scope="col">محیط<span class="dir"></span></th><th scope="col" class="sortable" data-sort="rollout">توزیع<span class="dir"></span></th><th scope="col">ایجاد<span class="dir"></span></th><th scope="col">آخرین تغییر<span class="dir"></span></th><th scope="col">مالک<span class="dir"></span></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pager" style="padding:12px 20px 16px" data-ad-pager="flags">
+    <span class="p-msg" data-ad-pmsg="flags"></span>
+  </div>
+</div>
+    </div>
+  </main>
+</div>
+<div class="palette-backdrop" id="adPalette" role="dialog" aria-modal="true" aria-label="فرمان‌های ادمین">
+  <div class="palette">
+    <div class="palette-input-wrap">
+      <span data-icon="command" style="display:flex"></span>
+      <input id="adPaletteInput" class="palette-input" placeholder="فرمان یا جستجوی سریع…" aria-label="فرمان سریع">
+      <button class="topbar-btn" data-ad-palette-close style="display:none" aria-label="بستن"><i data-icon="x"></i></button>
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="palette-list" id="adPaletteList"></div>
+    <div class="palette-foot"><span><span class="kbd">↑</span><span class="kbd">↓</span> حرکت</span><span><span class="kbd">↵</span> انتخاب</span><span style="margin-inline-start:auto;font-weight:700;color:var(--text-4)">Admin Console</span></div>
+  </div>
+</div>
+<div class="search-view" id="adSearch" role="dialog" aria-modal="true" aria-label="جستجوی سراسری ادمین">
+  <div class="search-panel">
+    <div class="search-header"><span style="display:flex;color:var(--text-3)" data-icon="search"></span>
+      <input id="adSearchInput" placeholder="جستجوی کاربر، سازمان، اشتراک، فاکتور، تیکت، Audit…" aria-label="جستجوی سراسری"><span class="kbd">ESC</span></div>
+    <div class="search-recents" id="adSearchRecents" style="padding:12px 18px"></div>
+    <div class="search-results" id="adSearchResults" style="padding:6px 18px 16px"></div>
+    <div id="adSearchEmpty" style="display:none"><div class="search-empty"><span style="display:inline-flex" data-icon="search-x"></span><p>نتیجه‌ای پیدا نشد. عبارت دیگری را امتحان کنید.</p></div></div>
+    <div class="search-foot"><span>جستجو در داده‌های نمایشی ادمین</span></div>
+  </div>
+</div>
+<div class="modal-backdrop" id="adConfirm" role="dialog" aria-modal="true" aria-label="تأیید عملیات">
+  <div class="modal modal-sm">
+    <div class="modal-head"><div><h2 data-adc-title>تأیید عملیات</h2></div>
+      <button class="modal-close" id="adConfirmClose" aria-label="بستن"><i data-icon="x"></i></button></div>
+    <div class="modal-body" data-adc-body></div>
+    <div class="modal-foot"><button class="btn btn-ghost" data-adc-cancel>انصراف</button><button class="btn btn-primary" data-adc-ok>تأیید</button></div>
+  </div>
+</div>
+<div class="drawer-backdrop" id="adDrBack"></div>
+<aside class="drawer ad-drawer" id="adDrawer" role="dialog" aria-modal="true" aria-label="جزئیات">
+  <div class="drawer-head">
+    <div class="flex gap-8"><h2 class="t-h4">جزئیات</h2></div>
+    <button class="modal-close" id="adDrawerClose" aria-label="بستن"><i data-icon="x"></i></button>
+  </div>
+  <div class="drawer-body" id="adDrawerBody"></div>
+  <div class="drawer-foot" id="adDrawerFoot" style="display:none"></div>
+</aside><div class="toast-region" id="toastRegion"></div>
+<script src="../assets/js/vendor/lucide.min.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script src="../assets/js/admin-data.js"></script>
+<script src="../assets/js/admin.js"></script>
+
+</body></html>
