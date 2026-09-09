@@ -6,7 +6,7 @@ for a clean slate."""
 import os, json
 from playwright.sync_api import sync_playwright
 
-ROOT = '/home/user/blue-vertex'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'http://127.0.0.1:8801/'
 PAGES = sorted([os.path.join(r, f).replace(ROOT + '/', '')
                 for r, _, fs in os.walk(ROOT) for f in fs if f.endswith('.html')])
