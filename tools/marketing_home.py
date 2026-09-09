@@ -519,7 +519,7 @@ def build(prefix=''):
       <span class="integration-card"><i data-icon="database"></i>PostgreSQL</span>
       <span class="integration-card"><i data-icon="server-cog"></i>Kafka</span>
       <span class="integration-card"><i data-icon="webhook"></i>Webhooks</span>
-      <span class="integration-card"><i data-icon="web"></i>GraphQL</span>
+      <span class="integration-card"><i data-icon="globe"></i>GraphQL</span>
       <span class="integration-card"><i data-icon="radio"></i>SSE</span>
       <span class="integration-card"><i data-icon="message-square-code"></i>Postman</span>
       <span class="integration-card"><i data-icon="zap"></i>CI/CD</span>

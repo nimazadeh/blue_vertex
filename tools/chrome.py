@@ -13,7 +13,7 @@ def head(title, desc, prefix, extra_css='', extra_meta='', canonical=None, og_ty
     canon = canonical or (prefix + 'index.html')
     __THEME_BOOT = THEME_BOOT
     __FONT_BOOT = FONT_BOOT
-    __html = f'''<!DOCTYPE html>'
+    __html = f'''<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -37,7 +37,7 @@ def head(title, desc, prefix, extra_css='', extra_meta='', canonical=None, og_ty
 <meta name="theme-color" content="#050505">
 {__THEME_BOOT}
 {extra_meta}
-<link rel="icon" type="image/svg+xml" href="{css}../icons/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="{prefix}assets/icons/favicon.svg">
 <link rel="stylesheet" href="{css}base.css">
 <link rel="stylesheet" href="{css}site.css">
 <link rel="stylesheet" href="{css}docs.css">
@@ -52,7 +52,7 @@ def announce(prefix=''):
     p = prefix
     return f'''<div class="announce">
   <span class="badge badge-blue">جدید</span>
-  <span>نسخه ۲٫۴٫۰ منتشر شد؛ SDK پایتون با پشتیبانی کامل از تایپ منتشر شد.</span>
+  <span>نسخه ۲٫۴٫۱ منتشر شد؛ بهبود نمودارها و بارگذاری سریع‌تر صفحه وضعیت سرویس.</span>
   <a href="{p}changelog/index.html">مشاهده تغییرات <span data-icon="chevron-left"></span></a>
 </div>'''
 

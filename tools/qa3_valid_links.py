@@ -3,7 +3,7 @@
 import os, re
 import html5lib
 
-ROOT = '/home/user/blue-vertex'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGES = sorted([os.path.join(r, f) for r, _, fs in os.walk(ROOT) for f in fs if f.endswith('.html')])
 
 bad_html = []

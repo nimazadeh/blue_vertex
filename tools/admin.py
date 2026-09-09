@@ -208,7 +208,7 @@ def table_card(title, sub, entity, cols, toolbar='', selectable=False, wrap_id=N
     th = ''
     if selectable:
         th += '<th scope="col" style="width:30px"><input type="checkbox" class="ck ck-all" aria-label="انتخاب همه"></th>'
-    th += ''.join(f'<th scope="col"{" class=\"sortable\" data-sort=\"" + c["sort"] + "\"" if c.get("sort") else ""}>{c["label"]}<span class="dir"></span></th>' for c in cols)
+    th += ''.join(('<th scope="col" class="sortable" data-sort="%s">%s<span class="dir"></span></th>' % (c["sort"], c["label"])) if c.get("sort") else ('<th scope="col">%s<span class="dir"></span></th>' % c["label"]) for c in cols)
     tbody = ''
     return f'''<div class="chart-card" style="padding:0;overflow:hidden">
   <div class="chart-card-head" style="padding:18px 22px 0;margin-bottom:10px">

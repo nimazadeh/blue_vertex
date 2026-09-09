@@ -5,6 +5,7 @@ Run: python3 tools/qa.py  (after python3 tools/build.py)
 import os, re, sys, io, glob, html.parser
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+SITE = 'https://bluevertex.ir/'
 PAGES = [p for p in sorted(glob.glob(os.path.join(ROOT, '**', '*.html'), recursive=True))
          if 'node_modules' not in p and 'tools/shots' not in p]
 
@@ -67,6 +68,23 @@ def check_page(path):
         src = f.read()
     page = os.path.relpath(path, ROOT).replace(os.sep, '/')
     pdir = os.path.dirname(path)
+    # DOCTYPE — first line must be exactly <!DOCTYPE html>
+    first = src.lstrip('\ufeff').splitlines()[0].strip() if src.strip() else ''
+    if first != '<!DOCTYPE html>':
+        errors.append(f'{page}: bad DOCTYPE → {first!r}')
+    # canonical — every indexable page must self-canonical; 404 must have none
+    if page == '404.html':
+        if 'rel="canonical"' in src:
+            errors.append(f'{page}: 404 page must not have a canonical')
+        if 'noindex' not in src:
+            errors.append(f'{page}: 404 page must be noindex')
+    else:
+        want = SITE + page
+        m = re.search(r'rel="canonical" href="([^"]+)"', src)
+        if not m:
+            errors.append(f'{page}: missing canonical')
+        elif m.group(1) != want:
+            errors.append(f'{page}: wrong canonical {m.group(1)} (expected {want})')
     # forbidden tokens
     for tok in FORBIDDEN:
         if tok in src:
@@ -107,9 +125,30 @@ def check_page(path):
     for m in re.finditer(r'<h([12])[^>]*>\s*(?:<[^>]+>\s*)*</h\1>', src):
         errors.append(f'{page}: empty heading found')
 
+def check_sitemap():
+    sp = os.path.join(ROOT, 'sitemap.xml')
+    if not os.path.exists(sp):
+        errors.append('sitemap.xml: missing')
+        return
+    with io.open(sp, encoding='utf-8') as f:
+        s = f.read()
+    locs = re.findall(r'<loc>([^<]+)</loc>', s)
+    for l in sorted({x for x in locs if locs.count(x) > 1}):
+        errors.append(f'sitemap.xml: duplicate <loc> {l}')
+    for l in locs:
+        if not os.path.exists(os.path.join(ROOT, l.replace(SITE, ''))):
+            errors.append(f'sitemap.xml: {l} → file not found')
+    for p in PAGES:
+        page = os.path.relpath(p, ROOT).replace(os.sep, '/')
+        if page == '404.html' or page.startswith(('admin/', 'dashboard/', 'auth/')):
+            continue
+        if SITE + page not in locs:
+            errors.append(f'sitemap.xml: missing public page {page}')
+
 def main():
     for p in PAGES:
         check_page(p)
+    check_sitemap()
     print(f'pages checked: {len(PAGES)}')
     print(f'errors: {len(errors)}   warnings: {len(warnings)}')
     uniq = sorted(set(errors))

@@ -49,8 +49,22 @@
 | 38 | داشبورد: صورتحساب | `dashboard/billing.html` | `tools/dash3.py` | qa/smoke/modal | ✅ |
 | 39 | داشبورد: اعلان‌ها | `dashboard/notifications.html` | `tools/dash3.py` | qa/smoke/tabs | ✅ |
 | 40 | داشبورد: تنظیمات | `dashboard/settings.html` | `tools/dash3.py` | qa/smoke/deep-link | ✅ |
+| 41 | ادمین: نمای کلی | `admin/index.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 42 | ادمین: کاربران | `admin/users.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 43 | ادمین: سازمان‌ها | `admin/organizations.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 44 | ادمین: اشتراک‌ها | `admin/subscriptions.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 45 | ادمین: درآمد | `admin/revenue.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 46 | ادمین: مصرف API | `admin/api.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 47 | ادمین: فعالیت سیستم | `admin/activity.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 48 | ادمین: پشتیبانی | `admin/support.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 49 | ادمین: اعلان‌ها | `admin/notifications.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 50 | ادمین: محتوا | `admin/content.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 51 | ادمین: Feature Flags | `admin/flags.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 52 | ادمین: امنیت و Audit | `admin/security.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| 53 | ادمین: تنظیمات سیستم | `admin/settings.html` | `tools/admin.py` | qa/audit_admin/deep_audit | ✅ |
+| — | صفحه ۴۰۴ (خودکار) | `404.html` | `seo_extras()` در `tools/build.py` | qa (noindex، بدون canonical) | ✅ |
 
-**جمع: ۴۰ صفحه از ۴۰ — بدون هیچ صفحه‌ی جاافتاده.**
+**جمع: ۵۳ صفحه از ۵۳ + 404.html خودکار = ۵۴ فایل HTML — بدون هیچ صفحه‌ی جاافتاده.**
 
 ---
 
@@ -70,7 +84,7 @@
 | V10 | کتابخانه فقط وقتی مفید | Chart.js، Lucide، Prism (همه vendored) | — | ✅ |
 | V11 | استتیک سازمانی تیره | توکن‌های `#050505`/`#0A0A0A`/`#2563EB`/`#38BDF8` | بازبینی طراحی + اسکرین‌شات | ✅ |
 | V12 | قیمت‌گذاری تومانی واقعی | ۹۹۰٬۰۰۰ / ۱٬۹۸۰٬۰۰۰ / ۳٬۹۰۰٬۰۰۰ تومان | بازبینی | ✅ |
-| V13 | حالت تیره اصلی و کامل؛ بدون حالت روشن نیمه‌کاره | تنها تم کامل تیره؛ دکمه روشن از تنظیمات حذف شد | بازبینی | ✅ |
+| V13 | تم تاریک پیش‌فرض + تم روشن کامل (بدون حالت نیمه‌کاره) | توکن‌های کامل هر دو تم در `:root` / `:root[data-theme="light"]`؛ اسکریپت anti-FOUC در head؛ دکمه‌های `data-theme-toggle` در سایت/داشبورد/ادمین/احراز/۴۰۴؛ نمودارها با `bv:theme` بازرسازی می‌شوند | qa_theme.py + qa_light_sweep.py + بازبینی | ✅ |
 | V14 | بدون کپی از Vercel/Stripe/Supabase/Linear | طراحی اختصاصی (نام، ساختار، داده‌ها، چیدمان متفاوت) | بازبینی انسانی | ✅ |
 | V15 | بدون TODO/placeholder/دکمه مرده | گیت qa.py (توکن‌های ممنوع) + audit (۰ خطای کنسول) | ✅ |
 | V16 | همه حالت‌های UI (خالی/خطا/موفقیت/هشدار/لودینگ واقعی) | بخش ۷ design-system.md | بازبینی هر صفحه | ✅ |
@@ -84,15 +98,17 @@
 | ابزار | دستور | نتیجه |
 |---|---|---|
 | گیت ساخت | `python3 tools/build.py` | ۴۰ صفحه، بدون خطا |
-| کنترل کیفیت | `python3 tools/qa.py` | ۴۰ صفحه بررسی — ۰ خطا، ۰ هشدار |
+| کنترل کیفیت | `python3 tools/qa.py` | ۵۴ صفحه بررسی — ۰ خطا، ۰ هشدار |
 | تست تعاملات | `node tools/smoke.js` | ALL SMOKE TESTS PASSED |
 | ممیزی مرورگر | `node tools/audit.js` | ۰ خطای کنسول/صفحه، ۰ سرریز دسکتاپ، فونت کامل، ۰ تصویر خراب |
 | ریسپانسیو موبایل | `node tools/mobile.js` | ۴۰/۴۰ صفحه بدون سرریز افقی در ۳۹۰px |
 | دسترس‌پذیری | `node tools/a11y.js` | ۰ تصویر بدون alt، ۰ دکمه بی‌نام، ۰ ورودی بدون برچسب، ۰ پرش سلسله‌مراتب |
-| حجم | `du -sh` (بدون tools/node_modules) | ~۲٫۲ مگابایت |
+| حجم | `du -sh` (بدون tools/node_modules) | ~۲٫۸ مگابایت |
 
 ## ۴. موارد خارج از محدوده (صریح)
 
 - هیچ بک‌اند، API واقعی، پرداخت واقعی یا ذخیره‌سازی داده وجود ندارد (دمو).
-- هیچ حالت روشن (Light Mode) عرضه نمی‌شود — تصمیم محصول.
-- هیچ صفحه‌ی دوزبانه EN/FA وجود ندارد — تصمیم محصول.
+- هیچ صفحه‌ی دوزبانه EN/FA وجود ندارد — تصمیم محصول (UI صرفاً فارسی).
+- لایه‌ی ادمین (`admin/`) در `robots.txt` و `sitemap.xml` از ایندکس خارج است — تصمیم SEO.
+
+> **به‌روزرسانی ۲٫۴٫۱:** این ماتریس برای نسخه‌ی ۲٫۴٫۱ (۵۴ صفحه شامل ۱۳ صفحه‌ی ادمین) به‌روز شده است. گزارش‌های تاریخ‌دار QA (بخش‌های مرتبط با ۴۰ صفحه) مربوط به وضعیت قبل از افزودن لایه‌ی ادمین/تم روشن هستند و در سرتیتر هرکدام محدودیت اعتبارشان ذکر شده است.

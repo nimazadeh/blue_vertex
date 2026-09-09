@@ -28,8 +28,18 @@ def _abs_canonical(rel_path, html):
     html = re.sub(r'rel="canonical" href="([^"]+)"', repl, html)
     return re.sub(r'property="og:url" content="([^"]+)"', repl_og, html)
 
+def _self_canonical(rel_path, html):
+    """self-canonical: every page declares its OWN absolute URL (not the homepage).
+    Pages without a canonical tag (404) are left untouched."""
+    full = os.path.normpath(rel_path).replace(os.sep, '/')
+    url = SITE + full
+    html = re.sub(r'rel="canonical" href="[^"]*"', 'rel="canonical" href="%s"' % url, html)
+    html = re.sub(r'property="og:url" content="[^"]*"', 'property="og:url" content="%s"' % url, html)
+    return html
+
 def emit(rel_path, html, out=OUT):
     html = _abs_canonical(rel_path, html)
+    html = _self_canonical(rel_path, html)
     full = os.path.join(ROOT, rel_path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with io.open(full, 'w', encoding='utf-8') as f:
@@ -80,18 +90,16 @@ def b():
     emit('status/index.html', misc.build_status('../'))
     for rel, html in admin_pages.build_all():
         emit(rel, html)
-    emit('index.html', marketing_home.build(''))
 
 def seo_extras():
     """robots.txt, sitemap.xml, 404.html — regenerated on every build."""
-    public = [p for p in sorted(OUT) if not p.startswith(('admin/', 'dashboard/', 'auth/'))]
+    public = sorted(set(p for p in OUT if not p.startswith(('admin/', 'dashboard/', 'auth/'))))
     today = datetime.date.today().isoformat()
     robots = ('User-agent: *\n'
               'Allow: /\n'
               'Disallow: /admin/\n'
               'Disallow: /dashboard/\n'
               'Disallow: /auth/\n'
-              'Disallow: /dashboard/*#*\n'
               '\nSitemap: ' + SITE + 'sitemap.xml\n')
     with io.open(os.path.join(ROOT, 'robots.txt'), 'w', encoding='utf-8') as f:
         f.write(robots)
